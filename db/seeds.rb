@@ -37,3 +37,52 @@ PicTag.create({
   tag_id: Tag.find_by(name: 'Spicy').id
 
   })
+
+
+
+
+  pic1 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144157977763',
+   cuisine_id: Cuisine.find_by(name: 'Mexican').id,
+   })
+
+  pic1.tags<< spicy
+
+  pic2 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144158550578',
+   cuisine_id: Cuisine.find_by(name: 'Japanese').id,
+   })
+
+  pic2.tags<< healthy
+
+  pic3 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144158539958',
+   cuisine_id: Cuisine.find_by(name: 'Italian').id,
+   })
+
+  pic3.tags<< comfort
+  pic3.tags<< savoury
+
+  pic4 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144158527628',
+   cuisine_id: Cuisine.find_by(name: 'Vegetarian').id,
+   })
+
+  pic4.tags<< healthy
+  pic4.tags<< vegan
+
+  pic5 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144150649803',
+   cuisine_id: Cuisine.find_by(name: 'Thai').id,
+   })
+
+  pic5.tags<< spicy
+  pic5.tags<< savoury
+
+  pic6 = Picture.create({
+   url: 'http://dindrdindr.tumblr.com/post/144150635748',
+   cuisine_id: Cuisine.find_by(name: 'Sandwiches').id,
+   })
+
+  pic6.tags<< spicy
+  pic6.tags<< fried
