@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'homes#index'
+  get 'home' => 'homes#index'
 
   get 'login' => 'sessions#new', :as => :login
   post 'create' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', :as => :logout
 
-  get 'home' => 'homes#index'
 
 
   resources :cuisines, except: %i(destroy edit update)
