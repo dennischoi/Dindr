@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
 
-before_action :is_admin?
+before_action :check_admin, :load_pictures
 
   def index
     @pictures = Picture.all
@@ -24,5 +24,18 @@ before_action :is_admin?
 
   def destroy
   end
+
+  private
+
+  def load_pictures
+    @pictures = Picture.all
+  end
+
+  def check_admin
+    unless admin?
+      redirect_to :homes
+    end
+  end
+
 
 end

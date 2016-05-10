@@ -4,11 +4,20 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def is_admin?
-    current_user.admin == true
+  # def is_admin
+  #   if current_user.admin == true
+  #   end
+  # end
+
+  # helper_method :admin?
+
+  def admin?
+    if current_user
+      current_user.admin
+    end
   end
 
-  helper_method :is_admin?
+
 
 
 end
