@@ -103,21 +103,21 @@ fried = Tag.create({
 
 #Pictures
 pic1 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144157977763',
+ url: 'http://67.media.tumblr.com/313372d1546e17024d705ad659af4fb9/tumblr_o6z57vzs161vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Mexican').id,
  })
 
 pic1.tags<< spicy
 
 pic2 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144158550578',
+ url: 'http://66.media.tumblr.com/49f042169878563220868da8a8310d16/tumblr_o6z5v2Fehr1vu96cko1_1280.png',
  cuisine_id: Cuisine.find_by(name: 'Japanese').id,
  })
 
 pic2.tags<< healthy
 
 pic3 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144158539958',
+ url: 'http://66.media.tumblr.com/dce796f731a59d6793e3d9a297510cf5/tumblr_o6z5umdmAo1vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Italian').id,
  })
 
@@ -125,7 +125,7 @@ pic3.tags<< comfort
 pic3.tags<< savoury
 
 pic4 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144158527628',
+ url: 'http://66.media.tumblr.com/e06e478dbef61cafe6fc1fb6181aab71/tumblr_o6z5u5SheS1vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Vegetarian').id,
  })
 
@@ -133,7 +133,7 @@ pic4.tags<< healthy
 pic4.tags<< vegan
 
 pic5 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144150649803',
+ url: 'http://66.media.tumblr.com/d81cc03b2d461ed2665f1903b2a646ec/tumblr_o6ywc8MNPD1vu96cko1_1280.jpg',
  cuisine_id: Cuisine.find_by(name: 'Thai').id,
  })
 
@@ -141,7 +141,7 @@ pic5.tags<< spicy
 pic5.tags<< savoury
 
 pic6 = Picture.create({
- url: 'http://dindrdindr.tumblr.com/post/144150635748',
+ url: 'http://67.media.tumblr.com/2b2979d4d97d22236f4331f0eef07f45/tumblr_o6ywbmw2kt1vu96cko1_1280.jpg',
  cuisine_id: Cuisine.find_by(name: 'Sandwiches').id,
  })
 
@@ -151,7 +151,7 @@ pic6.tags<< fried
 
 
 #Pic Tag Model
-# 
+#
 # PicTag.create({
 #   picture_id: Picture.find_by(url: 'www.facebook.com').id,
 #   tag_id: Tag.find_by(name: 'Spicy').id
