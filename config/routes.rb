@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   root 'homes#index'
-  resources :homes, only: %i(index)
 
   get 'login' => 'sessions#new', :as => :login
   post 'create' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', :as => :logout
+
+  resources :homes, only: %i(index)
+  #  will this work we shalll see
+
 
 
 
