@@ -20,7 +20,8 @@ User.create({
   password: 'test',
   password_confirmation: 'test',
   address: '150 king street',
-  phone_number: '416-555-6666'
+  phone_number: '416-555-6666',
+  admin: true
   })
 
 # Cuisines (10)
