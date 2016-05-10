@@ -8,7 +8,27 @@
 </head>
 <body>
 
+  <nav id="dindr-navbar">
+    <div id="home-button">
+      <%= link_to image_tag('kirby.jpg'), root_url %>
+    </div>
+
+    <ul id="nav-login">
+      <% if current_user %>
+        <li><%= link_to "Logout", :logout, method: :delete%> <%= link_to "Your Profile", user_path(current_user) %></li>
+      <% else %>
+        <li><%= link_to "Login", :login %> <%= link_to "Sign Up", new_user_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+
+
 <%= yield %>
 
 </body>
+
+<footer id="dindr-footer">
+  Copyright 2016
+</footer>
+
 </html>
