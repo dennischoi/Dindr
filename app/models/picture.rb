@@ -5,4 +5,10 @@ class Picture < ActiveRecord::Base
   validates :url, presence: true
   accepts_nested_attributes_for :cuisine, :tags
 
+  array = []
+
+  def self.randomizer
+
+  end
+
 end

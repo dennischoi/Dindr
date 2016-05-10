@@ -1,10 +1,8 @@
 <h1 id="home-index">Home</h1>
 
-<p>
-  <% @pictures.each do |pic| %>
-    <div>
-      
-      <img src="<%= pic.url %>" alt="" />
-    </div>
-  <% end %>
-</p>
+<div class="projects">
+
+  <img src="<%= @picture1.url %>" id="food-1" />
+  <img src="<%= @picture2.url %>" id="food-2" />
+  <img src="<%= @picture3.url %>" id="food-3" />
+</div>
