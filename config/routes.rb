@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'homes#index'
-  get 'home' => 'homes#index'
+  resources :homes, only: %i(index) do
+  #  will this work we shalll see
+    resources :pictures, only: %i(index)
+  end
 
   get 'login' => 'sessions#new', :as => :login
   post 'create' => 'sessions#create'
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
   resources :cuisines, except: %i(destroy edit update)
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
-  resources :pictures
+  resources :pictures, except: %i(index)
 
 
 

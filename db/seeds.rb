@@ -151,8 +151,8 @@ pic6.tags<< fried
 
 
 #Pic Tag Model
-
-PicTag.create({
-  picture_id: Picture.find_by(url: 'www.facebook.com').id,
-  tag_id: Tag.find_by(name: 'Spicy').id
-  })
+# 
+# PicTag.create({
+#   picture_id: Picture.find_by(url: 'www.facebook.com').id,
+#   tag_id: Tag.find_by(name: 'Spicy').id
+#   })
