@@ -15,7 +15,7 @@
 
     <ul id="nav-login">
       <% if current_user %>
-        <li><%= link_to "Logout", :logout, method: :delete%> <%= link_to "Your Profile", user_path(current_user) %></li>
+        <li><%= link_to "Your Profile", user_path(current_user) %> <%= link_to "Logout", :logout, method: :delete%></li>
       <% else %>
         <li><%= link_to "Login", :login %> <%= link_to "Sign Up", new_user_path %></li>
       <% end %>
