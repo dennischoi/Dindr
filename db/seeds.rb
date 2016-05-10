@@ -20,7 +20,8 @@ User.create({
   password: 'test',
   password_confirmation: 'test',
   address: '150 king street',
-  phone_number: '416-555-6666'
+  phone_number: '416-555-6666',
+  admin: true
   })
 
 # Cuisines (10)
@@ -151,7 +152,7 @@ pic6.tags<< fried
 
 
 #Pic Tag Model
-# 
+#
 # PicTag.create({
 #   picture_id: Picture.find_by(url: 'www.facebook.com').id,
 #   tag_id: Tag.find_by(name: 'Spicy').id
