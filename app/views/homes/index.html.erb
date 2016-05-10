@@ -1,1 +1,7 @@
 <h1 id="home-index">Home</h1>
+
+<p>
+  <% @pictures.each do |pic| %>
+    <%= pic.url %>
+  <% end %>
+</p>
