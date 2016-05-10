@@ -1,3 +1,6 @@
 class Cuisine < ActiveRecord::Base
-  has_many :pictures 
+  has_many :pictures
+
+  validates :name, presence: true
+  
 end
