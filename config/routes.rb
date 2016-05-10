@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root 'homes#index'
   resources :homes, only: %i(index) do
   #  will this work we shalll see
@@ -15,6 +17,9 @@ Rails.application.routes.draw do
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
   resources :pictures, except: %i(index)
+
+
+  resources :admins
 
 
 
