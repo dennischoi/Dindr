@@ -1,4 +1,58 @@
 Rails.application.routes.draw do
+  root 'homes#index'
+
+  get 'login' => 'sessions#new', :as => :login
+  post 'create' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy', :as => :logout
+
+  get 'home' => 'homes#index'
+
+
+  resources :cuisines, except: %i(destroy edit update)
+  resources :tags, except: %i(destroy edit update)
+  resources :users, except: %i(destroy index)
+  resources :pictures
+
+
+
+  # get 'users/update'
+  # get 'users/new'
+  #
+  # get 'users/create'
+  #
+  # get 'users/show'
+  #
+  # get 'users/edit'
+  # get 'cuisines/index'
+  #
+  # get 'cuisines/show'
+  #
+  # get 'cuisines/new'
+  #
+  # get 'cuisines/create'
+  #
+  # get 'tags/show'
+  #
+  # get 'tags/new'
+  #
+  # get 'tags/create'
+  #
+  # get 'tags/index'
+
+  # get 'pictures/index'
+  #
+  # get 'pictures/new'
+  #
+  # get 'pictures/create'
+  #
+  # get 'pictures/show'
+  #
+  # get 'pictures/edit'
+  #
+  # get 'pictures/update'
+  #
+  # get 'pictures/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
