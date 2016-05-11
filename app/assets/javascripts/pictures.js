@@ -22,7 +22,8 @@ $(document).on('ready', function() {
     };
   });
 
-  $('#food-1').on('click', likeOne)
+
+  $('.food-1').on('click', likeOne)
 
   function likeOne(ev) {
     console.log("Clicked")
@@ -39,7 +40,7 @@ $(document).on('ready', function() {
   };
 
 
-  $('#food-2').on('click', likeTwo)
+  $('.food-2').on('click', likeTwo)
 
   function  likeTwo(ev) {
     console.log("Clicked")
@@ -55,7 +56,7 @@ $(document).on('ready', function() {
       }
   };
 
-  $('#food-3').on('click', likeThree)
+  $('.food-3').on('click', likeThree)
 
   function likeThree(ev) {
     console.log("Clicked")
