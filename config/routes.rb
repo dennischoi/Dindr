@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root 'homes#index'
 
   get 'login' => 'sessions#new', :as => :login
@@ -15,6 +17,9 @@ Rails.application.routes.draw do
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
   resources :pictures
+
+
+  resources :admins
 
 
 

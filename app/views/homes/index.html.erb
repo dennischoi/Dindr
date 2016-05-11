@@ -1,7 +1,24 @@
 <h1 id="home-index">Home</h1>
 
 <div class="projects">
-  <img src="<%= @picture1.url %>" id="food-1" />
-  <img src="<%= @picture2.url %>" id="food-2" />
-  <img src="<%= @picture3.url %>" id="food-3" />
+
+  <form class="food-picture" action="index.html" method="post">
+    <input type="hidden" name="picture1-like" value="false">
+    <label for="">
+      <img src="<%= @picture1.url %>" id="food-1" />
+    </label>
+  </form>
+  <form class="food-picture" action="index.html" method="post">
+    <input type="hidden" name="picture2-like" value="false">
+    <label for="">
+      <img src="<%= @picture2.url %>" id="food-2" />
+    </label>
+  </form>
+  <form class="food-picture" action="index.html" method="post">
+    <input type="hidden" name="picture3-like" value="false">
+    <label for="">
+      <img src="<%= @picture3.url %>" id="food-3" />
+    </label>
+  </form>
+
 </div>
