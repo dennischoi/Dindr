@@ -178,7 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon
+  bourbon (~> 5.0.0.beta.5)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)

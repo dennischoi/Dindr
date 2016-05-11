@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   post 'create' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', :as => :logout
+  get 'game' => 'pictures#index', :as => :game
 
   resources :homes, only: %i(index)
   #  will this work we shalll see
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   resources :cuisines, except: %i(destroy edit update)
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
-  resources :pictures
+  resources :pictures, except: %i(index)
 
 
   resources :admins
