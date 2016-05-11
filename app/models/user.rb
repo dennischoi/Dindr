@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
   has_many :pictures
   has_many :tags, through: :pictures
   has_many :cuisines, through: :pictures
+  has_many :pictures_votes, through: :votes, class_name: "Pictures"
 end
