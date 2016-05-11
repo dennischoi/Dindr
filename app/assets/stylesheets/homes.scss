@@ -6,17 +6,39 @@
   text-align: center;
 }
 
+.food-picture {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #food-1 {
   width: 33%;
-  height: 12.5rem;
+  height: 33%;
 }
 
 #food-2 {
   width: 33%;
-  height: 12.5rem;
+  height: 33%;
 }
 
 #food-3 {
   width: 33%;
-  height: 12.5rem;
+  height: 33%;
+}
+
+.buttons {
+  display: inline;
+  list-style-type: none;
+}
+
+#dislike-button1 {
+  margin-left: 12.5rem;
+}
+
+#dislike-button2 {
+  margin-left: 12.5rem;
+}
+
+#dislike-button3 {
+  margin-left: 12.5rem;
 }

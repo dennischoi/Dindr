@@ -3,20 +3,30 @@
 <div class="projects">
   <form class="food-picture" action="index.html" method="post">
     <input type="hidden" name="picture1-like" value="false">
-    <label for="">
+      <div class="pic1">
+        <li class="buttons" id="like-button1"> <3 </li>
+        <li class="buttons" id="dislike-button1"> X </li>
+      </div>
       <img src="<%= @picture1.url %>" id="food-1" />
-    </label>
+
   </form>
+
   <form class="food-picture" action="index.html" method="post">
     <input type="hidden" name="picture2-like" value="false">
-    <label for="">
+      <div class="pic2">
+        <li class="buttons" id="like-button2"> <3 </li>
+        <li class="buttons" id="dislike-button2"> X </li>
+      </div>
       <img src="<%= @picture2.url %>" id="food-2" />
-    </label>
+
   </form>
   <form class="food-picture" action="index.html" method="post">
     <input type="hidden" name="picture3-like" value="false">
-    <label for="">
+      <div class="pic3">
+        <li class="buttons" id="like-button3"> <3 </li>
+        <li class="buttons" id="dislike-button3"> X </li>
+      </div>
       <img src="<%= @picture3.url %>" id="food-3" />
-    </label>
+
   </form>
 </div>
