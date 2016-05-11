@@ -1,43 +1,16 @@
-// Place all the styles related to the Homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'food_pictures';
 
-#home-index {
-  text-align: center;
+// HOMEPAGE
+
+#home-page {
+  min-height: 1500px;
 }
 
-.food-picture {
-  text-align: center;
-}
+#logo {
+  margin: 25rem auto;
+  width: 55%;
 
-#food-1 {
-  width: 33%;
-  height: 15rem;
-}
-
-#food-2 {
-  width: 33%;
-  height: 15rem;
-}
-
-#food-3 {
-  width: 33%;
-  height: 15rem;
-}
-
-.buttons {
-  display: inline;
-  list-style-type: none;
-}
-
-#dislike-button1 {
-  margin-left: 11rem;
-}
-
-#dislike-button2 {
-  margin-left: 11rem;
-}
-
-#dislike-button3 {
-  margin-left: 11rem;
+  img {
+    max-width: 100%;
+  }
 }

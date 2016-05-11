@@ -1,0 +1,29 @@
+
+.food-pictures {
+  width: 90%;
+  margin: 0 auto 200px;
+
+  td {
+    width: 10%;
+    // border: solid 1px;
+  }
+}
+
+#food-1,
+#food-2,
+#food-3 {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+.buttons {
+  display: inline;
+  list-style-type: none;
+}
+
+#dislike-button1,
+#dislike-button2,
+#dislike-button3 {
+  margin-left: 11rem;
+}

@@ -1,30 +1,28 @@
-<div class="food-pictures">
-
-  <form class="food-picture" action="index.html" method="post">
-    <input type="hidden" name="picture1" id="rand-1" value="false">
-      <div class="pic1">
+  <table>
+    <tr>
+      <td class="randomized-dish">
         <li class="buttons" id="like-button1">| <3 |</li>
         <li class="buttons" id="dislike-button1">| X |</li>
-      </div>
-      <%= image_tag(@picture1.url, :id => "food-1") %>
-  </form>
-
-  <form class="food-picture" action="index.html" method="post">
-    <input type="hidden" name="picture2" id="rand-2" value="false">
-      <div class="pic2">
+        <form class="food-picture-form" action="index.html" method="post">
+          <input type="hidden" name="picture1" id="rand-1" value="false">
+          <%= image_tag(@picture1.url, :id => "food-1") %>
+        </form>
+      </td>
+      <td class="randomized-dish">
         <li class="buttons" id="like-button2">| <3 |</li>
         <li class="buttons" id="dislike-button2">| X |</li>
-      </div>
-      <%= image_tag(@picture2.url, :id => "food-2") %>
-  </form>
-
-  <form class="food-picture" action="index.html" method="post">
-    <input type="hidden" name="picture3" id="rand-3" value="false">
-      <div class="pic3">
+        <form class="food-picture-form" action="index.html" method="post">
+          <input type="hidden" name="picture2" id="rand-2" value="false">
+          <%= image_tag(@picture2.url, :id => "food-2") %>
+        </form>
+      </td>
+      <td class="randomized-dish">
         <li class="buttons" id="like-button3">| <3 |</li>
         <li class="buttons" id="dislike-button3">| X |</li>
-      </div>
-      <%= image_tag(@picture3.url, :id => "food-3") %>
-  </form>
-
-</div>
+        <form class="food-picture-form" action="index.html" method="post">
+          <input type="hidden" name="picture3" id="rand-3" value="false">
+          <%= image_tag(@picture3.url, :id => "food-3") %>
+        </form>
+      </td>
+    </tr>
+  </table>
