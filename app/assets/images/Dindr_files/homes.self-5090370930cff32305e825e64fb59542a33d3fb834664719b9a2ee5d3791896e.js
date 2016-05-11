@@ -1,6 +1,6 @@
 $(document).on('ready page:load', function() {
 
-var turn = 0
+var choi = []
 
   function likeOne(ev) {
     console.log("Clicked")
@@ -38,12 +38,6 @@ $('#like-button2').on('click', likeTwo)
     $('#dislike-button3').css("background-color", "transparent");
     $('#rand-3').attr("value", "true");
     $('#food-3').removeClass('dislike');
-      if ($('#food-3').hasClass('like')) {
-        $('#food-1').attr('src', "");
-        $('#food-2').attr('src', "http://images.clipartpanda.com/happy-face-clipart-y4T9gyjiE.jpeg");
-        $('#food-3').attr('src', "http://images.clipartpanda.com/happy-face-clipart-y4T9gyjiE.jpeg");
-
-      }
 
     $('#food-3').off('click');
   };

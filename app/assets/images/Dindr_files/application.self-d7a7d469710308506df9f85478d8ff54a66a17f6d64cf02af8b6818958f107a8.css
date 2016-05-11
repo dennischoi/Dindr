@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ *,
+ *:after,
+ *:before, {
+   box-sizing: border-box;
+ }
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+body {
+  margin: 0;
+}
+
+#dindr-footer {
+  background-color: rgba(241, 240, 240, 0.5);
+  color: #e7b63f;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+#dindr-navbar {
+  overflow: hidden;
+  width: 100%;
+  background-color: orange;
+  margin: 0;
+  padding: 0;
+
+}
+
+#home-button img {
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  float: left;
+}
+
+#nav-login {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  float: right;
+  padding-right: 1.875rem;
+  margin-top: 1.2rem;
+
+}
+
+#nav-login a {
+  color: black;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  width: 10rem;
+}
+
+#nav-login a:hover {
+  background-color: rgba(241, 240, 240, 0.5);
+}

@@ -1,0 +1,48 @@
+/* line 5, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#home-index {
+  text-align: center;
+}
+
+/* line 9, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+.food-picture {
+  text-align: center;
+}
+
+/* line 13, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#food-1 {
+  width: 33%;
+  height: 15rem;
+}
+
+/* line 18, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#food-2 {
+  width: 33%;
+  height: 15rem;
+}
+
+/* line 23, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#food-3 {
+  width: 33%;
+  height: 15rem;
+}
+
+/* line 28, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+.buttons {
+  display: inline;
+  list-style-type: none;
+}
+
+/* line 33, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#dislike-button1 {
+  margin-left: 11rem;
+}
+
+/* line 37, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#dislike-button2 {
+  margin-left: 11rem;
+}
+
+/* line 41, /Users/dennischoi/Bitmakers/team_Veg/Final_Project/Dindr/app/assets/stylesheets/homes.scss */
+#dislike-button3 {
+  margin-left: 11rem;
+}
