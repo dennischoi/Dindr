@@ -1,10 +1,10 @@
 @import "bourbon";
-// $visual-grid: true;
+$visual-grid: true;
 $visual-grid-color: blue !default;
-$visual-grid-opacity: 0.4 !default;
+$visual-grid-opacity: 0.2 !default;
 
 
-$column: 90px;
-$gutter: 30px;
+$column: 110px;
+$gutter: 15px;
 $grid-columns: 12;
-$max-width: 1200px;
+$max-width: 85%;
