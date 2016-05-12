@@ -27,7 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon', '~> 5.0.0.beta.5'
 gem 'neat'
 
-# Use ActiveModel has_secure_password
+gem 'carrierwave'
+
+gem 'figaro'
+
+# Use ActiveModeTuplol has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
