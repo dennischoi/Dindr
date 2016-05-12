@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
   var turn = 0;
 
-  $(".next-button").on('click', function() {
+  $("#next-button").on('click', function() {
     turn++
 
     if( turn === 1 ) {
@@ -23,53 +23,40 @@ $(document).on('ready', function() {
   });
 
 
-  $('.food-1').on('click', likeOne)
+  $('.food-image').on('click', likeImage)
 
-  function likeOne(ev) {
+  function likeImage(ev) {
     console.log("Clicked")
       if ($(this).hasClass('dislike')){
-        $('#rand-1').attr("value", "true");
-        $(this).attr('class','like');
+        $(this).removeClass('dislike');
+        $(this).addClass('like');
         $(this).css('border', '5px solid green');
       }
       else if ($(this).hasClass('like')){
-        $('#rand-1').attr("value", "false");
-        $(this).attr('class','dislike');
+        $(this).removeClass('like');
+        $(this).addClass('dislike');
         $(this).css('border', 'transparent');
       }
   };
 
 
-  $('.food-2').on('click', likeTwo)
+  // $('#next-button').on('click', function(){
+  //
+  //   var picture = $(".food-image").hasClass("like")
+  //   //send the pictures that have the
+  //
+  //   $.ajax {
+  //     url: "/votes/update",
+  //     method: "post",
+  //     dataType: "html",
+  //     data: // Picture id
+  //     success: function(){
+  //       // maybe do something, maybe not
+  //     }
+  //
+  //   }
 
-  function  likeTwo(ev) {
-    console.log("Clicked")
-      if ($(this).hasClass('dislike')){
-        $('#rand-2').attr("value", "true");
-        $(this).attr('class','like');
-        $(this).css('border', '5px solid green');
-      }
-      else if ($(this).hasClass('like')){
-        $('#rand-2').attr("value", "false");
-        $(this).attr('class','dislike');
-        $(this).css('border', 'transparent');
-      }
-  };
-
-  $('.food-3').on('click', likeThree)
-
-  function likeThree(ev) {
-    console.log("Clicked")
-      if ($(this).hasClass('dislike')){
-        $('#rand-3').attr("value", "true");
-        $(this).attr('class','like');
-        $(this).css('border', '5px solid green');
-      }
-      else if ($(this).hasClass('like')){
-        $('#rand-3').attr("value", "false");
-        $(this).attr('class','dislike');
-        $(this).css('border', 'transparent');
-      }
-  };
+  // })
+  // Post request to vote update
 
 });
