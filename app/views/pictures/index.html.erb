@@ -9,6 +9,15 @@
     <input type="button" id="next-button" value="Keep Playing!">
   </div>
 
+
+  <div id="count-votes", data-user= <%= current_user.id %>>
+    <input type="button" id="vote" value="Count Votes">
+  </div>
+
+  <div class="your-votes">
+
+  </div>
+
   <div class="pic-sets">
     <div class="first-set">
       <table>
@@ -20,61 +29,17 @@
           </td>
           <td class="randomized-dish">
             <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture2.url, :class => "food-image dislike") %>
+              <%= image_tag(@picture2.url, :class => "food-image dislike", :id => "pic-2", data: {picId: "#{@picture2.id}"}) %>
             </form>
           </td>
           <td class="randomized-dish">
             <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture3.url, :class => "food-image dislike") %>
+              <%= image_tag(@picture3.url, :class => "food-image dislike",:id => "pic-3", data: {picId: "#{@picture3.id}"}) %>
             </form>
           </td>
         </tr>
       </table>
     </div>
 
-    <div class="second-set">
-      <table>
-        <tr>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture1.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture2.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture3.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="third-set">
-      <table>
-        <tr>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture1.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture2.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-          <td class="randomized-dish">
-            <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture3.url, :class => "food-image dislike") %>
-            </form>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
 </div>

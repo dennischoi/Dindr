@@ -6,7 +6,19 @@ class VotesController < ApplicationController
   end
 
   def create
+    @vote = Vote.new(vote_params)
+
+    if @vote.save
+
+    else
+      flash.now[:error] = ""
+    end
+
+
   end
+
+
+
 
   def edit
   end
@@ -15,9 +27,17 @@ class VotesController < ApplicationController
   # when request comes in,
   #   fetch vote
   #   fetch picture by id
+  # params hash to whatever we called the datad
   #   change vote value to true
   #   confirm vote has been updated
   #   (We don't need to get any info back)
   #   Only send this request when use clicks on NEXT'
   end
+
+  private
+
+  def vote_params
+    params.permit(:picture_id, :user_id, :like)
+  end
+
 end

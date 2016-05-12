@@ -2,33 +2,63 @@ $(document).on('ready', function() {
   var turn = 0;
   var likedPics = []
 
-  $("#next-button").on('click', function() {
-    turn++
+  // $("#next-button").on('click', function() {
+  //   turn++
+  //
+  //   if( turn === 1 ) {
+  //     $(".first-set").css('display', 'none')
+  //     $(".second-set").css('display', 'block')
+  //     console.log(turn);
+  //   }
+  //   else if( turn === 2 ) {
+  //     $(".second-set").css('display', 'none')
+  //     $(".third-set").css('display', 'block')
+  //     console.log(turn);
+  //   }
+  //   else if( turn === 3 ) {
+  //     $(".third-set").css('display', 'none')
+  //     $(".fourth-set").css('display', 'block')
+  //     $(".next-button").off('click')
+  //     console.log(turn);
+  //   }
+  //   else if( turn === 4 ) {
+  //     var pic = $('.like')
+  //     for (var i = 0; i < pic.length; i++)
+  //       likedPics.push(pic.eq(i).attr('src'));
+  //       console.log(likedPics)
+  //   };
+  //
+  // });
 
-    if( turn === 1 ) {
-      $(".first-set").css('display', 'none')
-      $(".second-set").css('display', 'block')
-      console.log(turn);
-    }
-    else if( turn === 2 ) {
-      $(".second-set").css('display', 'none')
-      $(".third-set").css('display', 'block')
-      console.log(turn);
-    }
-    else if( turn === 3 ) {
-      $(".third-set").css('display', 'none')
-      $(".fourth-set").css('display', 'block')
-      $(".next-button").off('click')
-      console.log(turn);
-    }
-    else if( turn === 4 ) {
-      var pic = $('.like')
-      for (var i = 0; i < pic.length; i++)
-        likedPics.push(pic.eq(i).attr('src'));
+
+  $("#vote").on('click', function(){
+    var pic = $('.like')
+    var likedPics = []
+    var userId = $('#count-votes').data('user')
+      for (var i = 0; i < pic.length; i++){
+        likedPics.push(pic.eq(i).data('picid'));
         console.log(likedPics)
+      }
+
+
+    for (var pic in likedPics){
+      $.ajax({
+        url: '/votes',
+        data:
+        { user_id: userId,
+          picture_id: pic,
+          like: true,
+        },
+        dataType: 'html',
+        method: 'post',
+        success: function(data){
+          alert("Votes Counted")
+        }
+      });
     };
 
-  });
+
+  })
 
 
   $('.food-image').on('click', likeImage)
