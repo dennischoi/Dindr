@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
   var turn = 0;
+  var likedPics = []
 
   $("#next-button").on('click', function() {
     turn++
@@ -19,7 +20,13 @@ $(document).on('ready', function() {
       $(".fourth-set").css('display', 'block')
       $(".next-button").off('click')
       console.log(turn);
-    };
+    }
+    else if( turn === 4 ) {
+      var pic = $('.like')
+      for (var i = 0; i < pic.length; i++){
+        likedPics.push(pic.eq(i))
+      }
+    }
   });
 
 
