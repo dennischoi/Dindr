@@ -24,7 +24,8 @@ $(document).on('ready', function() {
     else if( turn === 4 ) {
       var pic = $('.like')
       for (var i = 0; i < pic.length; i++)
-        alert(pic.eq(i).attr('src'));
+        likedPics.push(pic.eq(i).attr('src'));
+        console.log(likedPics)
     };
 
   });
@@ -38,6 +39,7 @@ $(document).on('ready', function() {
         $(this).removeClass('dislike');
         $(this).addClass('like');
         $(this).css('border', '5px solid green');
+
       }
       else if ($(this).hasClass('like')){
         $(this).removeClass('like');
