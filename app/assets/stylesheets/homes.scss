@@ -1,16 +1,15 @@
-@import 'food_pictures';
-
 // HOMEPAGE
 
 #home-page {
-  min-height: 1500px;
-}
+  min-height: 62.5rem;;
 
-#logo {
-  margin: 25rem auto;
-  width: 55%;
-
-  img {
-    max-width: 100%;
+  #logo {
+    margin: 10rem auto;
+    width: 55%;
   }
+  #homepage-button {
+    margin: auto;
+    text-align: center;
+  }
+
 }

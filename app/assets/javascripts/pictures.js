@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
   var turn = 0;
 
-  $(".next-button").on('click', function() {
+  $("#next-button").on('click', function() {
     turn++
 
     if( turn === 1 ) {
