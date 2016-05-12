@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
   var turn = 0;
+  var likedPics = []
 
   $("#next-button").on('click', function() {
     turn++
@@ -25,6 +26,7 @@ $(document).on('ready', function() {
       for (var i = 0; i < pic.length; i++)
         alert(pic.eq(i).attr('src'));
     };
+
   });
 
 
