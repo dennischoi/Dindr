@@ -12,6 +12,7 @@
 
 .pic-sets {
   @include fill-parent;
+  margin: 10rem 0;
 }
 .second-set {
   display: none;
