@@ -1,3 +1,22 @@
-// .second-set {
-//   display: none;
-// }
+#game-page {
+  min-height: 62.5rem;
+}
+.page-title {
+  text-align: center;
+  margin: 3rem;
+}
+#next-pics-button {
+  text-align: center;
+  // font-size: 50px;
+}
+
+.pic-sets {
+  @include fill-parent;
+  margin: 10rem 0;
+}
+.second-set {
+  display: none;
+}
+.third-set {
+  display: none;
+}
