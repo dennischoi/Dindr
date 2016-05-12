@@ -7,6 +7,8 @@ class Picture < ActiveRecord::Base
   validates :url, presence: true
   accepts_nested_attributes_for :cuisine, :tags
 
+  mount_uploader :content, ContentUploader
+
   array = []
 
   def self.randomizer
