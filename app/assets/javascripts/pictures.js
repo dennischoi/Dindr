@@ -19,6 +19,8 @@ $(document).on('ready', function() {
       $(".fourth-set").css('display', 'block')
       $(".next-button").off('click')
       console.log(turn);
+
+
     };
   });
 
@@ -38,6 +40,8 @@ $(document).on('ready', function() {
         $(this).css('border', 'transparent');
       }
   };
+
+
 
 
   // $('#next-button').on('click', function(){
