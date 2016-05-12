@@ -36,6 +36,8 @@ $(document).on('ready', function() {
   function likeImage(ev) {
     console.log("Clicked")
       if ($(this).hasClass('dislike')){
+        $('.food-image').css('border', 'transparent').removeClass('like');
+        $('.food-image').addClass('dislike')
         $(this).removeClass('dislike');
         $(this).addClass('like');
         $(this).css('border', '5px solid green');
