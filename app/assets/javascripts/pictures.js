@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
   var turn = 0;
+  var likedPics = []
 
   $("#next-button").on('click', function() {
     turn++
@@ -19,7 +20,14 @@ $(document).on('ready', function() {
       $(".fourth-set").css('display', 'block')
       $(".next-button").off('click')
       console.log(turn);
+    }
+    else if( turn === 4 ) {
+      var pic = $('.like')
+      for (var i = 0; i < pic.length; i++)
+        likedPics.push(pic.eq(i).attr('src'));
+        console.log(likedPics)
     };
+
   });
 
 
@@ -28,9 +36,12 @@ $(document).on('ready', function() {
   function likeImage(ev) {
     console.log("Clicked")
       if ($(this).hasClass('dislike')){
+        $('.food-image').css('border', 'transparent').removeClass('like');
+        $('.food-image').addClass('dislike')
         $(this).removeClass('dislike');
         $(this).addClass('like');
         $(this).css('border', '5px solid green');
+
       }
       else if ($(this).hasClass('like')){
         $(this).removeClass('like');
@@ -38,6 +49,8 @@ $(document).on('ready', function() {
         $(this).css('border', 'transparent');
       }
   };
+
+
 
 
   // $('#next-button').on('click', function(){

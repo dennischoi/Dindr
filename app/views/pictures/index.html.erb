@@ -15,7 +15,7 @@
         <tr>
           <td class="randomized-dish">
             <form class="food-picture-form" action="index.html" method="post">
-              <%= image_tag(@picture1.url, :class => "food-image dislike", :id => "pic-1" ) %>
+              <%= image_tag(@picture1.url, :class => "food-image dislike", :id => "pic-1", data: {picId: "#{@picture1.id}"} ) %>
             </form>
           </td>
           <td class="randomized-dish">
