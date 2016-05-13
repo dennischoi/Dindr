@@ -1,2 +1,35 @@
-<h1>Admins#new</h1>
-<p>Find me in app/views/admins/new.html.erb</p>
+<h1>Admin Upload Photos</h1>
+
+<%= form_for @picture do |f| %>
+
+  <div class="field">
+    <%=f.label :Photo %>
+    <%= f.file_field :content %>
+  </div>
+
+  <div class ="field">
+    <%=f.label :Category %>
+    <%=f.select :cuisine_id, options_for_select(@cuisines.collect {|cuisine| [ cuisine.name, cuisine.id ] }) %>
+  </div>
+
+  <!-- <div class ="field">
+    <#%=f.label :Tags %>
+    <#%=f.select :tag_id, options_for_select(@picture.tags.collect {|tag| [ tag.name, tag.id ] }) %>
+  </div> -->
+
+
+<!-- picture_tags -->
+<!-- doesnt except nested attributes for this  -->
+
+  <%= f.fields_for :tags, [Tag.new] do |tag_fields| %>
+    <div class="field">
+      <%= tag_fields.label :Tags %>
+      <%= tag_fields.select :name,[['Spicy',9],['Comfort',10],['Dessert',11],['Healthy',12],['Vegan',13],['Sweet',14],['Savoury',15],['Fried',12]] %>
+    </div>
+  <% end %>
+
+  <div class ="field">
+    <%=f.submit "Upload Picture" %>
+  </div>
+
+<% end %>
