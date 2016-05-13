@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
 
   def new_user
     akhmd = User.new
+    redirect_to url_for(:controller => UsersController, :action => :new)
   end
 
   def create_user
