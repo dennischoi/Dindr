@@ -1,6 +1,6 @@
-class AdminsController < ApplicationController
+class Admin::PicturesController < ApplicationController
 
-before_action :check_admin, :load_pictures
+before_action :check_admin
 
   def index
     @pictures = Picture.all
@@ -18,7 +18,7 @@ before_action :check_admin, :load_pictures
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to admins_path
+      redirect_to admin_pictures_path
 
     else
       render :new
@@ -37,10 +37,6 @@ before_action :check_admin, :load_pictures
 
   private
 
-  def load_pictures
-    @pictures = Picture.all
-  end
-
   def check_admin
     unless admin?
       redirect_to :homes
@@ -48,7 +44,7 @@ before_action :check_admin, :load_pictures
   end
 
   def picture_params
-    (params).require(:picture).permit(:content, :category_id, :tags_attributes [:tag_id])
+    (params).require(:picture).permit(:content, :cuisine_id, :tag_ids => [])
   end
 
 

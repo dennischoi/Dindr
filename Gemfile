@@ -29,7 +29,7 @@ gem 'neat'
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog-aws'
+gem "fog", "1.38.0"
 
 
 gem 'figaro'
