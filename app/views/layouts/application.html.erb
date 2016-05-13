@@ -21,7 +21,86 @@
           <li><%= link_to "Your Profile", user_path(current_user) %> <%= link_to "Logout", :logout, method: :delete%></li>
         <% end %>
       <% else %>
-        <li><%= link_to "Login", :login %> <%= link_to "Sign Up", new_user_path %></li>
+        <li>
+          <div class="modal">
+            <label for="modal-1">
+              <div class="modal-trigger">Sign In</div>
+            </label>
+            <input class="modal-state" id="modal-1" type="checkbox" />
+            <div class="modal-fade-screen">
+              <div class="modal-inner">
+                <div class="modal-close" for="modal-1"></div>
+                <h1>Sign in</h1>
+                <p class="modal-intro">Welcome Back</p>
+                <p class="modal-content">
+                <%= form_tag create_path, :method => :post do %>
+                <div class="field">
+                  <%= label_tag :email %>
+                  <%= text_field_tag :email %>
+                </div>
+                <div class="field">
+                  <%= label_tag :password %>
+                  <%= password_field_tag :password %>
+                </div>
+                <div class="action">
+                  <%= submit_tag :Submit %>
+                </div></li>
+                <li>
+                  <div class="modal">
+                    <label for="modal-2">
+                      <div class="modal-trigger">Sign Up</div>
+                    </label>
+                    <input class="modal-state" id="modal-2" type="checkbox" />
+                    <div class="modal-fade-screen">
+                      <div class="modal-inner">
+                        <div class="modal-close" for="modal-2"></div>
+                        <h1>Sign Up</h1>
+                        <p class="modal-intro">Welcome!</p>
+                        <p class="modal-content">
+                          <%= form_for User.new do |f| %>
+                            <div class="field">
+                              <%= f.label :first_name %>
+                              <%= f.text_field :first_name %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :last_name %>
+                              <%= f.text_field :last_name %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :user_name %>
+                              <%= f.text_field :user_name %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :email %>
+                              <%= f.text_field :email %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :address %>
+                              <%= f.text_field :address %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :phone_number %>
+                              <%= f.text_field :phone_number %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :password %>
+                              <%= f.password_field :password %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :password_confirmation %>
+                              <%= f.password_field :password_confirmation %>
+                            </div>
+                            <div class="action">
+                              <%= f.submit :Submit %>
+                            </div>
+                          <% end %>
+                  </li>
+
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
       <% end %>
     </ul>
   </nav>
