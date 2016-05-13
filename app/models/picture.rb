@@ -4,8 +4,8 @@ class Picture < ActiveRecord::Base
   has_many :votes
   has_many :users, through: :votes
 
-  validates :url, presence: true
-  accepts_nested_attributes_for :cuisine, :tags
+  # validates :url, presence: true
+  # accepts_nested_attributes_for :cuisine, :tags
 
   mount_uploader :content, ContentUploader
 

@@ -2,6 +2,6 @@
 
 <% @pictures.each do |picture| %>
 
- <img src="<%= picture.url %>"/>
+  <%= image_tag picture.content.thumb.url %>
 
 <% end %>

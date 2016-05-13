@@ -28,6 +28,9 @@ gem 'bourbon', '~> 5.0.0.beta.5'
 gem 'neat'
 
 gem 'carrierwave'
+gem 'mini_magick'
+gem "fog", "1.38.0"
+
 
 gem 'figaro'
 

@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   resources :pictures, except: %i(index)
 
 
-  resources :admins
+  namespace :admin do
+    resources :pictures
+  end
 
 
 
