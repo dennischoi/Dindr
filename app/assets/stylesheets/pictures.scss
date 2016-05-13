@@ -1,5 +1,11 @@
+@import "grid-settings";
+
 #game-page {
   min-height: 62.5rem;
+}
+
+#home-page {
+  padding-bottom: 5rem;
 }
 .page-title {
   text-align: center;
@@ -20,3 +26,150 @@
 .third-set {
   display: none;
 }
+
+.image-gradient-dynamic {
+  $image-gradient-color-top: red;
+  $transparency-top: 0.9;
+  $image-gradient-color-bottom: orange;
+  $transparency-bottom: 0.6;
+  $vertical-angle: 0deg;
+  $image-gradient-color-left: teal;
+  $transparency-left: 0.8;
+  $image-gradient-color-right: #5E0D0D;
+  $transparency-right: 0.8;
+  $horizontal-angle: 90deg;
+
+  line-height: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: auto;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .copy {
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    p {
+      color: white;
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+    }
+  }
+
+  .overlay {
+    @include position(absolute, 0);
+    background-color: transparentize(
+      $image-gradient-color-top,
+      $transparency-top
+    );
+    background-image: linear-gradient($vertical-angle,
+      transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom)
+    );
+    display: block;
+
+    &::after {
+      @include position(absolute, 0);
+      background-color: transparentize(
+        $image-gradient-color-left,
+        $transparency-right
+      );
+      background-image: linear-gradient($horizontal-angle,
+        transparentize($image-gradient-color-left, $transparency-left),
+        transparentize($image-gradient-color-right, $transparency-right)
+      );
+      content: "";
+      display: block;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// BOURBON BULLET LIST
+// ----------------------------------------------------------------------------
+#bullets {
+  @include outer-container;
+}
+.bullets {
+  $base-line-height: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $icon-bullet-size: 3.5em;
+
+  @include fill-parent;
+  @include row(table);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem 1rem;
+  margin-bottom: $base-line-height;
+  overflow: auto;
+  padding: 0;
+
+  .bullet {
+    @include span-columns(4);
+    // flex-basis: 20em;
+    // flex-grow: 1;
+  }
+
+  .bullet-icon {
+    background: $action-color;
+    border-radius: 50%;
+    float: left;
+    height: $icon-bullet-size;
+    padding: $icon-bullet-size / 4;
+    width: $icon-bullet-size;
+  }
+
+  .bullet-icon-1 {
+    background: $action-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($action-color, -50%);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($action-color, -140%);
+  }
+
+  .bullet-content {
+    margin-bottom: 2em;
+    margin-left: $icon-bullet-size * 1.4;
+  }
+
+  h2 {
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    display: inline-block;
+    font-size: $icon-bullet-size / 2.5;
+    margin: 0 0 ($icon-bullet-size / 6) 0;
+    padding-top: $icon-bullet-size / 7;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// ----------------------------------------------------------------------------
