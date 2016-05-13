@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
 
 
-  get 'votes/create'
-
-  get 'votes/update'
-
-  get 'votes/index'
-
-  get 'votes/new'
-
-  get 'votes/edit'
-
   root 'homes#index'
 
   get 'login' => 'sessions#new', :as => :login
@@ -20,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :homes, only: %i(index)
   #  will this work we shalll see
+  resources :votes
 
 
 

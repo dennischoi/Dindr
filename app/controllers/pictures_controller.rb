@@ -1,7 +1,8 @@
 class PicturesController < ApplicationController
+
   def index
     @pictures = Picture.all
-    
+
     array = @pictures.pluck(:id).shuffle.first(3)
 
     @picture1 = Picture.find_by(id: array[0])
