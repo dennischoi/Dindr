@@ -34,6 +34,8 @@ gem "fog", "1.38.0"
 
 gem 'figaro'
 
+gem 'randumb'
+
 # Use ActiveModeTuplol has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
