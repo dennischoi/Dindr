@@ -8,7 +8,7 @@
   </div>
 
   <div class ="field">
-    <%= f.label :Category %>
+    <%= f.label :Cuisines %>
     <%= f.select :cuisine_id, options_for_select(@cuisines.collect {|cuisine| [ cuisine.name, cuisine.id ] }) %>
   </div>
 
