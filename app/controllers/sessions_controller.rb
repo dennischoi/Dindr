@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    @user = login(params[:email], params[:password])
     if @user = login(params[:email], params[:password])
       redirect_back_or_to(:homes, notice: 'Login successful')
     else

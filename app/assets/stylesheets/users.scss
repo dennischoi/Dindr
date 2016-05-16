@@ -1,3 +1,26 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#profile-page {
+  padding-top: 5rem;
+  min-height: 47.5rem;
+  li {
+    list-style: none;
+  }
+}
+
+#new-user-page {
+  padding-top: 5rem;
+  min-height: 47.5rem;
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 1.6rem;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  input {
+    margin: 1.4rem 0;
+  }
+  .action {
+    margin: 1.7rem auto;
+  }
+}

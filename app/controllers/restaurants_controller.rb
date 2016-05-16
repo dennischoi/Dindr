@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   def search
     parameters = { term: params[:term], limit: 3 }
     @response = Yelp.client.search('Toronto', parameters)
+    client.search('San Francisco')
 
   end
 end
