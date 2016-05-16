@@ -5,3 +5,22 @@
     list-style: none;
   }
 }
+
+#new-user-page {
+  padding-top: 5rem;
+  min-height: 47.5rem;
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 1.6rem;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  input {
+    margin: 1.4rem 0;
+  }
+  .action {
+    margin: 1.7rem auto;
+  }
+}
