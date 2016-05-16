@@ -1,7 +1,9 @@
-<h1>Admins#index</h1>
+<div class="container" id="admin-pictures-page">
+  <h1>View All Pictures</h1>
 
-<% @pictures.each do |picture| %>
+  <% @pictures.each do |picture| %>
 
-  <%= image_tag picture.content.thumb.url %>
+    <%= image_tag picture.content.thumb.url %>
 
-<% end %>
+  <% end %>
+</div>
