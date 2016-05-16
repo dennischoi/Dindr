@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :homes, only: %i(index)
   #  will this work we shalll see
   resources :votes
-
+  resources :sessions
 
 
 
