@@ -1,1 +1,14 @@
 <h1>Restaurants#index</h1>
+
+<p>look at my list!!</p>
+
+  <% @restaurant_list.each do |name, url| %>
+    <ul>
+
+      <li>
+        <%= link_to "#{name}", url %>
+      </li>
+   </ul>
+  <% end %>
+
+  
