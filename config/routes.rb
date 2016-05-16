@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'restaurants/index'
-
-  get 'restaurants/show'
+  resources :restaurants, only: %i(index show)
 
   root 'homes#index'
 
