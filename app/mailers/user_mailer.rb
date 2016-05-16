@@ -21,6 +21,9 @@ class UserMailer < ApplicationMailer
     mail to: "to@example.org"
   end
 
-
+  def welcome_email(user)
+    @user = user
+    mail(to: @user.email, subject: "Welcome")
+  end
 
 end

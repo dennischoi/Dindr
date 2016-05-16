@@ -2,7 +2,7 @@ $(document).on('ready', function() {
   var turn = 0;
   var likedPics = []
 
-  $("#next-button").on('click', function() {
+  $(".food-image").on('click', function() {
     turn++
 
     if( turn === 1 ) {
@@ -35,6 +35,7 @@ $(document).on('ready', function() {
 
   function likeImage(ev) {
     console.log("Clicked")
+    debugger
       if ($(this).hasClass('dislike')){
         $('.food-image').css('border', 'transparent').removeClass('like');
         $('.food-image').addClass('dislike')
