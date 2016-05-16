@@ -1,50 +1,58 @@
-<nav id="dindr-navbar">
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="logo">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="Logo Image">
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
 
-  <div id="home-button">
-    <%= link_to image_tag('kirby.jpg'), root_url %>
-  </div>
+        <% if current_user %>
 
-  <% if current_user %>
-    <ul id="nav-login">
-      <% if current_user.admin? %>
-        <li><%= link_to "List of All Pictures", admin_pictures_path %></li>
-      <% end %>
-    <li><%= link_to "Your Profile", user_path(current_user) %> <%= link_to "Logout", :logout, method: :delete%></li>
-  <% else %>
-    <li>
-      <div class="modal">
-        <label for="modal-1">
-          <div class="modal-trigger">Sign In</div>
-        </label>
-        <input class="modal-state" id="modal-1" type="checkbox" />
-        <div class="modal-fade-screen">
-          <div class="modal-inner">
-            <div class="modal-close" for="modal-1"></div>
-            <h1>Sign in</h1>
-            <p class="modal-intro">Welcome Back!</p>
-            <p class="modal-content">
-
-            <%= form_tag create_path do %>
-              <div class="field">
-                <%= label_tag :email %>
-                <%= text_field_tag :email, params[:email] %>
-              </div>
-              <div class="field">
-                <%= label_tag :password %>
-                <%= password_field_tag :password %>
-              </div>
-              <div class="action">
-                <%= submit_tag :Submit %>
-              </div>
+        <li id="js-navigation-more" class="nav-link more">
+         <a>Signed in as: <%= current_user.email %></a>
+          <ul class="submenu">
+            <li> <%= link_to "My Profile", user_path(current_user) %> </li>
+            <li> <%= link_to "Log Out", :logout, method: :delete %> </li>
+            <% if current_user.admin? %>
+            <li><%= link_to "Show All Pictures", admin_pictures_path %></li>
+              </ul>
+            </li>
             <% end %>
-          </p>
-        </div>
-      </div>
-    </li>
+          </ul>
+        </li>
+        <% else %>
 
-    <li><%= link_to "Sign Up", new_user_path %></li>
+       <li class="nav-link"><%= link_to "Sign Up", new_user_path %></li>
+       <li class="nav-link modal modal-trigger">
+         <label for="modal-1"> Sign In </label>
+           <input class="modal-state" id="modal-1" type="checkbox" />
+             <div class="modal-fade-screen">
+               <div class="modal-inner">
+                 <div class="modal-close" for="modal-1"></div>
+                   <h1>Sign in</h1>
+                   <p class="modal-intro">Welcome Back!</p>
+                   <p class="modal-content">
 
-      </div>
-    </ul>
-  <% end %>
-</nav>
+                   <%= form_tag create_path do %>
+                     <div class="field">
+                       <%= label_tag :email %>
+                       <%= text_field_tag :email, params[:email] %>
+                     </div>
+                     <div class="field">
+                       <%= label_tag :password %>
+                       <%= password_field_tag :password %>
+                     </div>
+                     <div class="action">
+                       <%= submit_tag :Submit %>
+                     </div>
+                   <% end %>
+               </p>
+             </div>
+           </div>
+       </li>
+      </ul>
+      <% end %>
+    </nav>
+  </div>
+</header>
