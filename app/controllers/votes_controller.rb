@@ -6,6 +6,13 @@ class VotesController < ApplicationController
   end
 
   def create
+    @vote = Vote.new(vote_params)
+
+    if @vote.save
+
+    else
+      flash.now[:alert] =  "no vote sent"
+    end
   end
 
   def edit
@@ -20,4 +27,11 @@ class VotesController < ApplicationController
   #   (We don't need to get any info back)
   #   Only send this request when use clicks on NEXT'
   end
+
+  private
+
+  def vote_params
+    params.permit(:user_id, :picture_id, :like)
+  end
+
 end
