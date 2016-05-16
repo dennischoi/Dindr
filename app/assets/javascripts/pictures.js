@@ -18,6 +18,10 @@ $(document).on('ready page:load', function() {
   //     }
   // };
 
+  $('body').on('mouseover mouseleave', '.food-image', function(ev){
+    $(ev.target).toggleClass('on-hover')
+  })
+
   function changeImage(ev){
     ev.stopPropagation();
     $.ajax({
@@ -25,10 +29,7 @@ $(document).on('ready page:load', function() {
       method: 'get',
       dataType: 'script'
     })
-
-
-
-  }
+  };
 
 
   function voteImage(ev){
@@ -50,9 +51,6 @@ $(document).on('ready page:load', function() {
       success: function(data){
       }
     })
-
-
-
   }
 
 

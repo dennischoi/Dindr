@@ -66,6 +66,13 @@ Cuisine.create({
   name: 'Mediterranean'
   })
 
+Cuisine.create({
+  name: 'Middle Eastern'
+  })
+
+Cuisine.create({
+  name: 'Caribbean'
+  })
 
 # Tags (8)
 
@@ -99,6 +106,42 @@ savoury = Tag.create({
 
 fried = Tag.create({
   name: 'Fried'
+  })
+
+burgers = Tag.create({
+  name: 'Burgers'
+  })
+
+sushi = Tag.create({
+  name: 'Sushi'
+  })
+
+tacos = Tag.create({
+  name: 'Tacos'
+  })
+
+burritos = Tag.create({
+  name: 'Burritos'
+  })
+
+cheap_eats = Tag.create({
+  name: 'Cheap Eats'
+  })
+
+wraps = Tag.create({
+  name: 'Wraps'
+  })
+
+salads = Tag.create({
+  name: 'Salads'
+  })
+
+tapas = Tag.create({
+  name: 'Tapas'
+  })
+
+soup = Tag.create({
+  name: 'Soup'
   })
 
 
