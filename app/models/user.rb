@@ -34,6 +34,24 @@ class User < ActiveRecord::Base
     cat_hash.sort_by {|k,v| v}.reverse.take(3)
   end
 
+  def top_tags
+    tag_arr = []
+    pics = self.pictures
 
+
+    pics.each do |pic|
+      tag = pic.tag
+      tag_arr << tag.name
+    end
+    tag_arr
+
+    tag_hash = Hash.new(0)
+
+    tag_arr.each do |key|
+      tag_hash[key] += 1
+    end
+
+    tag_hash.sort_by {|k,v| v}.reverse.take(3)
+  end
 
 end
