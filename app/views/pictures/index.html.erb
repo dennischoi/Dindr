@@ -5,30 +5,20 @@
     <p>You hungry? Let's play!</p>
   </div>
 
-  <div id="next-pics-button" >
-    <input type="button" id="next-button" value="Keep Playing!">
+  <div id="reset-pics-button" >
+    <input type="button" id="reset-button" value="Reset!">
   </div>
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
     <%= render 'pictures' %>
   </div>
 
-  <div class="top categories">
-    <h3>Top Categories</h3>
-    <div class="cats">
-      <% current_user.top_cats.each do |cat| %>
-          <li>
-            <%= cat[0] %>
-          </li>
-      <% end %>
-    </div>
+  <div class="top-cuisines">
+    <%= render 'top3_cuisines' %>
   </div>
 
-  <div class="top categories">
-    <h3>Top Tags</h3>
-    <div class="tags">
-
-    </div>
+  <div class="top-tags">
+    <%= render 'top3_tags' %>
   </div>
 
 <!-- PROGRESS BAR -->
