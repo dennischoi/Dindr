@@ -28,6 +28,11 @@ class VotesController < ApplicationController
   #   Only send this request when use clicks on NEXT'
   end
 
+  def destroy
+    current_user.votes.destroy_all
+    render :controller => 'pictures', :action => 'index', :id => current_user.id
+  end
+
   private
 
   def vote_params
