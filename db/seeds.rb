@@ -24,7 +24,7 @@ User.create({
   admin: true
   })
 
-# Cuisines (10)
+# Cuisines (11)
 
 Cuisine.create({
   name: 'Mexican'
@@ -74,7 +74,11 @@ Cuisine.create({
   name: 'Caribbean'
   })
 
-# Tags (8)
+Cuisine.create({
+  name: 'Steakhouse'
+  })
+
+# Tags (9)
 
 spicy = Tag.create({
   name: 'Spicy'
@@ -144,6 +148,10 @@ soup = Tag.create({
   name: 'Soup'
   })
 
+seafood = Tag.create({
+  name: 'Seafood'
+})
+
 
 #Pictures
 pic1 = Picture.create({
@@ -191,12 +199,6 @@ pic6 = Picture.create({
 
 pic6.tags<< spicy
 pic6.tags<< fried
-
-Vote.create({
-  picture_id: Picture.find_by(url: 'http://67.media.tumblr.com/2b2979d4d97d22236f4331f0eef07f45/tumblr_o6ywbmw2kt1vu96cko1_1280.jpg').id,
-  user_id: User.find_by(first_name: 'Mark').id,
-  like: true
-  })
 
 #Pic Tag Model
 #
