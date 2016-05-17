@@ -13,7 +13,7 @@
     <%= render 'pictures' %>
   </div>
 
-  <div class="top categories">
+  <div class="top-categories">
     <h3>Top Categories</h3>
     <div class="cats">
       <% current_user.top_cats.each do |cat| %>
@@ -24,8 +24,7 @@
     </div>
   </div>
 
-  <div class="top tags">
-    <h3>Top Tags</h3>
+  <div class="top-tags">
     <%= render 'top3_tags' %>
   </div>
 
