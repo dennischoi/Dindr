@@ -1,8 +1,11 @@
 $(document).on('ready page:load', function() {
 
+  var turn = 0
+  var skip = 0
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
     // Potential transition for when a picture is liked/Clicked
+    turn++;
     $(ev.target).toggleClass('on-like')
     voteImage(ev)
     updateCuisines(ev)
@@ -10,27 +13,41 @@ $(document).on('ready page:load', function() {
     changeImage(ev)
   });
 
+
+  $('#skip-button').on('click', function(ev){
+    skip++
+    changeImage(ev)
+    if (skip == 3){
+      $(this).css('opacity', '0.4').off('click')
+      alert("You have used your 3 skips!")
+    }
+  });
+
+
   $('#reset-button').on('click', function(ev){
+    turn = 0;
+    skip = 0;
     $.ajax({
       url: '/votes',
       method: 'DELETE',
       dataType: 'script'
     });
-    updateCuisines(ev)
-    updateTags(ev)
+
+    $('#skip-button').css('opacity', '1');
+    $('#skip-button').on('click', function(ev){
+      skip++
+      if (skip == 3){
+        $(this).css('opacity', '0.4').off('click')
+        alert("You have used your 3 skips!")
+      }
+    });
+    updateCuisines(ev);
+    updateTags(ev);
     changeImage(ev)
   });
 
-  // function likeImage(ev) {
-  //   console.log("Clicked")
-  //     if ($(this).hasClass('dislike')){
-  //       $('.food-image').addClass('dislike')
-  //       $(this).removeClass('dislike');
-  //       $(this).addClass('like');
-  //       $('.food-image').css('border', 'transparent').removeClass('like');
-  //       $(this).css('border', '5px solid green');
-  //     }
-  // };
+
+
 
   $('body').on('mouseover mouseleave', '.food-image', function(ev){
     $(ev.target).toggleClass('on-hover')
