@@ -28,6 +28,10 @@ class VotesController < ApplicationController
   #   Only send this request when use clicks on NEXT'
   end
 
+  def destroy
+    current_user.votes.delete_all
+  end
+
   private
 
   def vote_params

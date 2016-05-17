@@ -10,6 +10,14 @@ $(document).on('ready page:load', function() {
     changeImage(ev)
   });
 
+  $('#reset-button').on('click', function(ev){
+    $.ajax({
+      url: '/game',
+      method: 'DELETE',
+      dataType: 'script'
+    });
+  });
+
   // function likeImage(ev) {
   //   console.log("Clicked")
   //     if ($(this).hasClass('dislike')){
