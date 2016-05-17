@@ -13,6 +13,24 @@
     <%= render 'pictures' %>
   </div>
 
+  <div class="top categories">
+    <h3>Top Categories</h3>
+    <div class="cats">
+      <% current_user.top_cats.each do |cat| %>
+          <li>
+            <%= cat[0] %>
+          </li>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="top categories">
+    <h3>Top Tags</h3>
+    <div class="tags">
+
+    </div>
+  </div>
+
 <!-- PROGRESS BAR -->
 
 <div class="progress-bar">
