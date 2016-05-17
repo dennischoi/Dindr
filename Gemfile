@@ -53,6 +53,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -63,7 +64,6 @@ group :development do
   gem 'spring'
   gem "letter_opener"
 
-  gem 'sqlite3'
 
 end
 
