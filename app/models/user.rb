@@ -40,8 +40,10 @@ class User < ActiveRecord::Base
 
 
     pics.each do |pic|
-      tag = pic.tag
-      tag_arr << tag.name
+      tag = pic.tags
+      tag.each do |i|
+        tag_arr << i.name
+      end
     end
     tag_arr
 

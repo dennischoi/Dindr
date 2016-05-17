@@ -2,6 +2,8 @@ $(document).on('ready page:load', function() {
 
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
+    // Potential transition for when a picture is liked/Clicked
+    $(ev.target).toggleClass('on-like')
     voteImage(ev)
     changeImage(ev)
   });

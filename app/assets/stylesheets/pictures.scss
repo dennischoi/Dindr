@@ -20,12 +20,7 @@
   @include fill-parent;
   margin: 10rem 0;
 }
-.second-set {
-  display: none;
-}
-.third-set {
-  display: none;
-}
+
 
 .image-gradient-dynamic {
   $image-gradient-color-top: red;
@@ -170,9 +165,7 @@
     line-height: $base-line-height;
   }
 
-  img {
-    max-width: 100%;
-  }
+
 }
 
 // ----------------------------------------------------------------------------
@@ -269,12 +262,21 @@
   }
 }
 
+.food-image {
 
+  transition: all 0.25s cubic-bezier(.63,.21,.2,.98);
+  z-index: -1;
+}
 .on-hover{
-  border: 5px solid green;
+  border: 10px solid green;
+  max-width: 125%;
+  max-height: 125%;
+  z-index: 999;
+  top: 40%;
 }
 
 
-.on-click {
+.on-like {
 
+  left: 110%
 }
