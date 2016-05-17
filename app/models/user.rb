@@ -8,8 +8,32 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
 
-  has_many :pictures
+
+  has_many :votes
+  has_many :pictures, through: :votes
   has_many :tags, through: :pictures
   has_many :cuisines, through: :pictures
-  has_many :pictures_votes, through: :votes, class_name: "Pictures"
+
+  def top_cats
+    category_arr = []
+    pics = self.pictures
+
+
+    pics.each do |pic|
+      cat = pic.cuisine
+      category_arr << cat.name
+    end
+    category_arr
+
+    cat_hash = Hash.new(0)
+
+    category_arr.each do |key|
+      cat_hash[key] += 1
+    end
+
+    cat_hash.sort_by {|k,v| v}.reverse.take(3)
+  end
+
+
+
 end
