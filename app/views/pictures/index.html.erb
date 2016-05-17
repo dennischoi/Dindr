@@ -9,6 +9,14 @@
     <input type="button" id="reset-button" value="Start Over!">
   </div>
 
+  <div id="skip-pics-button" >
+    <input type="button" id="skip-button" value="Skip!">
+  </div>
+
+  <div id="agg-pics-button" >
+    <input type="button" id="agg-button" value="Finished!">
+  </div>
+
   <div class="pic-sets" data-user="<%= current_user.id %>">
     <% if @picture1 == true && @picture2 == true && @picture3 == true %>
     <%= render 'pictures' %>
@@ -21,11 +29,11 @@
   </div>
 
   <div class="top-cuisines">
-    <%= render 'top3_cuisines' %>
+    <%= render 'cuisines/top3_cuisines' %>
   </div>
 
   <div class="top-tags">
-    <%= render 'top3_tags' %>
+    <%= render 'tags/top3_tags' %>
   </div>
 
 <!-- PROGRESS BAR -->

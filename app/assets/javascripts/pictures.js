@@ -1,36 +1,61 @@
 $(document).on('ready page:load', function() {
 
+  var turn = 0
+  var skip = 0
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
     // Potential transition for when a picture is liked/Clicked
-    $(ev.target).toggleClass('on-like')
-    voteImage(ev)
-    updateCuisines(ev)
-    updateTags(ev)
-    changeImage(ev)
+      turn++;
+      $(ev.target).toggleClass('on-like')
+      voteImage(ev)
+      changeImage(ev)
+      console.log(turn)
+
+      if (turn == 2){
+        $('#agg-pics-button').addClass('enough-votes').on('click', function(){
+          updateCuisines(ev)
+          updateTags(ev)
+        })
+      }
+  });
+
+
+
+  $('#skip-button').on('click', function(event){
+    console.log("WTF")
+    skip++
+    changeImage(event)
+    if (skip == 3){
+      $(this).css('opacity', '0.4').off('click')
+      alert("You have used your 3 skips!")
+    }
   });
 
   $('#reset-button').on('click', function(ev){
+    turn = 0;
+    skip = 0;
     $.ajax({
       url: '/votes',
       method: 'DELETE',
       dataType: 'script'
     });
-    updateCuisines(ev)
-    updateTags(ev)
+
+    $('#skip-button').css('opacity', '1');
+    $('#skip-button').on('click', function(ev){
+      skip++
+      if (skip == 3){
+        $(this).css('opacity', '0.4').off('click')
+        alert("You have used your 3 skips!")
+      }
+    });
+    $('#agg-button').removeClass('enough-votes')
+    updateCuisines(ev);
+    updateTags(ev);
     changeImage(ev)
   });
 
-  // function likeImage(ev) {
-  //   console.log("Clicked")
-  //     if ($(this).hasClass('dislike')){
-  //       $('.food-image').addClass('dislike')
-  //       $(this).removeClass('dislike');
-  //       $(this).addClass('like');
-  //       $('.food-image').css('border', 'transparent').removeClass('like');
-  //       $(this).css('border', '5px solid green');
-  //     }
-  // };
+
+
 
   $('body').on('mouseover mouseleave', '.food-image', function(ev){
     $(ev.target).toggleClass('on-hover')
@@ -49,7 +74,7 @@ $(document).on('ready page:load', function() {
   function updateCuisines(ev){
     ev.stopPropagation();
     $.ajax({
-      url: '/game',
+      url: '/cuisines',
       method: 'GET',
       dataType: 'script'
     });
@@ -58,7 +83,7 @@ $(document).on('ready page:load', function() {
   function updateTags(ev){
     ev.stopPropagation();
     $.ajax({
-      url: '/game',
+      url: '/tags',
       method: 'GET',
       dataType: 'script'
     });
@@ -77,16 +102,14 @@ $(document).on('ready page:load', function() {
     $.ajax({
       url: '/votes',
       method: 'post',
-      dataType: 'html',
+      dataType: 'script',
       data: {
         user_id: userId,
         picture_id: likedPic,
         like: true
       },
-      success: function(data){
-      }
-    })
-  }
+    });
+  };
 
 
 });

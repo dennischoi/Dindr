@@ -1,5 +1,12 @@
 class CuisinesController < ApplicationController
   def index
+    @cuisines = Cuisine.all
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
   end
 
   def show
