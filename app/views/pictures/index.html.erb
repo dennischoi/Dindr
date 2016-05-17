@@ -8,9 +8,13 @@
   <div id="reset-pics-button" >
     <input type="button" id="reset-button" value="Reset!">
   </div>
-  
+
   <div id="skip-pics-button" >
     <input type="button" id="skip-button" value="Skip!">
+  </div>
+
+  <div id="agg-pics-button" >
+    <input type="button" id="agg-button" value="Finished!">
   </div>
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
@@ -18,11 +22,11 @@
   </div>
 
   <div class="top-cuisines">
-    <%= render 'top3_cuisines' %>
+    <%= render 'cuisines/top3_cuisines' %>
   </div>
 
   <div class="top-tags">
-    <%= render 'top3_tags' %>
+    <%= render 'tags/top3_tags' %>
   </div>
 
 <!-- PROGRESS BAR -->

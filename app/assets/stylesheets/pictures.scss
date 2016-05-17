@@ -284,6 +284,13 @@
 
 
 .on-like {
-
   left: 110%
+}
+
+#agg-pics-button {
+  display: none;
+
+  &.enough-votes{
+    display: block;
+  }
 }
