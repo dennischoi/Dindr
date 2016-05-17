@@ -5,6 +5,7 @@ $(document).on('ready page:load', function() {
     // Potential transition for when a picture is liked/Clicked
     $(ev.target).toggleClass('on-like')
     voteImage(ev)
+    updateCuisines(ev)
     updateTags(ev)
     changeImage(ev)
   });
@@ -34,14 +35,24 @@ $(document).on('ready page:load', function() {
 
   };
 
+  function updateCuisines(ev){
+    ev.stopPropagation();
+    $.ajax({
+      url: '/game',
+      method: 'GET',
+      dataType: 'script'
+    });
+  };
+
   function updateTags(ev){
     ev.stopPropagation();
     $.ajax({
       url: '/game',
-      method: 'get',
+      method: 'GET',
       dataType: 'script'
     });
   };
+
 
 
   function voteImage(ev){
