@@ -9,10 +9,5 @@ class Picture < ActiveRecord::Base
 
   mount_uploader :content, ContentUploader
 
-  array = []
-
-  def self.randomizer
-
-  end
 
 end

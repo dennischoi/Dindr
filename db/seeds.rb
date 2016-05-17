@@ -24,7 +24,7 @@ User.create({
   admin: true
   })
 
-# Cuisines (10)
+# Cuisines (11)
 
 Cuisine.create({
   name: 'Mexican'
@@ -74,7 +74,11 @@ Cuisine.create({
   name: 'Caribbean'
   })
 
-# Tags (8)
+Cuisine.create({
+  name: 'Steakhouse'
+  })
+
+# Tags (9)
 
 spicy = Tag.create({
   name: 'Spicy'
@@ -143,6 +147,10 @@ tapas = Tag.create({
 soup = Tag.create({
   name: 'Soup'
   })
+
+seafood = Tag.create({
+  name: 'Seafood'
+})
 
 
 #Pictures

@@ -38,6 +38,7 @@ $(document).on('ready page:load', function() {
     var likedPic = $(ev.target).data('picid')
     var userId = $('.pic-sets').data('user')
     console.log(userId)
+    console.log(likedPic)
 
     $.ajax({
       url: '/votes',
