@@ -10,6 +10,17 @@ $(document).on('ready page:load', function() {
     changeImage(ev)
   });
 
+  $('#reset-button').on('click', function(ev){
+    $.ajax({
+      url: '/votes',
+      method: 'DELETE',
+      dataType: 'script'
+    });
+    updateCuisines(ev)
+    updateTags(ev)
+    changeImage(ev)
+  });
+
   // function likeImage(ev) {
   //   console.log("Clicked")
   //     if ($(this).hasClass('dislike')){
