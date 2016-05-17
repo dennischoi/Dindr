@@ -29,7 +29,8 @@ class VotesController < ApplicationController
   end
 
   def destroy
-    current_user.votes.delete_all
+    current_user.votes.destroy_all
+    render :controller => 'pictures', :action => 'index', :id => current_user.id
   end
 
   private

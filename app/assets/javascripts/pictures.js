@@ -12,10 +12,13 @@ $(document).on('ready page:load', function() {
 
   $('#reset-button').on('click', function(ev){
     $.ajax({
-      url: '/game',
+      url: '/votes',
       method: 'DELETE',
       dataType: 'script'
     });
+    updateCuisines(ev)
+    updateTags(ev)
+    changeImage(ev)
   });
 
   // function likeImage(ev) {

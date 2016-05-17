@@ -11,7 +11,10 @@ Rails.application.routes.draw do
 
   resources :homes, only: %i(index)
   #  will this work we shalll see
-  resources :votes
+  resources :votes, except: %i(destroy)
+
+    delete 'votes' => 'votes#destroy'
+
   resources :cuisines, except: %i(destroy edit update)
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
