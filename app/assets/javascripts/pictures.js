@@ -5,6 +5,7 @@ $(document).on('ready page:load', function() {
     // Potential transition for when a picture is liked/Clicked
     $(ev.target).toggleClass('on-like')
     voteImage(ev)
+    updateTags(ev)
     changeImage(ev)
   });
 
@@ -31,6 +32,15 @@ $(document).on('ready page:load', function() {
       dataType: 'script'
     })
 
+  };
+
+  function updateTags(ev){
+    ev.stopPropagation();
+    $.ajax({
+      url: '/game',
+      method: 'get',
+      dataType: 'script'
+    });
   };
 
 

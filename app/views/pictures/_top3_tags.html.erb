@@ -1,0 +1,7 @@
+<div class="tags">
+  <% current_user.top_tags.each do |tag| %>
+      <li>
+        <%= tag[0] %>
+      </li>
+  <% end %>
+</div>
