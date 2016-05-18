@@ -20,7 +20,9 @@
   </div>
 
   <div id="agg-pics-button" >
-    <input type="button" id="agg-button" value="Finished!">
+    <!-- <input type="button" id="agg-button" value="Finished!"> -->
+    <%= button_to "See Results", user_cuisines_path, :method => "get" %>
+
   </div>
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
@@ -28,13 +30,7 @@
     <!-- This will have to be changed into an AJAX function -->
   </div>
 
-  <div class="top-cuisines">
-    <%= render 'cuisines/top3_cuisines' %>
-  </div>
 
-  <div class="top-tags">
-    <%= render 'tags/top3_tags' %>
-  </div>
 
 
 </div>
