@@ -13,19 +13,19 @@
     <input type="button" id="skip-button" value="Skip!">
   </div>
 
+  <!-- PROGRESS BAR -->
+
+  <div class="progress-bar">
+    <span class="meter"></span>
+  </div>
+
   <div id="agg-pics-button" >
     <input type="button" id="agg-button" value="Finished!">
   </div>
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
-    <% if @picture1 == true && @picture2 == true && @picture3 == true %>
     <%= render 'pictures' %>
-    <% else %>
     <!-- This will have to be changed into an AJAX function -->
-    <p>
-      No more pictures to render here
-    </p>
-    <% end %>
   </div>
 
   <div class="top-cuisines">
@@ -36,10 +36,5 @@
     <%= render 'tags/top3_tags' %>
   </div>
 
-<!-- PROGRESS BAR -->
-
-<div class="progress-bar">
-  <span class="meter" style="width: 60%"></span>
-</div>
 
 </div>

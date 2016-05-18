@@ -10,11 +10,13 @@ $(document).on('ready page:load', function() {
       voteImage(ev)
       changeImage(ev)
       console.log(turn)
+      $('span.meter').css('width', turn/3*100 + "%")
 
-      if (turn == 2){
+      if (turn == 3){
         $('#agg-pics-button').addClass('enough-votes').on('click', function(){
           updateCuisines(ev)
           updateTags(ev)
+          $('span.meter').css('display', 'none')
         })
       }
   });
@@ -48,12 +50,12 @@ $(document).on('ready page:load', function() {
         alert("You have used your 3 skips!")
       }
     });
-    $('#agg-button').removeClass('enough-votes')
+    $('#agg-pics-button').removeClass('enough-votes');
+    $('span.meter').css('display', 'block', 'width', '0%');
     updateCuisines(ev);
     updateTags(ev);
-    changeImage(ev)
+    changeImage(ev);
   });
-
 
 
 
