@@ -210,10 +210,9 @@
     box-sizing: border-box;
     display: block;
     height: 100%;
-    width: 60%;
+    width: 1%;
   }
 }
-
 @-webkit-keyframes progress {
   0% {
     background-position: 0 0;
@@ -259,6 +258,7 @@
   }
 }
 
+
 .pic-sets{
   position: relative;
 }
@@ -278,9 +278,16 @@
 
   }
 }
-
-
 .on-like {
-
   left: 110%
+}
+
+
+
+#agg-pics-button {
+  display: none;
+
+  &.enough-votes{
+    display: block;
+  }
 }

@@ -9,7 +9,7 @@ class VotesController < ApplicationController
     @vote = Vote.new(vote_params)
 
     if @vote.save
-
+      render nothing: :true
     else
       flash.now[:alert] =  "no vote sent"
     end

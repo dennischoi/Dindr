@@ -9,5 +9,12 @@ class TagsController < ApplicationController
   end
 
   def index
+    @tags = Tag.all
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
+  
 end

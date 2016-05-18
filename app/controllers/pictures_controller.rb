@@ -9,6 +9,7 @@ class PicturesController < ApplicationController
     @picture2 = Picture.find_by(id: array[1])
     @picture3 = Picture.find_by(id: array[2])
 
+
     respond_to do |format|
       format.html
       format.js
