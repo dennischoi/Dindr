@@ -51,7 +51,7 @@ $(document).on('ready page:load', function() {
       }
     });
     $('#agg-pics-button').removeClass('enough-votes');
-    $('span.meter').css('display', 'block', 'width', '0%');
+    $('span.meter').css('display', 'block', 'width', '1%');
     updateCuisines(ev);
     updateTags(ev);
     changeImage(ev);
