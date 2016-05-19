@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
     Yelp.client.search_by_coordinates(@coordinates, search_options).businesses
 
     @restaurant_list = []
-    restaurants.each {|restaurant| @restaurant_list << [restaurant.name, restaurant.url, restaurant.location.coordinate.latitude, restaurant.location.coordinate.longitude, ]}
+    restaurants.each {|restaurant| @restaurant_list << [restaurant.name, restaurant.url, restaurant.location.coordinate.latitude, restaurant.location.coordinate.longitude, restaurant.rating, restaurant.location.display_address]}
 
     if request.xhr?
       render 'index', layout: false
