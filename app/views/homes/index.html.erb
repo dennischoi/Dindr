@@ -7,12 +7,17 @@
 </div>
 
 <div class="container" id="home-page">
-
   <div id="homepage-button">
     <form class="button" action="/game" method="get">
-      <input type="submit" value="Click Here to Dindr" >
-
+      <% if current_user %>
+        <input type="submit" value="Click Here to Dindr" >
+      <% else %>
+        <div class="modal modal-trigger">
+          <button id="open-sign-in" class="button">Click Here to Dindr</button>
+        </div>
+      <% end %>
     </form>
+
   </div>
 
 <!-- LIST BULLETS -->
