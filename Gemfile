@@ -38,6 +38,8 @@ gem 'randumb'
 
 gem 'geocoder'
 
+gem 'rails_12factor'
+
 
 # Use ActiveModeTuplol has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
