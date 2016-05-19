@@ -17,7 +17,7 @@ $(document).on('ready page:load', function() {
         // .on('click', function(){
         //   updateCuisines(ev)
         //   updateTags(ev)
-        
+
       }
   });
 
@@ -29,8 +29,9 @@ $(document).on('ready page:load', function() {
       skip++
       changeImage(ev)
       if (skip == 3){
+        changeImage(ev)
         $(this).css('opacity', '0.4').off('click')
-        alert("You have used your 2 skips!")
+        alert("You have used your 3 skips!")
       };
   }
 
