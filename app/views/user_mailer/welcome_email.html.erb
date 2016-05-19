@@ -1,10 +1,27 @@
 <h1>Welcome to Dindr</h1>
 
-<p>
-  Hey <%= @user.first_name %>, you're the best! #Ariane
+<p>Hey <%= @user.first_name %>, <br />
+  Thanks for signing up, we love you already!
 </p>
 
 <p>
-  You should go checkout <%= link_to "The GAME", homes_url(host: 'http://localhost:3000/') %>!
-  <!-- host: name should be changed to our own website url -->
+  We promise to always match you with your cravings.<br />
+  Now you should go checkout <%= link_to "THE GAME", 'https://arcane-ocean-79595.herokuapp.com/'%>!
+</p>
+
+<p>
+Happy Dindring!
+<br />
+Dindr Team
+</p>
+
+<p>
+Oh and by the way, the whole Dindr Team is looking for new challenges (jobs, tbh). <br />
+Take a look at our Bitmaker profiles!<br />
+
+<%= link_to "Ariane", 'https://profiles.bitmaker.co/' %><br />
+<%= link_to "Dennis", 'https://profiles.bitmaker.co/' %><br />
+<%= link_to "Hou-Tai", 'https://profiles.bitmaker.co/' %><br />
+<%= link_to "Kimberly", 'https://profiles.bitmaker.co/' %><br />
+<%= link_to "Mike", 'https://profiles.bitmaker.co/' %><br />
 </p>
