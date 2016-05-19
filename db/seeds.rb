@@ -24,7 +24,7 @@ User.create({
   admin: true
   })
 
-# Cuisines (11)
+# Cuisines (13)
 
 Cuisine.create({
   name: 'Mexican'
@@ -78,7 +78,7 @@ Cuisine.create({
   name: 'Steakhouse'
   })
 
-# Tags (9)
+# Tags (18)
 
 spicy = Tag.create({
   name: 'Spicy'
@@ -152,32 +152,41 @@ seafood = Tag.create({
   name: 'Seafood'
 })
 
+pizza = Tag.create({
+  name: 'Pizza'
+})
+
+pasta = Tag.create({
+  name: 'Pasta'
+})
+
 
 #Pictures
 pic1 = Picture.create({
- url: 'http://67.media.tumblr.com/313372d1546e17024d705ad659af4fb9/tumblr_o6z57vzs161vu96cko1_540.png',
+ remote_content_url: 'http://67.media.tumblr.com/313372d1546e17024d705ad659af4fb9/tumblr_o6z57vzs161vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Mexican').id,
  })
 
 pic1.tags<< spicy
 
 pic2 = Picture.create({
- url: 'http://66.media.tumblr.com/49f042169878563220868da8a8310d16/tumblr_o6z5v2Fehr1vu96cko1_1280.png',
+ remote_content_url: 'http://66.media.tumblr.com/49f042169878563220868da8a8310d16/tumblr_o6z5v2Fehr1vu96cko1_1280.png',
  cuisine_id: Cuisine.find_by(name: 'Japanese').id,
  })
 
 pic2.tags<< healthy
 
 pic3 = Picture.create({
- url: 'http://66.media.tumblr.com/dce796f731a59d6793e3d9a297510cf5/tumblr_o6z5umdmAo1vu96cko1_540.png',
+ remote_content_url: 'http://66.media.tumblr.com/dce796f731a59d6793e3d9a297510cf5/tumblr_o6z5umdmAo1vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Italian').id,
  })
 
 pic3.tags<< comfort
 pic3.tags<< savoury
+pic3.tags<< pizza
 
 pic4 = Picture.create({
- url: 'http://66.media.tumblr.com/e06e478dbef61cafe6fc1fb6181aab71/tumblr_o6z5u5SheS1vu96cko1_540.png',
+ remote_content_url: 'http://66.media.tumblr.com/e06e478dbef61cafe6fc1fb6181aab71/tumblr_o6z5u5SheS1vu96cko1_540.png',
  cuisine_id: Cuisine.find_by(name: 'Vegetarian').id,
  })
 
@@ -185,7 +194,7 @@ pic4.tags<< healthy
 pic4.tags<< vegan
 
 pic5 = Picture.create({
- url: 'http://66.media.tumblr.com/d81cc03b2d461ed2665f1903b2a646ec/tumblr_o6ywc8MNPD1vu96cko1_1280.jpg',
+ remote_content_url: 'http://66.media.tumblr.com/d81cc03b2d461ed2665f1903b2a646ec/tumblr_o6ywc8MNPD1vu96cko1_1280.jpg',
  cuisine_id: Cuisine.find_by(name: 'Thai').id,
  })
 
@@ -193,12 +202,226 @@ pic5.tags<< spicy
 pic5.tags<< savoury
 
 pic6 = Picture.create({
- url: 'http://67.media.tumblr.com/2b2979d4d97d22236f4331f0eef07f45/tumblr_o6ywbmw2kt1vu96cko1_1280.jpg',
+ remote_content_url: 'http://67.media.tumblr.com/2b2979d4d97d22236f4331f0eef07f45/tumblr_o6ywbmw2kt1vu96cko1_1280.jpg',
  cuisine_id: Cuisine.find_by(name: 'Sandwiches').id,
  })
 
 pic6.tags<< spicy
 pic6.tags<< fried
+
+# testing seeding new pictures
+
+pic7 = Picture.create({
+ remote_content_url: 'http://65.media.tumblr.com/06f6bc7aa949dca83196b308bc958d6c/tumblr_o6ywby7ADQ1vu96cko1_1280.jpg',
+ cuisine_id: Cuisine.find_by(name: 'Mexican').id,
+ })
+
+pic7.tags<< spicy
+pic7.tags<< burritos
+
+
+pic8 = Picture.create({
+ remote_content_url: 'http://67.media.tumblr.com/a11aec87be80bf624fec6268014dba89/tumblr_o6ywbaGi1r1vu96cko1_1280.jpg',
+ cuisine_id: Cuisine.find_by(name: 'American').id,
+ })
+
+ pic8.tags<< burgers
+ pic8.tags<< cheap_eats
+
+# breakpoint
+
+pic9 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/2c90fced56f3aa1e35288f2277dd9dc5/tumblr_o7g3zmFK791vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Thai').id,
+  })
+
+pic9.tags<< soup
+pic9.tags<< spicy
+
+pic10 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/a9e394f1eb6b0ec8502ecbc97b720a97/tumblr_o7g3zdkDTS1vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Japanese').id,
+  })
+
+pic10.tags<< salads
+pic10.tags<< healthy
+
+pic11 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/54001de892896945a25cf30b5652c580/tumblr_o7g3z3fEzy1vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Italian').id,
+  })
+
+pic11.tags<< pasta
+pic11.tags<< comfort
+
+pic12 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/54001de892896945a25cf30b5652c580/tumblr_o7g3z3fEzy1vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Italian').id,
+  })
+
+pic12.tags<< pasta
+pic12.tags<< savoury
+
+pic13 = Picture.create({
+  remote_content_url: 'https://66.media.tumblr.com/ed411c3dbd61c1cb214de8a737dec7a0/tumblr_o7g3w4rzJ71vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Italian').id,
+  })
+
+pic13.tags<< seafood
+pic13.tags<< fried
+
+pic14 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/5633cea87df17694a8435316e05af0be/tumblr_o7g3vtob991vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Italian').id,
+  })
+
+pic14.tags<< pizza
+pic14.tags<< comfort
+
+pic15 = Picture.create({
+  remote_content_url: 'https://65.media.tumblr.com/b1055baadf41d5ab98bf0ae5c2a8dcf0/tumblr_o7g3vkK0wZ1vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Italian').id,
+  })
+
+pic15.tags<< seafood
+pic15.tags<< healthy
+
+
+pic16 = Picture.create({
+  remote_content_url: 'https://65.media.tumblr.com/63327657b9c63a85a4f89cbd4486d44f/tumblr_o7g3vcG0Jv1vv6hp0o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Steakhouse').id,
+  })
+
+pic16.tags<< savoury
+pic16.tags<< healthy
+
+
+
+
+pic17 = Picture.create({
+  remote_content_url: 'https://66.media.tumblr.com/a15ce0219e251436a8547ae01e05ad5a/tumblr_o54sx6Oi361sraj02o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Chinese').id,
+  })
+
+pic17.tags<< fried
+pic17.tags<< comfort
+
+pic18 = Picture.create({
+  remote_content_url: 'https://67.media.tumblr.com/69ec38dae2ae96787708f52aca009ac8/tumblr_o61hp1hran1sraj02o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Japanese').id,
+  })
+
+pic18.tags<< soup
+pic18.tags<< healthy
+
+pic19 = Picture.create({
+  remote_content_url: 'https://65.media.tumblr.com/0b575cd7b8ca43d264b9e85d73124eb7/tumblr_o725qr9jOs1sraj02o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Chinese').id,
+  })
+
+pic19.tags<< soup
+pic19.tags<< savoury
+
+pic20 = Picture.create({
+  remote_content_url: 'https://65.media.tumblr.com/db98367c630187c527c866dd020a4711/tumblr_o7fcmibuf61sraj02o1_540.jpg',
+  cuisine_id: Cuisine.find_by(name: 'Chinese').id,
+  })
+
+pic20.tags<< soup
+pic20.tags<< savoury
+
+
+
+
+
+pic21 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic21.tags<< burgers
+pic21.tags<< cheap_eats
+
+pic22 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic22.tags<< burgers
+pic22.tags<< cheap_eats
+
+pic23 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic23.tags<< burgers
+pic23.tags<< cheap_eats
+
+pic24 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic24.tags<< burgers
+pic24.tags<< cheap_eats
+
+pic25 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic25.tags<< burgers
+pic25.tags<< cheap_eats
+
+
+pic26 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic26.tags<< burgers
+pic26.tags<< cheap_eats
+
+
+pic27 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic27.tags<< burgers
+pic27.tags<< cheap_eats
+
+
+pic28 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic28.tags<< burgers
+pic28.tags<< cheap_eats
+
+pic29 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic29.tags<< burgers
+pic29.tags<< cheap_eats
+
+
+pic30 = Picture.create({
+  remote_content_url: '',
+  cuisine_id: Cuisine.find_by(name: 'American').id,
+  })
+
+pic30.tags<< burgers
+pic30.tags<< cheap_eats
+
+
+
+
+
 
 #Pic Tag Model
 #
