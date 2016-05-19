@@ -1,4 +1,4 @@
-class CuisinesController < ApplicationController
+class User::CuisinesController < ApplicationController
   def index
     @cuisines = Cuisine.all
 

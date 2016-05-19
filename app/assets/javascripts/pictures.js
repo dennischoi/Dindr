@@ -13,11 +13,11 @@ $(document).on('ready page:load', function() {
       $('span.meter').css('width', turn/3*100 + "%")
 
       if (turn == 3){
-        $('#agg-pics-button').addClass('enough-votes').on('click', function(){
-          updateCuisines(ev)
-          updateTags(ev)
-
-        })
+        $('#agg-pics-button').addClass('enough-votes')
+        // .on('click', function(){
+        //   updateCuisines(ev)
+        //   updateTags(ev)
+        $('span.meter').css('display', 'none')
       }
   });
 
@@ -45,10 +45,10 @@ $(document).on('ready page:load', function() {
 
     $('#skip-button').css('opacity', '1').on('click', skips);
     $('#agg-pics-button').removeClass('enough-votes');
-    $('span.meter').css('width', '1%');
-    updateCuisines(ev);
-    updateTags(ev);
-
+    $('span.meter').css('display', 'block', 'width', '1%');
+    // updateCuisines(ev);
+    // updateTags(ev);
+    changeImage(ev);
   });
 
 
@@ -67,23 +67,23 @@ $(document).on('ready page:load', function() {
 
   };
 
-  function updateCuisines(ev){
-    ev.stopPropagation();
-    $.ajax({
-      url: '/cuisines',
-      method: 'GET',
-      dataType: 'script'
-    });
-  };
-
-  function updateTags(ev){
-    ev.stopPropagation();
-    $.ajax({
-      url: '/tags',
-      method: 'GET',
-      dataType: 'script'
-    });
-  };
+  // function updateCuisines(ev){
+  //   ev.stopPropagation();
+  //   $.ajax({
+  //     url: '/cuisines',
+  //     method: 'GET',
+  //     dataType: 'script'
+  //   });
+  // };
+  //
+  // function updateTags(ev){
+  //   ev.stopPropagation();
+  //   $.ajax({
+  //     url: '/tags',
+  //     method: 'GET',
+  //     dataType: 'script'
+  //   });
+  // };
 
 
 

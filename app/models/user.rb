@@ -8,6 +8,13 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
 
+# adding geolocation
+
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
+  # everytime we add a restaurant we want to geocode it. User.near("220 King Street")
+
 
   has_many :votes
   has_many :pictures, through: :votes

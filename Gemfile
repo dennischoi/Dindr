@@ -30,13 +30,13 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "fog", "1.38.0"
 
-
 gem 'figaro'
-
 
 gem 'yelp', require: 'yelp'
 
 gem 'randumb'
+
+gem 'geocoder'
 
 
 # Use ActiveModeTuplol has_secure_password

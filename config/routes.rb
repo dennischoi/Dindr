@@ -15,13 +15,17 @@ Rails.application.routes.draw do
 
     delete 'votes' => 'votes#destroy'
 
-  resources :cuisines, except: %i(destroy edit update)
+
   resources :tags, except: %i(destroy edit update)
   resources :users, except: %i(destroy index)
   resources :pictures, except: %i(index)
 
   namespace :admin do
     resources :pictures
+  end
+
+  namespace :user do
+      resources :cuisines, only: %i(index)
   end
 
 end

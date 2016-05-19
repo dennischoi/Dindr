@@ -3,18 +3,26 @@ class RestaurantsController < ApplicationController
   def index
 
 
+    #
+    # if request.xhr?
+    #   params[:category_filter]
+
     search_options = {
-           limit: 2,
-           category_filter: 'mexican',
+           limit: 5,
+           radius_filter: '2000',
+           category_filter: params[:category_filter].downcase
          }
 
-    bounding_box = { sw_latitude: 43.647303, sw_longitude: -79.393374, ne_latitude: 43.656440, ne_longitude: -79.376840 }
+    coordinates = { latitude: params[:lat].to_f, longitude: params[:lon].to_f }
 
-
-    restaurants = Yelp.client.search_by_bounding_box(bounding_box, search_options).businesses
+    restaurants =
+    Yelp.client.search_by_coordinates(coordinates, search_options).businesses
 
     @restaurant_list = []
     restaurants.each {|restaurant| @restaurant_list << [restaurant.name, restaurant.url]}
+    if request.xhr?
+      render 'index', layout: false
+    end
   end
 
   def show
