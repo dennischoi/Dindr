@@ -17,24 +17,27 @@ $(document).on('ready page:load', function() {
         // .on('click', function(){
         //   updateCuisines(ev)
         //   updateTags(ev)
-        $('span.meter').css('display', 'none')
+        
       }
   });
 
   $('#skip-button').on('click', skips)
 
   function skips(ev){
-
-      console.log("WTF")
+    console.log(skip)
+    ev.stopPropagation();
       skip++
       changeImage(ev)
       if (skip == 3){
         $(this).css('opacity', '0.4').off('click')
-        alert("You have used your 3 skips!")
+        alert("You have used your 2 skips!")
       };
   }
 
   $('#reset-button').on('click', function(ev){
+    console.log(skip)
+    $('#skip-button').off('click')
+    ev.stopPropagation();
     turn = 0;
     $.ajax({
       url: '/votes',
