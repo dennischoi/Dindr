@@ -141,10 +141,7 @@
     }
   }
 
-  .modal-state:checked + .modal-fade-screen {
-    opacity: 1;
-    visibility: visible;
-  }
+
 
   .modal-state:checked + .modal-fade-screen .modal-inner {
     top: 0.5em;
@@ -153,6 +150,10 @@
 
 .modal-open {
   overflow: hidden;
+  .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 #modal-1 {
