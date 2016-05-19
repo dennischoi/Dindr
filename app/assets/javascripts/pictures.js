@@ -36,7 +36,6 @@ $(document).on('ready page:load', function() {
 
   $('#reset-button').on('click', function(ev){
     turn = 0;
-    skip = 0;
     $.ajax({
       url: '/votes',
       method: 'DELETE',
@@ -45,10 +44,12 @@ $(document).on('ready page:load', function() {
 
     $('#skip-button').css('opacity', '1').on('click', skips);
     $('#agg-pics-button').removeClass('enough-votes');
-    $('span.meter').css('display', 'block', 'width', '1%');
+    $('span.meter').css('display', 'block')
+    $('span.meter').css('width', '0%');
     // updateCuisines(ev);
     // updateTags(ev);
     changeImage(ev);
+    skip = 0;
   });
 
 
@@ -66,25 +67,6 @@ $(document).on('ready page:load', function() {
     })
 
   };
-
-  // function updateCuisines(ev){
-  //   ev.stopPropagation();
-  //   $.ajax({
-  //     url: '/cuisines',
-  //     method: 'GET',
-  //     dataType: 'script'
-  //   });
-  // };
-  //
-  // function updateTags(ev){
-  //   ev.stopPropagation();
-  //   $.ajax({
-  //     url: '/tags',
-  //     method: 'GET',
-  //     dataType: 'script'
-  //   });
-  // };
-
 
 
   function voteImage(ev){
