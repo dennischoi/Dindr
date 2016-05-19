@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :password_resets
+
   resources :restaurants, only: %i(index show)
 
   root 'homes#index'
