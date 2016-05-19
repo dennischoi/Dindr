@@ -1,14 +1,18 @@
 <h1>Top Restaurants</h1>
 
-<p>look at my list!!</p>
-
 <div class="yelp-results">
-  <% @restaurant_list.each do |name, url| %>
+  <% @restaurant_list.each do |name, url, latitude, longitude| %>
     <ul>
 
       <li>
         <%= link_to "#{name}", url %>
       </li>
+
+      <li>
+        Only <%= current_user.distance_to([latitude, longitude], :km).round(2) %> kms away! mmm delish!
+      </li>
+
+
    </ul>
   <% end %>
 </div>

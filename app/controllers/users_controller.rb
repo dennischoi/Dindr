@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user)
     if @user.update_attributes(user_params_edit)
-      redirect_to current_user
+      render nothing: :true
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   private
   def user_params_edit
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number, :latitude, :longitude)
   end
 
   def user_params
