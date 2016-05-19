@@ -16,22 +16,23 @@ $(document).on('ready page:load', function() {
         $('#agg-pics-button').addClass('enough-votes').on('click', function(){
           updateCuisines(ev)
           updateTags(ev)
-          $('span.meter').css('display', 'none')
+
         })
       }
   });
 
+  $('#skip-button').on('click', skips)
 
+  function skips(ev){
 
-  $('#skip-button').on('click', function(event){
-    console.log("WTF")
-    skip++
-    changeImage(event)
-    if (skip == 3){
-      $(this).css('opacity', '0.4').off('click')
-      alert("You have used your 3 skips!")
-    }
-  });
+      console.log("WTF")
+      skip++
+      changeImage(ev)
+      if (skip == 3){
+        $(this).css('opacity', '0.4').off('click')
+        alert("You have used your 3 skips!")
+      };
+  }
 
   $('#reset-button').on('click', function(ev){
     turn = 0;
@@ -42,19 +43,12 @@ $(document).on('ready page:load', function() {
       dataType: 'script'
     });
 
-    $('#skip-button').css('opacity', '1');
-    $('#skip-button').on('click', function(ev){
-      skip++
-      if (skip == 3){
-        $(this).css('opacity', '0.4').off('click')
-        alert("You have used your 3 skips!")
-      }
-    });
+    $('#skip-button').css('opacity', '1').on('click', skips);
     $('#agg-pics-button').removeClass('enough-votes');
-    $('span.meter').css('display', 'block', 'width', '1%');
+    $('span.meter').css('width', '1%');
     updateCuisines(ev);
     updateTags(ev);
-    changeImage(ev);
+
   });
 
 
@@ -112,6 +106,7 @@ $(document).on('ready page:load', function() {
       },
     });
   };
+
 
 
 });
