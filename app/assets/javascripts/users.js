@@ -17,11 +17,25 @@ function success(ev, position){
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
 
+  var userId = $('pic-sets').data('user')
+
   var cuisine = $(ev.target).data('cuisinename')
 
   var latitude_value = position.coords.latitude
   var longitude_value = position.coords.longitude
 
+  $.ajax({
+
+    url: '/users/' + userId,
+    method: 'patch',
+    data: {
+      user:{
+        latitude: latitude_value,
+        longitude: longitude_value
+      }
+    },
+    dataType: 'script'
+  });
 
   $.ajax({
     url: '/restaurants',
@@ -37,6 +51,7 @@ function success(ev, position){
       $(".result-restaurants").html(data);
     }
   });
+
 }
 
 
