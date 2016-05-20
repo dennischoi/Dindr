@@ -270,13 +270,13 @@ pic11 = Picture.create({
 pic11.tags<< pasta
 pic11.tags<< comfort
 
-pic12 = Picture.create({
-  remote_content_url: 'https://67.media.tumblr.com/54001de892896945a25cf30b5652c580/tumblr_o7g3z3fEzy1vv6hp0o1_540.jpg',
-  cuisine_id: Cuisine.find_by(name: 'Italian').id,
-  })
-
-pic12.tags<< pasta
-pic12.tags<< savoury
+# pic12 = Picture.create({
+#   remote_content_url: 'https://67.media.tumblr.com/54001de892896945a25cf30b5652c580/tumblr_o7g3z3fEzy1vv6hp0o1_540.jpg',
+#   cuisine_id: Cuisine.find_by(name: 'Italian').id,
+#   })
+#
+# pic12.tags<< pasta
+# pic12.tags<< savoury
 
 pic13 = Picture.create({
   remote_content_url: 'https://66.media.tumblr.com/ed411c3dbd61c1cb214de8a737dec7a0/tumblr_o7g3w4rzJ71vv6hp0o1_540.jpg',
