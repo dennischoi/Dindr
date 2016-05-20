@@ -482,7 +482,7 @@ pic36 = Picture.create({
 
 pic36.tags<< tapas
 
-pic37 = Picture.create({ **** perogies
+pic37 = Picture.create({
   remote_content_url: 'http://67.media.tumblr.com/1367bf25ea71f0afd61e6476bcf18795/tumblr_o7hjgpBOTO1vu96cko1_1280.png',
   cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
   })
