@@ -38,7 +38,8 @@ gem 'randumb'
 
 gem 'geocoder'
 
-# gem 'rails_12factor'
+gem 'puma'
+
 
 
 # Use ActiveModeTuplol has_secure_password
@@ -71,4 +72,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
