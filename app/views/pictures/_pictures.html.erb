@@ -3,17 +3,17 @@
       <tr>
         <td class="randomized-dish">
 
-            <%= image_tag(@picture1.url, :class => "food-image", :id => "pic-1", data: {picId: "#{@picture1.id}"} ) %>
+            <%= image_tag(@picture1.content.url, :class => "food-image", :id => "pic-1", data: {picId: "#{@picture1.id}"} ) %>
 
         </td>
         <td class="randomized-dish">
 
-            <%= image_tag(@picture2.url, :class => "food-image" , data: {picId: "#{@picture2.id}"} )%>
+            <%= image_tag(@picture2.content.url, :class => "food-image" , data: {picId: "#{@picture2.id}"} )%>
 
         </td>
         <td class="randomized-dish">
 
-            <%= image_tag(@picture3.url, :class => "food-image", data: {picId: "#{@picture3.id}"}) %>
+            <%= image_tag(@picture3.content.url, :class => "food-image", data: {picId: "#{@picture3.id}"}) %>
 
         </td>
       </tr>
