@@ -2,7 +2,7 @@
 
 #game-page {
   margin-top: 5rem;
-  min-height: 62.5rem;
+  min-height: 55rem;
 }
 
 #home-page {
@@ -11,10 +11,26 @@
 .page-title {
   text-align: center;
   margin: 3rem;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
 }
 #reset-pics-button {
   text-align: center;
   // font-size: 50px;
+}
+
+#skip-pics-button {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.button_to {
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .pic-sets {
@@ -163,6 +179,17 @@
     width: 1%;
   }
 }
+
+.progress-bar.stick {
+  margin-top: 0 !important;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 85%;
+}
+
+
+
 @-webkit-keyframes progress {
   0% {
     background-position: 0 0;
@@ -218,11 +245,11 @@
   transition: all 0.25s cubic-bezier(.63,.21,.2,.98);
   z-index: 0;
   &.on-hover{
-    position: absolute;
-    top: 0px;
-    max-width: 125%;
-    max-height: 125%;
-    z-index: 1;
+    // position: absolute;
+    // top: 0px;
+    // max-width: 125%;
+    // max-height: 125%;
+    // z-index: 1;
 
   }
 }

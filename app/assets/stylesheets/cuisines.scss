@@ -1,3 +1,79 @@
 // Place all the styles related to the Cuisines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#results-page {
+  min-height: 52rem;
+}
+
+// .top-box {
+//   @include span-columns(12);
+// }
+
+.top-cuis {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.half-width-container {
+  @include span-columns(5.95);
+  display: inline-table;
+  h3 {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+}
+
+#top-cuisines {
+  // @include span-columns(6);
+  height: 18.75rem;
+}
+
+#top-tags {
+  // @include span-columns(6);
+  height: 18.75rem;
+}
+
+.result-restaurants {
+  text-align: center;
+  margin-top: 5rem;
+  overflow: hidden;
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.each-rest {
+  float: left;
+  display: inline-block;
+  padding: 2rem;
+  width: 33.3%;
+  border: 2px solid black;
+  border-radius: 5px;
+  min-height: 20.3125rem;
+}
+
+.cats {
+  list-style-type: none;
+}
+
+.cats-list {
+  font-size: 1.15rem;
+  width: 60%;
+}
+.tags {
+  padding: 0 3rem;
+  .tags-list {
+    padding: 1rem;
+    font-size: 1.6rem;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+
+.nearby-restaurants {
+  margin-top: 1rem;
+}

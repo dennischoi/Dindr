@@ -1,10 +1,15 @@
 <h3>Top Cuisines</h3>
 <div class="cats">
   <% current_user.top_cats.each do |cat| %>
-      <li>
-        <%= cat[0] %> <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinename: "#{cat[0]}"} %>
-
-      </li>
-
+      <table class="cats-list">
+      <tr>
+        <td>
+          <%= cat[0] %>
+        </td>
+        <td>
+          <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinename: "#{cat[0]}"} %>
+        </td>
+      </tr>
+    </table>
   <% end %>
 </div>
