@@ -25,9 +25,6 @@ header.navigation {
   position: absolute;
   top: 0px;
 
-
-
-
   .navigation-wrapper {
     @include clearfix;
     position: relative;
@@ -126,6 +123,11 @@ header.navigation {
 
     a {
       color: white;
+      text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
       font-size: 1rem;
       display: inline-block;
       text-decoration: none;
