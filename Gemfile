@@ -38,7 +38,7 @@ gem 'randumb'
 
 gem 'geocoder'
 
-gem 'rails_12factor'
+# gem 'rails_12factor'
 
 
 # Use ActiveModeTuplol has_secure_password
