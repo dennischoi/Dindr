@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_action :require_login
 
   def index
 
@@ -8,7 +9,7 @@ class RestaurantsController < ApplicationController
     #   params[:category_filter]
 
     search_options = {
-           limit: 5,
+           limit: 6,
            radius_filter: '2000',
            category_filter: params[:category_filter].downcase
          }
@@ -25,8 +26,4 @@ class RestaurantsController < ApplicationController
       render 'index', layout: false
     end
   end
-
-  def show
-  end
-
 end

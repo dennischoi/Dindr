@@ -6,7 +6,16 @@
 }
 
 #homepage-button {
-  margin-top: -12rem;
-  margin-bottom: 9rem;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   text-align: center;
+  z-index: 9999999999;
+
+}
+
+button {
+  // width: 200%;
+  // height: 200%;
+  // @include button(shiny, #ff0000);
+
 }
