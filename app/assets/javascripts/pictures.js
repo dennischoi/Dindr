@@ -94,6 +94,8 @@ $(document).on('ready page:load', function() {
   };
 
 
+// Progress bar fix errors where .top is being errored on other pages other than pictures.js
+
   // function progressRelocate() {
   //   var topWindow = $(window).scrollTop();
   //   var topDiv = $('#progress-anchor').offset().top;
