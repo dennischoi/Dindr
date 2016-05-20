@@ -98,8 +98,8 @@ $(document).on('ready page:load', function() {
 // tried changing window to just the game-page but didnt work
 
   function progressRelocate() {
-    // var div = $('#progress-anchor');
-    // if (div.length) {
+    var div = $('#progress-anchor');
+    if (div.length) {
 
       var topDiv = $('#progress-anchor').offset().top;
       var topWindow = $(window).scrollTop();
