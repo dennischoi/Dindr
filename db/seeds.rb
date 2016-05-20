@@ -443,7 +443,7 @@ pic29 = Picture.create({
 pic29.tags<< healthy
 pic29.tags<< savoury
 
-# 
+#
 # pic30 = Picture.create({
 #   remote_content_url: 'https://66.media.tumblr.com/9e540f64d364fb81f7cfdf12de5e120b/tumblr_o7g86hC67x1vv6hp0o1_540.jpg',
 #   cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
@@ -503,8 +503,8 @@ pic37 = Picture.create({
   cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
   })
 
-pic30.tags<< tapas
-pic30.tags<< fried
+pic37.tags<< tapas
+pic37.tags<< fried
 
 pic38 = Picture.create({
   remote_content_url: 'http://67.media.tumblr.com/1b060ad209932753bed402714ed283fb/tumblr_o7hjdwqRv11vu96cko1_1280.png',
