@@ -10,9 +10,9 @@ $(document).on('ready page:load', function() {
       voteImage(ev)
       changeImage(ev)
       console.log(turn)
-      $('span.meter').css('width', turn/3*100 + "%")
+      $('span.meter').css('width', turn/10*100 + "%")
 
-      if (turn == 3){
+      if (turn == 10){
         $('#agg-pics-button').addClass('enough-votes')
         // .on('click', function(){
         //   updateCuisines(ev)
@@ -93,6 +93,24 @@ $(document).on('ready page:load', function() {
     });
   };
 
+
+  function progressRelocate() {
+    var topWindow = $(window).scrollTop();
+    var topDiv = $('#progress-anchor').offset().top;
+
+    if (topWindow > topDiv) {
+      $('.progress-bar').addClass('stick');
+      $('#progress-anchor').height($('.progress-bar').outerHeight());
+    } else {
+      $('.progress-bar').removeClass('stick');
+      $('#progress-anchor').height(0);
+    }
+  }
+
+  $(function() {
+    $(window).scroll(progressRelocate);
+    progressRelocate();
+  });
 
 
 });
