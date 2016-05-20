@@ -33,9 +33,15 @@
   padding-top: 2rem;
 }
 
+
+
 .pic-sets {
   @include fill-parent;
   margin: 10rem 0;
+  #no-pics {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 .image-gradient-dynamic {
