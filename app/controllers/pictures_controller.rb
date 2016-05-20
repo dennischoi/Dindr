@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  before_action :require_login
 
   def index
     @pictures = Picture.all
