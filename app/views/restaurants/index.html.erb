@@ -1,7 +1,8 @@
-<h1>Top Restaurants</h1>
+<h1>Top Restaurants you might fancy...</h1>
 
 <div class="yelp-results">
   <% @restaurant_list.each do |name, url, latitude, longitude, rating, address| %>
+  <div class="each-rest">
     <ul>
 
       <li>
@@ -27,5 +28,6 @@
 
 
    </ul>
+ </div>
   <% end %>
 </div>

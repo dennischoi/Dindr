@@ -269,11 +269,11 @@
   transition: all 0.25s cubic-bezier(.63,.21,.2,.98);
   z-index: 0;
   &.on-hover{
-    position: absolute;
-    top: 0px;
-    max-width: 125%;
-    max-height: 125%;
-    z-index: 1;
+    // position: absolute;
+    // top: 0px;
+    // max-width: 125%;
+    // max-height: 125%;
+    // z-index: 1;
 
   }
 }
