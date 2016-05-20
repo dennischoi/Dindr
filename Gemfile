@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.3.0"
 gem 'sorcery'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,7 +39,8 @@ gem 'randumb'
 
 gem 'geocoder'
 
-# gem 'rails_12factor'
+gem 'puma'
+
 
 
 # Use ActiveModeTuplol has_secure_password
@@ -71,4 +73,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end

@@ -21,13 +21,8 @@
     cursor: pointer;
     margin-bottom: 0;
     margin-top: 0;
+    color: black;
   }
-
-  // label img {
-  //   border-radius: $modal-trigger-image-width / 2;
-  //   display: block;
-  //   max-width: $modal-trigger-image-width;
-  // }
 
   .modal-state {
     display: none;
@@ -89,12 +84,19 @@
     border-radius: $base-border-radius;
     margin: auto;
     margin-top: 0;
-    max-height: 95%;
+    min-height: 95%;
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
     transition: opacity 0.25s ease;
-    width: 95%;
+    min-width: 95%;
+    a {
+      color: black;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+
 
     @include media($medium-screen) {
       max-height: 70%;
@@ -159,4 +161,10 @@
 #modal-1 {
   position: absolute;
   top: 50rem;
+}
+
+#reset-pass-link {
+  color: black;
+  text-decoration: underline;
+  hover: $action-color;
 }

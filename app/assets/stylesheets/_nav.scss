@@ -50,7 +50,7 @@ header.navigation {
 // Mobile view
 
   .navigation-menu-button {
-    color: $navigation-color;
+    color: $action-color;
     display: block;
     float: right;
     line-height: $navigation-height;
@@ -112,11 +112,9 @@ header.navigation {
     // text-align: right;
     width: 100%;
     z-index: 9999;
-    color: $navigation-color;
-    // .modal {
-    //   padding-right: 4.5em;
-    //   padding-bottom: 0;
-    // }
+    color: white;
+    font-size: 1rem;
+
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
@@ -127,13 +125,14 @@ header.navigation {
     }
 
     a {
-      color: $navigation-color;
+      color: white;
+      font-size: 1rem;
       display: inline-block;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
-        text-decoration: line-through;
+        // text-decoration: line-through;
       }
 
       &:focus,
@@ -301,7 +300,6 @@ header.navigation {
 
 .footer-2 {
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
@@ -309,7 +307,7 @@ header.navigation {
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background: $footer-background;
+  background: rgba(162, 132, 176, 0.6);
   display: inline-block;
   padding: $base-spacing;
   width: 100%;
@@ -402,4 +400,8 @@ header.navigation {
       }
     }
   }
+}
+
+#nav-sign-in {
+  color: white;
 }
