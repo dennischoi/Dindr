@@ -27,62 +27,78 @@ User.create({
 # Cuisines (13)
 
 Cuisine.create({
-  name: 'Mexican'
+  name: 'Mexican',
+  label: 'mexican'
   })
 
 Cuisine.create({
-  name: 'Thai'
+  name: 'Thai',
+  label: 'thai'
   })
 
 Cuisine.create({
-  name: 'Japanese'
+  name: 'Japanese',
+  label: 'japanese'
   })
 
 Cuisine.create({
-  name: 'Italian'
+  name: 'Italian',
+  label: 'italian'
   })
 
 Cuisine.create({
-  name: 'Chinese'
+  name: 'Chinese',
+  label: 'chinese'
   })
 
 Cuisine.create({
-  name: 'American'
+  name: 'American',
+  label: 'newamerican'
   })
 
 Cuisine.create({
-  name: 'Vegetarian'
+  name: 'Vegetarian',
+  label: 'vegetarian'
   })
 
 Cuisine.create({
-  name: 'Indian'
+  name: 'Indian',
+  label: 'indpak'
   })
 
 Cuisine.create({
-  name: 'Sandwiches'
+  name: 'Sandwiches',
+  label: 'sandwiches'
   })
 
 Cuisine.create({
-  name: 'Mediterranean'
+  name: 'Mediterranean',
+  label: 'mediterranean'
   })
 
 Cuisine.create({
-  name: 'Middle Eastern'
+  name: 'Middle Eastern',
+  label: 'mideastern'
   })
 
 Cuisine.create({
-  name: 'Caribbean'
+  name: 'Caribbean',
+  label: 'caribbean'
+
   })
 
 Cuisine.create({
-  name: 'Steakhouse'
+  name: 'Steakhouse',
+  label: 'steak'
   })
 
 Cuisine.create({
-  name: 'Spanish'
+  name: 'Spanish',
+  label: 'spanish'
   })
 Cuisine.create({
-  name: 'Modern European'
+  name: 'Modern European',
+  label: 'modern_european'
   })
 
 # Tags (18)
@@ -427,14 +443,14 @@ pic29 = Picture.create({
 pic29.tags<< healthy
 pic29.tags<< savoury
 
-
-pic30 = Picture.create({
-  remote_content_url: 'https://66.media.tumblr.com/9e540f64d364fb81f7cfdf12de5e120b/tumblr_o7g86hC67x1vv6hp0o1_540.jpg',
-  cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
-  })
-
-pic30.tags<< healthy
-pic30.tags<< savoury
+# 
+# pic30 = Picture.create({
+#   remote_content_url: 'https://66.media.tumblr.com/9e540f64d364fb81f7cfdf12de5e120b/tumblr_o7g86hC67x1vv6hp0o1_540.jpg',
+#   cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
+#   })
+#
+# pic30.tags<< healthy
+# pic30.tags<< savoury
 
 pic31 = Picture.create({
   remote_content_url: 'http://67.media.tumblr.com/a9dadb64ce7e5bcebf8b07ee62b69401/tumblr_o7hjlxq7371vu96cko1_1280.jpg',
