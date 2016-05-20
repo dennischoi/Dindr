@@ -27,55 +27,69 @@ User.create({
 # Cuisines (13)
 
 Cuisine.create({
-  name: 'Mexican'
+  name: 'Mexican',
+  label: 'mexican'
   })
 
 Cuisine.create({
-  name: 'Thai'
+  name: 'Thai',
+  label: 'thai'
   })
 
 Cuisine.create({
-  name: 'Japanese'
+  name: 'Japanese',
+  label: 'japanese'
   })
 
 Cuisine.create({
-  name: 'Italian'
+  name: 'Italian',
+  label: 'italian'
   })
 
 Cuisine.create({
-  name: 'Chinese'
+  name: 'Chinese',
+  label: 'chinese'
   })
 
 Cuisine.create({
-  name: 'American'
+  name: 'American',
+  label: 'newamerican'
   })
 
 Cuisine.create({
-  name: 'Vegetarian'
+  name: 'Vegetarian',
+  label: 'vegetarian'
   })
 
 Cuisine.create({
-  name: 'Indian'
+  name: 'Indian',
+  label: 'indpak'
   })
 
 Cuisine.create({
-  name: 'Sandwiches'
+  name: 'Sandwiches',
+  label: 'sandwiches'
   })
 
 Cuisine.create({
-  name: 'Mediterranean'
+  name: 'Mediterranean',
+  label: 'mediterranean'
   })
 
 Cuisine.create({
-  name: 'Middle Eastern'
+  name: 'Middle Eastern',
+  label: 'mideastern'
   })
 
 Cuisine.create({
-  name: 'Caribbean'
+  name: 'Caribbean',
+  label: 'caribbean'
+
   })
 
 Cuisine.create({
-  name: 'Steakhouse'
+  name: 'Steakhouse',
+  label: 'steak'
   })
 
 # Tags (18)
