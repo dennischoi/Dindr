@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
       tag_hash[key] += 1
     end
 
-    tag_hash.sort_by {|k,v| v}.reverse.take(3)
+    tag_hash.sort_by {|k,v| v}.reverse.take(4)
   end
 
 end

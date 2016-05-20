@@ -27,8 +27,13 @@
   </div>
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
+    <% if @picture1 == true && @picture2 == true && @picture3 == true %>
       <%= render 'pictures' %>
-
+    <% else %>
+      <p id="no-pics">
+        No more delicious foods can be rendered!! Press the "Start Over" button!
+      </p>
+    <% end %>
     <!-- This will have to be changed into an AJAX function -->
   </div>
 
