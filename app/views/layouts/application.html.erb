@@ -8,10 +8,6 @@
 </head>
 <body>
 
-<%= render 'layouts/navbar' %>
-
-
-
 <%= yield %>
 
 </body>
@@ -23,18 +19,16 @@
 
 <footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
-    <%= image_tag('dindr-little-d.png') %>
+    <%= link_to image_tag('dindr-little-d.png'), homes_path %>
   </div>
     <ul>
-      <li><a href="javascript:void(0)">About</a></li>
-      <li><a href="javascript:void(0)">Contact</a></li>
-      <li><a href="javascript:void(0)">Products</a></li>
+      <li><a href="javascript:void(0)">About Dindr</a></li>
+      <li><a href="javascript:void(0)">Contact Us</a></li>
     </ul>
 
     <div class="footer-secondary-links">
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-        <li><a href="javascript:void(0)">Privacy Policy</a></li>
       </ul>
 
       <ul class="footer-social">

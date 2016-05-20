@@ -1,44 +1,46 @@
-<h1>Edit Profile</h1>
+<div class='container' id='edit-user-page'>
+  <h1>Edit Profile</h1>
 
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
     <% end %>
+
+    <div class="edit-user-uname">
+      <%= f.label :user_name %><br>
+      <%= f.text_field :user_name %>
+    </div>
+
+    <div class="edit-user-fname">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </div>
+
+    <div class="edit-user-lname">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div class="edit-user-email">
+      <%= f.label :email %><br>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="edit-user-phone">
+      <%= f.label :phone_number %><br>
+      <%= f.telephone_field :phone_number %>
+    </div>
+
+    <div class="edit-user-address">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
+
+    <div class="edit-user-button">
+       <%= f.submit %>
+    </div>
+
   <% end %>
-
-  <div class="edit-user-uname">
-    <%= f.label :user_name %><br>
-    <%= f.text_field :user_name %>
-  </div>
-
-  <div class="edit-user-fname">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-
-  <div class="edit-user-lname">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="edit-user-email">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="edit-user-phone">
-    <%= f.label :phone_number %><br>
-    <%= f.telephone_field :phone_number %>
-  </div>
-
-  <div class="edit-user-address">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-
-  <div class="edit-user-button">
-     <%= f.submit %>
-  </div>
-
-<% end %>
+</div>

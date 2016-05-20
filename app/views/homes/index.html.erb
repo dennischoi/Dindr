@@ -1,3 +1,5 @@
+<%= render 'layouts/navbar' %>
+
 <!-- BIG HEADER IMAGE -->
 <div class="image-gradient-dynamic">
   <%= image_tag('dindr-header-v2.png') %>
@@ -52,10 +54,10 @@
   <div id="homepage-button">
     <form class="button" action="/game" method="get">
       <% if current_user %>
-        <input type="submit" value="Click Here to Dindr" >
+        <input type="submit" value="Click Here to DINDR!" id="open-sign-in">
       <% else %>
         <div class="modal modal-trigger">
-          <button id="open-sign-in" class="button">Click Here to Dindr</button>
+          <button id="open-sign-in" class="button">Click Here to DINDR! </button>
         </div>
       <% end %>
     </form>
