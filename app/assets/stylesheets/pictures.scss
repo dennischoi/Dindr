@@ -2,7 +2,7 @@
 
 #game-page {
   margin-top: 5rem;
-  min-height: 62.5rem;
+  min-height: 55rem;
 }
 
 #home-page {
@@ -15,6 +15,11 @@
 #reset-pics-button {
   text-align: center;
   // font-size: 50px;
+}
+
+#skip-pics-button {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .pic-sets {
@@ -193,6 +198,7 @@
   padding: 2px;
   width: 100%;
 
+
   > span.meter {
     animation: progress $progress-animation-duration linear infinite;
     background-color: $progress-meter-color;
@@ -214,6 +220,17 @@
     width: 1%;
   }
 }
+
+.progress-bar.stick {
+  margin-top: 0 !important;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 85%;
+}
+
+
+
 @-webkit-keyframes progress {
   0% {
     background-position: 0 0;
