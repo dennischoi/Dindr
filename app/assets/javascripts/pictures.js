@@ -97,25 +97,25 @@ $(document).on('ready page:load', function() {
 // Progress bar fix errors where .top is being errored on other pages other than pictures.js
 // tried changing window to just the game-page but didnt work
 
-  function progressRelocate() {
-    var topWindow = $(window).scrollTop();
-    var topDiv = $('#progress-anchor').offset().top;
-
-    if (topWindow > topDiv) {
-      $('.progress-bar').addClass('stick');
-      $('#progress-anchor').height($('.progress-bar').outerHeight());
-    } else {
-      $('.progress-bar').removeClass('stick');
-      $('#progress-anchor').height(0);
-
-    }
-  }
-
-  $(function() {
-    $(window).scroll(progressRelocate);
-    progressRelocate();
-
-  });
+  // function progressRelocate() {
+  //   var topWindow = $(window).scrollTop();
+  //   var topDiv = $('#progress-anchor').offset().top;
+  //
+  //   if (topWindow > topDiv) {
+  //     $('.progress-bar').addClass('stick');
+  //     $('#progress-anchor').height($('.progress-bar').outerHeight());
+  //   } else {
+  //     $('.progress-bar').removeClass('stick');
+  //     $('#progress-anchor').height(0);
+  //
+  //   }
+  // }
+  //
+  // $(function() {
+  //   $(window).scroll(progressRelocate);
+  //   progressRelocate();
+  //
+  // });
 
 
 
