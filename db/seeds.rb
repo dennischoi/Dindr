@@ -27,62 +27,78 @@ User.create({
 # Cuisines (13)
 
 Cuisine.create({
-  name: 'Mexican'
+  name: 'Mexican',
+  label: 'mexican'
   })
 
 Cuisine.create({
-  name: 'Thai'
+  name: 'Thai',
+  label: 'thai'
   })
 
 Cuisine.create({
-  name: 'Japanese'
+  name: 'Japanese',
+  label: 'japanese'
   })
 
 Cuisine.create({
-  name: 'Italian'
+  name: 'Italian',
+  label: 'italian'
   })
 
 Cuisine.create({
-  name: 'Chinese'
+  name: 'Chinese',
+  label: 'chinese'
   })
 
 Cuisine.create({
-  name: 'American'
+  name: 'American',
+  label: 'newamerican'
   })
 
 Cuisine.create({
-  name: 'Vegetarian'
+  name: 'Vegetarian',
+  label: 'vegetarian'
   })
 
 Cuisine.create({
-  name: 'Indian'
+  name: 'Indian',
+  label: 'indpak'
   })
 
 Cuisine.create({
-  name: 'Sandwiches'
+  name: 'Sandwiches',
+  label: 'sandwiches'
   })
 
 Cuisine.create({
-  name: 'Mediterranean'
+  name: 'Mediterranean',
+  label: 'mediterranean'
   })
 
 Cuisine.create({
-  name: 'Middle Eastern'
+  name: 'Middle Eastern',
+  label: 'mideastern'
   })
 
 Cuisine.create({
-  name: 'Caribbean'
+  name: 'Caribbean',
+  label: 'caribbean'
+
   })
 
 Cuisine.create({
-  name: 'Steakhouse'
+  name: 'Steakhouse',
+  label: 'steak'
   })
 
 Cuisine.create({
-  name: 'Spanish'
+  name: 'Spanish',
+  label: 'spanish'
   })
 Cuisine.create({
-  name: 'Modern European'
+  name: 'Modern European',
+  label: 'modern_european'
   })
 
 # Tags (18)
@@ -270,7 +286,6 @@ pic11 = Picture.create({
 pic11.tags<< pasta
 pic11.tags<< comfort
 pic11.tags<< savoury
-
 
 
 pic12 = Picture.create({
@@ -475,8 +490,10 @@ pic35 = Picture.create({
   cuisine_id: Cuisine.find_by(name: 'Mediterranean').id,
   })
 
+
 pic35.tags<< tapas
 pic35.tags<< fried
+
 
 pic36 = Picture.create({
   remote_content_url: 'http://67.media.tumblr.com/1b060ad209932753bed402714ed283fb/tumblr_o7hjdwqRv11vu96cko1_1280.png',

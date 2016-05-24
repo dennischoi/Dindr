@@ -19,7 +19,7 @@ function success(ev, position){
 
   var userId = $('pic-sets').data('user')
 
-  var cuisine = $(ev.target).data('cuisinename')
+  var cuisine = $(ev.target).data('cuisinelabel')
 
   var latitude_value = position.coords.latitude
   var longitude_value = position.coords.longitude

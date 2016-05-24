@@ -1,5 +1,6 @@
 <h3>Top Cuisines</h3>
 <div class="cats">
+
   <% current_user.top_cats.each do |cat| %>
       <table class="cats-list">
       <tr>
@@ -7,9 +8,13 @@
           <%= cat[0] %>
         </td>
         <td>
-          <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinename: "#{cat[0]}"} %>
+          <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>
         </td>
       </tr>
     </table>
   <% end %>
 </div>
+
+
+
+<!--   -->

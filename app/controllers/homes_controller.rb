@@ -3,7 +3,7 @@ class HomesController < ApplicationController
 
 
   def index
-
+    @pictures = Picture.all.limit(12)
   end
 
   private
