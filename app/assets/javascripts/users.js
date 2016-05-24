@@ -68,7 +68,7 @@ function success(ev, position){
           //
           var restaurant = new google.maps.Marker({
             position: restMap,
-            title: 'You!'
+            title: 'data-restName',
           });
           restaurant.setMap(map);
 
