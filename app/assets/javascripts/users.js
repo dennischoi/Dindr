@@ -50,11 +50,13 @@ function success(ev, position){
       console.log(data);
       $(".result-restaurants").html(data);
 
+
       var marker = new google.maps.Marker({
         position: {lat: latitude_value, lng: longitude_value},
         map: map,
         title: 'You!'
       });
+      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
 
 
         var rests = $('.each-rest')
@@ -64,11 +66,12 @@ function success(ev, position){
 
           var restLat = $(val).data('latitude')
           var restLng = $(val).data('longitude')
+          var name = $(val).data('name')
           var restMap = {lat: restLat, lng: restLng}
           //
           var restaurant = new google.maps.Marker({
             position: restMap,
-            title: 'You!'
+            title: name + "!"
           });
           restaurant.setMap(map);
 
