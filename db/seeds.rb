@@ -24,6 +24,23 @@ User.create({
   admin: true
   })
 
+User.create({
+  first_name: 'Kim',
+  last_name: 'berly',
+  user_name: 'Kimmies',
+  email: 'kimbo@kim.com',
+  password: 'test',
+  password_confirmation: 'test',
+  address: '150 king street',
+  phone_number: '416-323-3333'
+})
+
+Invitation.create({
+  date: '12-1-2016',
+  send_user_id: User.find_by(first_name: 'Mark').id,
+  accept_user_id: User.find_by(first_name: 'Kim').id
+})
+
 # Cuisines (13)
 
 Cuisine.create({

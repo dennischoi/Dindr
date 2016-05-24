@@ -49,6 +49,7 @@ function success(ev, position){
     success: function(data){
       console.log(data);
       $(".result-restaurants").html(data);
+      
       map.clearOverlays();
 
       var marker = new google.maps.Marker({

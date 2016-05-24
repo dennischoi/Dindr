@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
   has_many :pictures, through: :votes
   has_many :tags, through: :pictures
   has_many :cuisines, through: :pictures
+  has_many :send_invitations, class_name: 'Invitation', foreign_key: :send_user_id
+  has_many :accept_invitations, class_name: 'Invitation', foreign_key: :accept_user_id
 
   def top_cats
     category_arr = []
