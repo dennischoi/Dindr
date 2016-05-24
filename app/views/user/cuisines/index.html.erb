@@ -14,6 +14,16 @@
       <%= render 'tags/top3_tags' %>
     </div>
 
+    <div class="outsource">
+      <form class="reservation" action="http://www.opentable.com/" method="get">
+        <input type="submit" value="Book Your Reservation!">
+      </form>
+
+      <form class="order-in" action="https://www.foodora.ca/" method="get">
+        <input type="submit" value="Order In!">
+      </form>
+
+    </div>
     <div id="map" data-lat=<%= current_user.latitude %> data-lon=<%= current_user.longitude %>>
     </div>
 
