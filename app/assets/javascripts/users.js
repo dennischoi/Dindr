@@ -49,6 +49,31 @@ function success(ev, position){
     success: function(data){
       console.log(data);
       $(".result-restaurants").html(data);
+
+      var marker = new google.maps.Marker({
+        position: {lat: latitude_value, lng: longitude_value},
+        map: map,
+        title: 'You!'
+      });
+
+
+        var rests = $('.each-rest')
+        console.log(rests)
+
+        jQuery.each(rests, function(ind, val){
+
+          var restLat = $(val).data('latitude')
+          var restLng = $(val).data('longitude')
+          var restMap = {lat: restLat, lng: restLng}
+          //
+          var restaurant = new google.maps.Marker({
+            position: restMap,
+            title: 'You!'
+          });
+          restaurant.setMap(map);
+
+
+      });
     }
   });
 
