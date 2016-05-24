@@ -16,6 +16,8 @@ function initMap(){
     //   map: map,
     //   title: 'You!'
     // });
+    // marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
+
 
     // var neary = document.getElementsByClassName(".nearby-restaurants")
 

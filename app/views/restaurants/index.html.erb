@@ -2,7 +2,8 @@
 
 <div class="yelp-results">
   <% @restaurant_list.each do |name, url, latitude, longitude, rating, address| %>
-  <div class="each-rest" data-restName='<%= name %>' data-latitude=<%=latitude %> data-longitude=<%=longitude %> >
+
+  <div class="each-rest" data-latitude=<%= latitude %> data-longitude=<%= longitude %> data-name="<%= name %>" >
     <ul>
 
       <li id="rest-name">
