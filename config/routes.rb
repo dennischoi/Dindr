@@ -30,6 +30,6 @@ Rails.application.routes.draw do
       resources :cuisines, only: %i(index)
   end
 
-  resources :cuisines, only: %i(show)
+  # resources :cuisines, only: %i(show)
 
 end

@@ -13,6 +13,14 @@ function initMap(){
       zoom: 14
     });
 
+    google.maps.Map.prototype.clearOverlays = function() {
+      for (var i = 0; i < markerArray.length; i++ ) {
+        markerArray[i].setMap(null);
+      }
+      markerArray.length = 0;
+    }
+
+  }
 
   // function clearOverlays() {
   //   for (var i = 0; i < markersArray.length; i++ ) {
@@ -48,14 +56,6 @@ function initMap(){
     //   });
     //
     // });
-    google.maps.Map.prototype.clearOverlays = function() {
-      for (var i = 0; i < markerArray.length; i++ ) {
-        markerArray[i].setMap(null);
-      }
-      markerArray.length = 0;
-    }
-
-}
 
 
 // function clearOverlays() {
