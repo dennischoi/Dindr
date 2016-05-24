@@ -27,9 +27,8 @@ Rails.application.routes.draw do
   end
 
   namespace :user do
-      resources :cuisines, only: %i(index)
+      resources :cuisines, only: %i(index show)
   end
 
-  # resources :cuisines, only: %i(show)
 
 end

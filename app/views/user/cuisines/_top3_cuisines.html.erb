@@ -9,12 +9,9 @@
         </td>
         <td>
           <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>
+          <%= button_to "Find Dindr Date!", user_cuisine_path(@cuisines.find_by(name: cat[0]).id), method: :get %>
         </td>
       </tr>
     </table>
   <% end %>
 </div>
-
-
-
-<!--   -->
