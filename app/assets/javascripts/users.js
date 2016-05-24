@@ -49,34 +49,35 @@ function success(ev, position){
     success: function(data){
       console.log(data);
       $(".result-restaurants").html(data);
-
+      map.clearOverlays();
 
       var marker = new google.maps.Marker({
         position: {lat: latitude_value, lng: longitude_value},
         map: map,
         title: 'You!'
       });
-      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
+      markerArray.push(marker);
+      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+      map.panTo(marker.getPosition());
 
 
-        var rests = $('.each-rest')
-        console.log(rests)
+      var rests = $('.each-rest');
+      console.log(rests)
 
-        jQuery.each(rests, function(ind, val){
+      jQuery.each(rests, function(ind, val){
 
-          var restLat = $(val).data('latitude')
-          var restLng = $(val).data('longitude')
-          var name = $(val).data('name')
-          var restMap = {lat: restLat, lng: restLng}
-          //
-          var restaurant = new google.maps.Marker({
-            position: restMap,
-            title: name + "!"
-          });
-          restaurant.setMap(map);
-
-
-      });
+        var restLat = $(val).data('latitude')
+        var restLng = $(val).data('longitude')
+        var name = $(val).data('name')
+        var restMap = {lat: restLat, lng: restLng}
+        //
+        var restaurant = new google.maps.Marker({
+          position: restMap,
+          title: name + "!"
+        });
+        markerArray.push(restaurant);
+        restaurant.setMap(map);
+    });
     }
   });
 

@@ -1,4 +1,6 @@
 var map;
+var markerArray = [];
+
 function initMap(){
     var lat = $('#map').data('lat');
     var lon = $('#map').data('lon');
@@ -11,7 +13,14 @@ function initMap(){
       zoom: 14
     });
 
-    // var marker = new google.maps.Marker({
+
+  // function clearOverlays() {
+  //   for (var i = 0; i < markersArray.length; i++ ) {
+  //     markersArray[i].setMap(null);
+  //   }
+  //   markersArray.length = 0;
+  // };
+ // var marker = new google.maps.Marker({
     //   position: myMap,
     //   map: map,
     //   title: 'You!'
@@ -39,5 +48,19 @@ function initMap(){
     //   });
     //
     // });
+    google.maps.Map.prototype.clearOverlays = function() {
+      for (var i = 0; i < markerArray.length; i++ ) {
+        markerArray[i].setMap(null);
+      }
+      markerArray.length = 0;
+    }
 
 }
+
+
+// function clearOverlays() {
+//   for (var i = 0; i < markerArray.length; i++ ) {
+//     markerArray[i].setMap(null);
+//   }
+//   markerArray.length = 0;
+// };
