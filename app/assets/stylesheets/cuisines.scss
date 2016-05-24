@@ -6,6 +6,11 @@
   min-height: 52rem;
 }
 
+#date-page {
+  margin-top: 5rem;
+  min-height: 55rem;
+}
+
 // .top-box {
 //   @include span-columns(12);
 // }
@@ -79,5 +84,9 @@
 }
 
 .outsource {
+  text-align: center;
+}
+
+.cuisine-title {
   text-align: center;
 }
