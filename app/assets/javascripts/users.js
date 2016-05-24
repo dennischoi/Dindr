@@ -1,4 +1,4 @@
-$(document).on('ready load: page', function(){
+$(document).on('ready load:page', function(){
   $(".nearby-restaurants").on('click', function(ev){
 
     if ('geolocation' in navigator){
