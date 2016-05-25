@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
 
+# Mounting Uploader for ProfilePic
+
+  mount_uploader :profile_pic, ProfilePicUploader
+
 
 # adding geolocation
 

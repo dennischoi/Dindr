@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525191638) do
+ActiveRecord::Schema.define(version: 20160525201410) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
@@ -68,6 +68,9 @@ ActiveRecord::Schema.define(version: 20160525191638) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "down_to_meet",                    default: false
+    t.string   "profile_pic"
+    t.string   "bio"
+    t.integer  "age"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
