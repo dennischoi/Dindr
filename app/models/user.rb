@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
 
+
 # adding geolocation
 
   geocoded_by :address
@@ -64,5 +65,7 @@ class User < ActiveRecord::Base
 
     tag_hash.sort_by {|k,v| v}.reverse.take(4)
   end
+
+
 
 end

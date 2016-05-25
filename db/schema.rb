@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524224243) do
+ActiveRecord::Schema.define(version: 20160525191638) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(version: 20160524224243) do
     t.date     "date"
     t.integer  "send_user_id"
     t.integer  "accept_user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "pending",        default: true
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -48,7 +49,7 @@ ActiveRecord::Schema.define(version: 20160524224243) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                           null: false
+    t.string   "email",                                           null: false
     t.string   "crypted_password"
     t.string   "salt"
     t.string   "first_name"
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20160524224243) do
     t.boolean  "admin"
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "down_to_meet",                    default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
