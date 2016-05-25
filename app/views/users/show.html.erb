@@ -1,18 +1,12 @@
 <div class="container" id="profile-page">
-  <h1><%= current_user.first_name %> <%= current_user.last_name %>'s Profile</h1>
-    <li>Email: <%= current_user.email %></li>
-    <li><%= link_to "Edit Profile", edit_user_path %></li>
+  <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+
+    <li><%= current_user.user_name %></li>
+    <%= image_tag current_user.profile_pic.url %>
+    <li><%= current_user.bio %></li>
 
 
 
-  <%= form_for [@user] do |f| %>
-
-    <div class="field">
-      <%= f.label :ProfilePicture %>
-      <%= f.file_field :profile_pic %>
-
-  <% end %>
-
-
+  <li><%= link_to "Edit Profile", edit_user_path %></li>
 
 </div>

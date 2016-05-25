@@ -30,7 +30,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user)
     if @user.update_attributes(user_params_edit)
-      render nothing: :true
+      if request.xhr?
+        render nothing: :true
+      else
+        render :show
+      end
     else
       render :edit
     end
@@ -38,7 +42,7 @@ class UsersController < ApplicationController
 
   private
   def user_params_edit
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number, :latitude, :longitude)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number, :latitude, :longitude, :profile_pic, :bio, :age)
   end
 
   def user_params

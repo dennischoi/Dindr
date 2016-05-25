@@ -21,25 +21,65 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-555-6666',
-  admin: true
+  admin: true,
+  remote_profile_pic_url: 'https://66.media.tumblr.com/bbe794936454be70eb8c1f48afe3dced/tumblr_o7pqmigQno1tf5wtuo1_540.jpg'
   })
 
+# New Users
+
 User.create({
-  first_name: 'Kim',
-  last_name: 'berly',
-  user_name: 'Kimmies',
-  email: 'kimbo@kim.com',
+  first_name: 'Brad',
+  last_name: 'Pitt',
+  user_name: 'Hottie1',
+  email: 'brad@gmail.com',
   password: 'test',
   password_confirmation: 'test',
   address: '150 king street',
-  phone_number: '416-323-3333'
+  phone_number: '416-323-3333',
+  remote_profile_pic_url: 'https://66.media.tumblr.com/e83d081af4d305d1fe2a51c260038135/tumblr_o76kljMPQq1sfnn0mo1_r1_540.jpg',
 })
 
-Invitation.create({
-  date: '12-1-2016',
-  send_user_id: User.find_by(first_name: 'Mark').id,
-  accept_user_id: User.find_by(first_name: 'Kim').id
-})
+User.create({
+  first_name: 'Tom',
+  last_name: 'Hardy',
+  user_name: 'Hottie2',
+  email: 'tom@gmail.com',
+  password: 'test',
+  password_confirmation: 'test',
+  address: '150 king street',
+  phone_number: '416-555-6666',
+  remote_profile_pic_url: 'https://67.media.tumblr.com/3eb2baa415f5c6284ef4c3a2c871cdf0/tumblr_o7pa7hHnmR1v5kw6jo1_400.jpg'
+  })
+
+User.create({
+  first_name: 'Rachel',
+  last_name: 'McAdam',
+  user_name: 'GirlHottie1',
+  email: 'rachel@gmail.com',
+  password: 'test',
+  password_confirmation: 'test',
+  address: '150 king street',
+  phone_number: '416-555-6666',
+  remote_profile_pic_url: 'https://65.media.tumblr.com/fd15d919eb2cd9b53c8f39ceb0e20b11/tumblr_o7pyoimb0p1unmtsfo1_540.jpg'
+  })
+
+User.create({
+  first_name: 'Alicia',
+  last_name: 'Vikander',
+  user_name: 'GirlHottie2',
+  email: 'alicia@gmail.com',
+  password: 'test',
+  password_confirmation: 'test',
+  address: '150 king street',
+  phone_number: '416-555-6666',
+  remote_profile_pic_url: 'https://67.media.tumblr.com/48f1c32b27df3645b8640e268a7498e4/tumblr_o77sjwTSLh1ufirt1o1_400.jpg'
+  })
+
+# Invitation.create({
+#   date: '12-1-2016',
+#   send_user_id: User.find_by(first_name: 'Mark').id,
+#   accept_user_id: User.find_by(first_name: 'Kim').id
+# })
 
 # Cuisines (13)
 
