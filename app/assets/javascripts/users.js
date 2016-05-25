@@ -10,6 +10,43 @@ $(document).on('ready load:page', function(){
       alert ("Geolocation not supported");
     }
   });
+
+  $(".dindr-dates").on('click', function(){
+    console.log("Heyyyyyy")
+
+    var userId = $('pic-sets').data('user')
+
+    $.ajax({
+
+      url: '/users/' + userId,
+      method: 'patch',
+      data: {
+        user:{
+          down_to_meet: true,
+        }
+      },
+      dataType: 'script'
+    });
+
+    var cuisine = $(this).data('cuisinename')
+
+    console.log(cuisine)
+
+    $.ajax({
+      url: '/users',
+      method: 'get',
+      dataType: 'html',
+      data: {
+          category: cuisine,
+        },
+      success: function(data){
+        $(".result-restaurants").html(data);
+        console.log(data);
+      }
+    });
+  });
+
+
 });
 
 

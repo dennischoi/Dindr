@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 
   resources :tags, except: %i(destroy edit update)
-  resources :users, except: %i(destroy index)
+  resources :users, except: %i(destroy)
   resources :pictures, except: %i(index)
 
   namespace :admin do

@@ -1,4 +1,39 @@
 class UsersController < ApplicationController
+
+
+  def index
+
+    cuis = params[:category]
+    potentials = []
+    array_users = User.where(down_to_meet: true)
+
+      array_users.each do |user|
+        cuisine_A = user.top_cats
+        if cuisine_A[0].include?(cuis)
+          potentials << user.id
+        elsif cuisine_A[1].include?(cuis)
+          potentials << user.id
+        elsif cuisine_A[2].include?(cuis)
+          potentials << user.id
+        else
+          break;
+        end
+      end
+
+    @users = []
+    potentials.each do |id|
+      @users << User.find(id)
+    end
+
+
+
+    if request.xhr?
+      render partial: 'users'
+    end
+  end
+
+
+
   def new
     @user = User.new
   end
@@ -42,7 +77,7 @@ class UsersController < ApplicationController
 
   private
   def user_params_edit
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number, :latitude, :longitude, :profile_pic, :bio, :age)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :phone_number, :latitude, :longitude, :profile_pic, :bio, :age, :down_to_meet)
   end
 
   def user_params
