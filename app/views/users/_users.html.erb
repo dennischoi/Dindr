@@ -1,5 +1,14 @@
 <div>
   <% @users.each do |user| %>
-  <%= user.first_name %>
+  <div>
+    <% if user.id == current_user.id %>
+      <% break; %>
+    <% else %>
+      <%= image_tag user.profile_pic.url %>
+      <li>
+        <%= user.first_name %>, <%= user.last_name %>
+      </li>
+    <% end %>
+  </div>
   <% end %>
 </div>
