@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Dindr</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Figaro.env.google_maps_api_key}", async: true, defer: true %>
