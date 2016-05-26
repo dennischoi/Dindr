@@ -36,7 +36,7 @@
 
 
 .pic-sets {
-  @include fill-parent;
+  @include outer-container(100%);
   margin: 10rem 0;
   #no-pics {
     font-size: 2rem;
@@ -45,12 +45,17 @@
 }
 
 .first-set {
+  @include fill-parent;
   -webkit-animation: fadein 0.8s;
 }
 
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.randomized-dish {
+  @include span-columns(4);
 }
 
 .image-gradient-dynamic {
