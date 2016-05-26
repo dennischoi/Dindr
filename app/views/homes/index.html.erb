@@ -49,13 +49,19 @@
       </li>
     </ul>
   </div>
-
+<!--
   <div id="homepage-thumbnails">
     <% @pictures.each do |picture| %>
     <%= image_tag picture.content.thumb.url %>
     <% end %>
+  </div> -->
+
+  <!-- SNAPWIDGET -->
+  <div id="homepage-widget">
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <iframe src="https://snapwidget.com/embed/177224" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
   </div>
-  
+
   <div id="homepage-button">
     <form class="button" action="/game" method="get">
       <% if current_user %>
