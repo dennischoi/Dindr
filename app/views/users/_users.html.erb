@@ -3,11 +3,11 @@
 
   <div>
     <% if user.id == current_user.id %>
-    
+
     <% else %>
 
-    <div class="dindr-date-pic">
-        <%= image_tag user.profile_pic.url %>
+    <div>
+        <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, currentuserid: current_user.id } %>
     </div>
 
     <div class="dindr-date-info">

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  resources :invitations
+
   resources :password_resets
 
   resources :restaurants, only: %i(index)

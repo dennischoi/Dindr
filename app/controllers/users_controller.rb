@@ -3,18 +3,18 @@ class UsersController < ApplicationController
 
   def index
 
-    cuis = params[:category]
+    @cuis = params[:category]
     potentials = []
     array_users = User.where(down_to_meet: true)
 
 
       array_users.each do |user|
         cuisine_A = user.top_cats
-        if cuisine_A[0].include?(cuis)
+        if cuisine_A[0].include?(@cuis)
           potentials << user.id
-        elsif cuisine_A[1].include?(cuis)
+        elsif cuisine_A[1].include?(@cuis)
           potentials << user.id
-        elsif cuisine_A[2].include?(cuis)
+        elsif cuisine_A[2].include?(@cuis)
           potentials << user.id
         else
 
@@ -24,8 +24,6 @@ class UsersController < ApplicationController
     potentials.each do |id|
       @users << User.find(id)
     end
-
-
 
 
     if request.xhr?
@@ -57,6 +55,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
+    if request.xhr?
+      render partial: 'invitations/invitations'
+    end
   end
 
   def edit

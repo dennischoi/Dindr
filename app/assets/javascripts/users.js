@@ -11,6 +11,8 @@ $(document).on('ready load:page', function(){
     }
   });
 
+
+
   $(".dindr-dates").on('click', function(){
     console.log("Heyyyyyy")
 
@@ -47,8 +49,56 @@ $(document).on('ready load:page', function(){
   });
 
 
+// Create an ajax request to create an invitation
+
+  $("body").on('click', ".dindr-date-pic", function(ev){
+
+
+
+      console.log("i clicked a picture")
+
+
+    var date_cuisine = $(ev.target).data('datecuisine')
+    var accept_userId = $(ev.target).data('acceptuserid')
+    var userId = $(ev.target).data('currentuserid')
+    var date = new Date()
+
+    console.log(date_cuisine)
+    console.log(accept_userId)
+    console.log(date)
+
+
+    console.log(userId)
+
+
+    $.ajax({
+      url: '/invitations',
+      method: 'post',
+      dataType: 'html',
+      data: {
+        invitation: {
+          date_cuisine: date_cuisine,
+          send_user_id: userId,
+          accept_user_id: accept_userId,
+          date: date
+          }
+        },
+      success: function(data){
+        $('.dates-pending').html(data)
+        console.log(data);
+      }
+    });
+  });
+
+
+
+
+
+
+
 });
 
+// Renders the map & top restaurants
 
 function success(ev, position){
   console.log(position.coords.latitude);

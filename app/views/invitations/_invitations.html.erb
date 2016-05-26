@@ -1,0 +1,13 @@
+<h1>Hey Im pending</h1>
+
+<div class="">
+
+  <% current_user.accepted_invitations.each do |inv|%>
+
+  <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %>
+
+  <%= button_tag "Accept Date?", class: "accept_button" %> | <%= button_tag "Delete this BITch", class: 'delete',data: {invitationid: inv.id} %>
+
+  <% end %>
+
+</div>
