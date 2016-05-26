@@ -65,7 +65,7 @@
 }
 
 // ----------------------------------------------------------------------------
-// BOURBON BULLET LIST
+// Main Pg. Bullet List
 // ----------------------------------------------------------------------------
 #bullets {
   @include outer-container;
@@ -147,8 +147,6 @@
     color: $base-font-color;
     line-height: $base-line-height;
   }
-
-
 }
 
 // ----------------------------------------------------------------------------
@@ -208,8 +206,6 @@
   width: 85%;
 }
 
-
-
 @-webkit-keyframes progress {
   0% {
     background-position: 0 0;
@@ -255,29 +251,19 @@
   }
 }
 
+//
 
 .pic-sets{
   position: relative;
 }
 
 .food-image {
-
-  transition: all 0.25s cubic-bezier(.63,.21,.2,.98);
-  z-index: 0;
-  &.on-hover{
-    // position: absolute;
-    // top: 0px;
-    // max-width: 125%;
-    // max-height: 125%;
-    // z-index: 1;
-
-  }
+  border-radius: 10%;
 }
+
 .on-like {
   left: 110%
 }
-
-
 
 #agg-pics-button {
   display: none;
@@ -289,4 +275,105 @@
 
 i {
   image: 4rem;
+
+}
+
+// Hover Animations
+
+// Grow
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.064);
+  transform: scale(1.064);
+}
+
+// Bob
+
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }
