@@ -44,6 +44,15 @@
   }
 }
 
+.first-set {
+  -webkit-animation: fadein 0.8s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .image-gradient-dynamic {
   line-height: 0;
   position: relative;
