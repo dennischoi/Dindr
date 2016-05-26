@@ -19,9 +19,15 @@
   font-size: 2.5rem
 }
 
-#homepage-thumbnails {
+#homepage-widget {
+  padding-left: 45px;
+}
+
+.snapwidget-widget {
+  border:none;
+  overflow:hidden;
+  width:100%;
   text-align: center;
-  margin-bottom: 10rem;
 }
 
 button {
