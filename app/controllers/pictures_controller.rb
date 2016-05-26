@@ -4,11 +4,14 @@ class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
 
-    array = @pictures.order_by_rand.includes(:votes).where( :votes => { :user_id => nil }).limit(3)
+    # array = @pictures.order_by_rand.includes(:votes).where( :votes => { :user_id => nil }).limit(3)
 
-    @picture1 = Picture.find_by(id: array[0])
-    @picture2 = Picture.find_by(id: array[1])
-    @picture3 = Picture.find_by(id: array[2])
+    votes_array = current_user.votes.pluck(:picture_id)
+    @pictures = Picture.order_by_rand.where.not(id: votes_array)
+
+    @picture1 = @pictures[0]
+    @picture2 = @pictures[1]
+    @picture3 = @pictures[2]
 
 
     respond_to do |format|
