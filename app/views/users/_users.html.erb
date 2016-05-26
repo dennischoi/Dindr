@@ -1,14 +1,21 @@
 <div>
   <% @users.each do |user| %>
+
   <div>
     <% if user.id == current_user.id %>
-      <% break; %>
+    
     <% else %>
-      <%= image_tag user.profile_pic.url %>
-      <li>
-        <%= user.first_name %>, <%= user.last_name %>
-      </li>
+
+    <div class="dindr-date-pic">
+        <%= image_tag user.profile_pic.url %>
+    </div>
+
+    <div class="dindr-date-info">
+          <%= user.first_name %> <%= user.last_name %>
+    </div>
+
     <% end %>
   </div>
   <% end %>
+
 </div>

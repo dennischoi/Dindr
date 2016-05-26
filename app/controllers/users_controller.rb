@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     potentials = []
     array_users = User.where(down_to_meet: true)
 
+
       array_users.each do |user|
         cuisine_A = user.top_cats
         if cuisine_A[0].include?(cuis)
@@ -16,14 +17,14 @@ class UsersController < ApplicationController
         elsif cuisine_A[2].include?(cuis)
           potentials << user.id
         else
-          break;
+
         end
       end
-
     @users = []
     potentials.each do |id|
       @users << User.find(id)
     end
+
 
 
 
