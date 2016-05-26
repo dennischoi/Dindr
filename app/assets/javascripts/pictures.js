@@ -10,6 +10,8 @@ $(document).on('ready page:load', function() {
       voteImage(ev)
       changeImage(ev)
       console.log(turn)
+
+      if (turn < 11)
       $('span.meter').css('width', turn/10*100 + "%")
 
       if (turn == 10){
@@ -17,7 +19,6 @@ $(document).on('ready page:load', function() {
         // .on('click', function(){
         //   updateCuisines(ev)
         //   updateTags(ev)
-
       }
   });
 
