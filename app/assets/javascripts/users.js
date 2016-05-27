@@ -62,6 +62,8 @@ $(document).on('ready load:page', function(){
     var accept_userId = $(ev.target).data('acceptuserid')
     var userId = $(ev.target).data('currentuserid')
     var date = new Date()
+    var dates_name = $(ev.target).data('acceptusername')
+    var picAnswer = confirm ("Do you want to send this person an Invitation to " + dates_name + "?")
 
     console.log(date_cuisine)
     console.log(accept_userId)
@@ -70,24 +72,25 @@ $(document).on('ready load:page', function(){
 
     console.log(userId)
 
-
-    $.ajax({
-      url: '/invitations',
-      method: 'post',
-      dataType: 'html',
-      data: {
-        invitation: {
-          date_cuisine: date_cuisine,
-          send_user_id: userId,
-          accept_user_id: accept_userId,
-          date: date
+    if (picAnswer) {
+      $.ajax({
+        url: '/invitations',
+        method: 'post',
+        dataType: 'html',
+        data: {
+          invitation: {
+            date_cuisine: date_cuisine,
+            send_user_id: userId,
+            accept_user_id: accept_userId,
+            date: date
           }
         },
-      success: function(data){
-        $('.dates-pending').html(data)
-        console.log(data);
-      }
-    });
+        success: function(data){
+          $('.dates-pending').html(data)
+          console.log(data);
+        }
+      });
+    };
   });
 
 
