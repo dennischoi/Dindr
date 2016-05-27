@@ -24,11 +24,11 @@ var invId = $('.delete').data('invitationid')
 
     $.ajax({
       url: "/invitations/" + invId,
-      method: "post",
+      method: "DELETE",
       dataType: 'script',
-      data: {
-        "_method":"delete"
-      }
+      // data: {
+      //   "_method":"delete"
+      // }
     })
   })
 
