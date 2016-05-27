@@ -15,6 +15,7 @@
 
 <div class="pending">
 
+  <h2>Waiting on...</h2>
   <% current_user.sent_invitations.each do |inv| %>
     <li>
       <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
