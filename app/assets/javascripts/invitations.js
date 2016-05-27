@@ -1,4 +1,4 @@
-$(document).on('ready', function(){
+$(document).on('ready page:load', function(){
 
 
   $('body').on('click','.accept_button', function(ev){
