@@ -14,10 +14,12 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(invitation_params)
 
     if @invitation.save
-      render :nothing => true
+      render nothing: :true
+
     else
       render :new
     end
+
   end
 
   def edit
@@ -29,9 +31,11 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
 
     if @invitation.update_attributes(accepted_params)
-      if request.xhr?
-        render nothing: true
+      respond_to do |format|
+        format.js
+        format.html
       end
+      
     else
       render :edit
     end
@@ -41,9 +45,9 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
     @invitation.destroy
 
-    
+
     respond_to do |format|
-      format.js 
+      format.js
       format.html
     end
 

@@ -1,12 +1,15 @@
-
 <div class="requests">
   <h2>Invites</h2>
   <% current_user.accepted_invitations.each do |inv| %>
   <li>
     <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
-    <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %>
-
-    <%= button_tag "Accept Date?", class: "accept_button", data: {invitationid: inv.id} %> ||| <%= button_tag "Delete this BITch", class: 'delete', data: {invitationid: inv.id} %>
+    <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %> |
+    <% if inv.pending == false %>
+      You've Accepted!
+    <% else %>
+    <%= button_tag "Accept Date?", class: "accept_button", data: {invitationid: inv.id} %>
+    <% end %>
+    ||| <%= button_tag "Delete this BITch", class: 'delete', data: {invitationid: inv.id} %>
   </li>
 
   <% end %>
@@ -14,7 +17,7 @@
 
 
 <div class="pending">
-
+  <h2>Waiting on...</h2>
   <% current_user.sent_invitations.each do |inv| %>
     <li>
       <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
