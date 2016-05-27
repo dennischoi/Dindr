@@ -2,10 +2,14 @@ class PicturesController < ApplicationController
   before_action :require_login
 
   def index
-    @pictures = Picture.all
+    # @pictures = Picture.order_by_rand.all
 
-    # array = @pictures.order_by_rand.includes(:votes).where( :votes => { :user_id => nil }).limit(3)
-
+    # array2 = @pictures.includes(:votes).where( :votes => { :user_id => nil })
+    #
+    # array1 = @pictures.includes(:votes).where.not( :votes => { :user_id => current_user.id })
+    #
+    # array = array1.concat(array2)
+    # array.uniq!
     votes_array = current_user.votes.pluck(:picture_id)
     @pictures = Picture.order_by_rand.where.not(id: votes_array)
 

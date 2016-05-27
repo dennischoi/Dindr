@@ -1,5 +1,6 @@
 class InvitationsController < ApplicationController
   def index
+    @invitations = current_user.accepted_invitations
   end
 
   def show
@@ -42,9 +43,10 @@ class InvitationsController < ApplicationController
 
 
     respond_to do |format|
-      format.js
+      format.js 
       format.html
     end
+
 
   end
 
