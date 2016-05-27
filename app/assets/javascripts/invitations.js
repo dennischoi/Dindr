@@ -16,8 +16,8 @@ $(document).on('ready page:load', function(){
         data: {
           invitation: {
             pending: false
-          };
-        };
+          }
+        }
       });
     };
   });

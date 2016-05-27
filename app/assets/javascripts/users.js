@@ -62,7 +62,8 @@ $(document).on('ready load:page', function(){
     var accept_userId = $(ev.target).data('acceptuserid')
     var userId = $(ev.target).data('currentuserid')
     var date = new Date()
-    var picAnswer = confirm ("Do you want to send this person an Invitation?")
+    var dates_name = $(ev.target).data('acceptusername')
+    var picAnswer = confirm ("Do you want to send this person an Invitation to " + dates_name + "?")
 
     console.log(date_cuisine)
     console.log(accept_userId)
