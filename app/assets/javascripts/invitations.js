@@ -16,11 +16,11 @@ $(document).on('ready page:load', function(){
         data: {
           invitation: {
             pending: false
-          }
-        }
-      })    
-    }
-  })
+          };
+        };
+      });
+    };
+  });
 
   $('body').on('click', '.delete', function(ev) {
     console.log("I deleted you")
@@ -41,9 +41,7 @@ $(document).on('ready page:load', function(){
         // data: {
         //   "_method":"delete"
         // }
-      })
-
-    }
-  })
-
-})
+      });
+    };
+  });
+});
