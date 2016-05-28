@@ -1,27 +1,17 @@
+<%= render 'layouts/burgerbar' %>
 
-<!-- BIG HEADER IMAGE -->
+<!-- Jumbo Header Image -->
+
 <div class="image-gradient-dynamic">
   <%= image_tag('dindr-header-v2.png') %>
 </div>
 
-<!-- <div class="container" id="home-page">
-  <div id="homepage-button">
-    <form class="button" action="/game" method="get">
-      <% if current_user %>
-        <input type="submit" value="Click Here to Dindr" >
-      <% else %>
-        <div class="modal modal-trigger">
-          <button id="open-sign-in" class="button">Click Here to Dindr</button>
-        </div>
-      <% end %>
-    </form>
-  </div> -->
-
-<!-- LIST BULLETS -->
+<div class="container" id="home-page">
+<!-- List Bullet -->
 
   <div id="bullets">
-    <ul class="bullets">
-      <li class="bullet">
+    <div class="bullets">
+      <div class="bullet">
         <div class="bullet-icon bullet-icon-1">
           <%= image_tag('dindr-little-d.png') %>
         </div>
@@ -29,25 +19,25 @@
           <h2>Step 1:</h2>
           <p>Register an account with Dindr</p>
           </div>
-      </li>
-      <li class="bullet">
+      </div>
+      <div class="bullet">
         <div class="bullet-icon bullet-icon-2">
           <%= image_tag('udon.png') %>
         </div>
         <div class="bullet-content">
           <h2>Step 2:</h2>
-          <p>You will be shown pictures of amazing dishes. Click the one in each set looks the most delicious to you.<p>
+          <p>You will be shown pictures of tasty dishes. Click the one in each set looks the most delicious to you.<p>
         </div>
-      </li>
-      <li class="bullet">
+      </div>
+      <div class="bullet">
         <div class="bullet-icon bullet-icon-3">
           <%= image_tag('man-sitting-in-front-of-a-table-eating-and-drinking-while-having-lunch.png') %>        </div>
         <div class="bullet-content">
           <h2>Step 3: </h2>
-          <p>Find out what you want to eat! After we've collected enough data on your preferences, we'll show you some restaurants near you that has exactly the food you want!</p>
+          <p>Find out exactly what you want to eat and where you can find it!</p>
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 <!--
   <div id="homepage-thumbnails">
@@ -56,7 +46,7 @@
     <% end %>
   </div> -->
 
-  <!-- SNAPWIDGET -->
+<!-- SNAPWIDGET -->
   <div id="homepage-widget">
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <iframe src="https://snapwidget.com/embed/177224" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"></iframe>

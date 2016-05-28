@@ -3,10 +3,10 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function() {
 // ----------------------------------------------------------------------------
 // MODAL
 // ----------------------------------------------------------------------------
-
 $(function() {
   $("#modal-1").on("change", function() {
     if ($(this).is(":checked")) {
@@ -24,7 +24,6 @@ $(function() {
     e.stopPropagation();
   });
 });
-
 
 $(function() {
   $("#open-sign-in").on("click", function(e) {
@@ -64,16 +63,28 @@ $(window).resize(function() {
   }
 });
 
-$(document).ready(function() {
-  var menuToggle = $("#js-mobile-menu").unbind();
-  $("#js-navigation-menu").removeClass("show");
 
-  menuToggle.on("click", function(e) {
-    e.preventDefault();
-    $("#js-navigation-menu").slideToggle(function(){
-      if($("#js-navigation-menu").is(":hidden")) {
-        $("#js-navigation-menu").removeAttr("style");
-      }
+// ----------------------------------------------------------------------------
+// BURGER NAV
+// ----------------------------------------------------------------------------
+
+  ( function () {
+      $('.menu-trigger').mouseenter(function() {
+          $(this).toggleClass('active');
+          // $('#nav-box').toggle();
+          $('#nav-box').css('visibility', 'visible');
+      });
+  }.call(this));
+
+  ( function () {
+    $('.navigation').mouseleave(function() {
+      $('.menu-trigger').toggleClass('active');
+      // $('#nav-box').toggle();
+      $('#nav-box').css('visibility', 'hidden');
+      // $('#nav-box').css('color', 'green');
     });
-  });
+  }.call(this));
+
+
+
 });

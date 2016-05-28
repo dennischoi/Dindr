@@ -1,77 +1,31 @@
-@import "grid-settings";
+// ----------------------------------------------------------------------------
+// This sheet contains all the styles for the homepage and game page //--------
+// ----------------------------------------------------------------------------
 
-#game-page {
-  margin-top: 5rem;
-  min-height: 55rem;
-}
+// Home Page // ---------------------------------------------------------------
 
 #home-page {
   padding-bottom: 5rem;
 }
-.page-title {
-  text-align: center;
-  margin: 3rem;
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1.25rem;
-  }
-}
-#reset-pics-button {
-  text-align: center;
-  // font-size: 50px;
-}
-
-#skip-pics-button {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.button_to {
-  text-align: center;
-  padding-top: 2rem;
-}
-
-
-
-.pic-sets {
-  @include outer-container(100%);
-  margin: 10rem 0;
-  #no-pics {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-
-.first-set {
-  @include fill-parent;
-  -webkit-animation: fadein 0.8s;
-}
-
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.randomized-dish {
-  @include span-columns(4);
-}
 
 .image-gradient-dynamic {
   line-height: 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  img {
   width: 100%;
+  height: 100%;
+  visibility: visible;
+  z-index: 0;
+  }
 }
 
-// ----------------------------------------------------------------------------
-// Main Pg. Bullet List
-// ----------------------------------------------------------------------------
+// Bullet List
+
 #bullets {
-  @include outer-container;
-  margin-left: 30px;
-  // margin-top: 15rem;
-  // border: 1px solid;
+  @include fill-parent;
+  border: 1px solid;
+  min-height: 900px;
 }
 .bullets {
   $base-line-height: 1.5em !default;
@@ -79,25 +33,28 @@
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   $icon-bullet-size: 6em;
+  min-height: 80%;
 
-  @include fill-parent;
-  @include row(table);
   display: flex;
   flex-wrap: wrap;
-  margin: 5rem 1rem;
-  margin-bottom: $base-line-height;
+  margin: 5rem 0;
+  // margin-bottom: $base-line-height;
   overflow: auto;
-  padding: 0;
+  padding: 10% 0;
+  border: 0.5px solid;
+  border-radius: 50px;
 
   .bullet {
-    @include span-columns(4 of 12);
+    @include span-columns(4);
     flex-basis: 20em;
     flex-grow: 1;
+    border: 0.5px solid;
+    border-radius: 50px;
+
   }
 
   .bullet-icon {
     // background: $action-color;
-    border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
     padding: $icon-bullet-size / 6;
@@ -107,7 +64,7 @@
   .bullet-icon-1 {
     // background: adjust-hue($action-color, -200%);
     img {
-      width: 100%;
+      max-width: 100%;
       height: 100%;
     }
   }
@@ -116,11 +73,16 @@
     // background: adjust-hue($action-color, -590%);
     img {
       padding-bottom: 4rem;
+      max-width: 130%;
     }
   }
 
   .bullet-icon-3 {
     // background: adjust-hue($action-color, -1040%);
+    img {
+      padding-bottom: 4rem;
+      max-width: 130%;
+    }
   }
 
   .bullet-content {
@@ -149,9 +111,49 @@
   }
 }
 
-// ----------------------------------------------------------------------------
-// PROGRESS BAR
-// ----------------------------------------------------------------------------
+// Game Page // ---------------------------------------------------------------
+
+#game-page {
+  margin-top: 5rem;
+  min-height: 55rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  max-width: 35%;
+  margin: auto;
+}
+
+#start-game-button {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+#reset-pics-button {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  // display: none;
+}
+
+#skip-pics-button {
+  text-align: center;
+  padding: 2rem 0;
+  // display: none;
+}
+
+.game-started {
+  min-height: 200%;
+}
+
+.button_to {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+// Progress Bar
 
 .progress-bar {
   $base-border-color: gainsboro !default;
@@ -251,14 +253,40 @@
   }
 }
 
-//
+// Pictures // --------------------------------------------------------------------
 
-.pic-sets{
-  position: relative;
+.pic-sets {
+  @include outer-container(100%);
+  margin: 10rem 0;
+  border: 1px dotted;
+
+  #no-pics {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.first-set {
+  // @include outer-container(100%);
+  @include fill-parent;
+  // @include row(table);
+  -webkit-animation: fadein 0.8s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.randomized-dish {
+@include span-columns(4);
+// @include shift(-1);
 }
 
 .food-image {
   border-radius: 10%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .on-like {
@@ -275,11 +303,9 @@
 
 i {
   image: 4rem;
-
 }
 
-// Hover Animations
-
+// Hover Animations // --------------------------------------------------------
 // Grow
 
 .hvr-grow {

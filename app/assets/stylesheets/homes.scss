@@ -12,15 +12,17 @@
   z-index: 9999999999;
 }
 
-
 #open-sign-in {
   width: 500px;
   height: 140px;
   font-size: 2.5rem
 }
 
+// Carousel
+
 #homepage-widget {
-  padding-left: 45px;
+
+  margin: 6rem auto 0 3.8%;
 }
 
 .snapwidget-widget {
@@ -28,10 +30,4 @@
   overflow:hidden;
   width:100%;
   text-align: center;
-}
-
-button {
-  // width: 200%;
-  // height: 200%;
-  // @include button(shiny, #ff0000);
 }
