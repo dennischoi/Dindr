@@ -6,9 +6,45 @@
   </div>
 
   <div id="nav-box">
-    <li><a href="">signed in as: </a></li>
-    <li><a href="">my profile</a></li>
-    <li><a href="">dindr dates</a></li>
-    <li><a href="">log out</a></li>
+    <% if current_user %>
+    <li><a>signed in as: <%= current_user.email %></a></li>
+    <li><%= link_to "profile", user_path(current_user) %></li>
+    <li><%= link_to "log out", :logout, method: :delete %></li>
+      <% if current_user.admin? %>
+        <li><%= link_to "view all pictures", admin_pictures_path %></li>
+      <% end %>
+    <% else %>
+    <li class="nav-link"><%= link_to "sign up!", new_user_path %></li>
+       <li class="nav-link modal modal-trigger">
+         <label for="modal-1" id="nav-sign-in"> Sign In </label>
+           <input class="modal-state" id="modal-1" type="checkbox" />
+             <div class="modal-fade-screen">
+               <div class="modal-inner">
+                 <div class="modal-close" for="modal-1"></div>
+                   <h1>Sign in</h1>
+                   <p class="modal-intro">Welcome Back!</p>
+                   <p class="modal-content">
+
+                   <%= form_tag create_path do %>
+                     <div class="field">
+                       <%= label_tag :email %>
+                       <%= text_field_tag :email, params[:email] %>
+                     </div>
+                     <div class="field">
+                       <%= label_tag :password %>
+                       <%= password_field_tag :password %>
+                     </div>
+                     <div class="action">
+                       <%= submit_tag :Submit %>
+                     </div>
+                   <% end %>
+                   <h1>Forgot Password?</h1>
+                   <%= link_to 'Click here to reset your password!', password_resets_path, id: "reset-pass-link" %>
+               </p>
+             </div>
+           </div>
+       </li>
+
+      <% end %>
   </div>
 </div>

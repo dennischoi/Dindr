@@ -12,9 +12,6 @@
 @import 'cuisines';
 @import 'restaurants';
 @import 'maps';
- @mixin vert-center-header-img {
-
- }
 
  *,
  *:after,
@@ -41,20 +38,21 @@ label {
 }
 
 #nav-box {
-  min-width: 10rem;
-  height: 8rem;
+  min-width: 15rem;
+  min-height: 10rem;
   visibility: hidden;
-  // background-color: grey;
+  background-color: rgba(215, 208, 218, 0.4);
   z-index: 99999999999;
   position: absolute;
-    border: 2px dashed white;
-
-  // float: left;
-  top: 3rem;
+  // border: 2px dashed white;
+  top: 4.5rem;
   right: 0rem;
+  border-radius: 50px;
   li {
+    list-style: none;
     text-align: right;
     font-size: 1.3rem;
+    padding: 5% 10%;
   }
 }
 
@@ -69,9 +67,9 @@ label {
   display: inline-block;
   z-index: 999999999;
   height: 7rem;
-  width: 5rem;
+  width: 4rem;
   position: absolute;
   right: 2.9rem;
   top: 30px;
-  border: 2px dashed;
+  // border: 2px dashed;
 }
