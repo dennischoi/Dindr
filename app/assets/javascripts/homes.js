@@ -2,6 +2,7 @@
 // BURGER NAV
 // ----------------------------------------------------------------------------
 $(document).ready(function() {
+
   ( function () {
         $('.menu-trigger').mouseenter(function() {
             $(this).toggleClass('active');

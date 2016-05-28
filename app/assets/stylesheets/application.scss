@@ -38,7 +38,7 @@ label {
 }
 
 #nav-box {
-  min-width: 15rem;
+  min-width: 18rem;
   min-height: 10rem;
   visibility: hidden;
   background-color: rgba(215, 208, 218, 0.4);
@@ -47,12 +47,16 @@ label {
   // border: 2px dashed white;
   top: 4.5rem;
   right: 0rem;
-  border-radius: 50px;
-  li {
-    list-style: none;
-    text-align: right;
-    font-size: 1.3rem;
-    padding: 5% 10%;
+  border-radius: 30px;
+
+  ul {
+    margin: 10%;
+    li {
+      list-style: none;
+      text-align: right;
+      font-size: 1.3rem;
+      padding: 1% 10% 1% 5%;
+    }
   }
 }
 
