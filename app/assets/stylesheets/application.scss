@@ -2,8 +2,8 @@
 @import "grid-settings";
 @import "neat";
 @import "base/base";
+@import 'home_nav';
 @import 'footer';
-@import 'burgerbar';
 @import 'pictures';
 @import 'homes';
 @import 'modal';
@@ -23,7 +23,6 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
 body {
   margin: 0;
   background-image: url('white-light-paper-fibers-1920x1080.png');
@@ -35,45 +34,4 @@ body {
 
 label {
   margin: 0;
-}
-
-#nav-box {
-  min-width: 18rem;
-  min-height: 10rem;
-  visibility: hidden;
-  background-color: rgba(215, 208, 218, 0.4);
-  z-index: 99999999999;
-  position: absolute;
-  // border: 2px dashed white;
-  top: 4.5rem;
-  right: 0rem;
-  border-radius: 30px;
-
-  ul {
-    margin: 10%;
-    li {
-      list-style: none;
-      text-align: right;
-      font-size: 1.3rem;
-      padding: 1% 10% 1% 5%;
-    }
-  }
-}
-
-.hamburger {
-  // float:right;
-  font-size: 0.7rem;
-  min-height: auto;
-  width: auto;
-}
-
-.navigation {
-  display: inline-block;
-  z-index: 999999999;
-  height: 7rem;
-  width: 4rem;
-  position: absolute;
-  right: 2.9rem;
-  top: 30px;
-  // border: 2px dashed;
 }

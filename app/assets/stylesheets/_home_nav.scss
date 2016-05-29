@@ -1,3 +1,56 @@
+// The Navigation Components
+
+.navigation {
+  // display: inline-block;
+  z-index: 999999999;
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  right: 2.9rem;
+  top: 30px;
+  // border: 2px dashed blue;
+}
+
+#nav-box {
+  width: 8rem;
+  height: auto;
+  visibility: hidden;
+  background-color: rgba(215, 208, 218, 0.4);
+  z-index: 99999999999;
+  position: absolute;
+  // border: 2px dashed white;
+  top: 4.5rem;
+  right: 0rem;
+  text-align: right;
+
+
+  ul {
+    // margin: 10%;
+    li {
+      list-style: none;
+      text-align: right;
+      font-size: 1.3rem;
+      padding: 1% 10% 1% 5%;
+      @media (max-width: 667px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media (max-width: 667px) {
+    width: 6rem;
+  }
+}
+
+
+
+
+.hamburger {
+  height: auto;
+  width: auto;
+}
+
+
+// Burger Icon/Animation
 .menu-trigger {
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;

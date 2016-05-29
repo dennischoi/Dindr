@@ -8,8 +8,7 @@
   <div id="nav-box">
     <% if current_user %>
     <ul>
-      <li><a>signed in as: <%= current_user.email %></a></li>
-      <li><%= link_to "profile", user_path(current_user) %></li>
+      <li><%= link_to "my profile", user_path(current_user) %></li>
       <li><%= link_to "dindr dates" %></li>
       <li><%= link_to "log out", :logout, method: :delete %></li>
 

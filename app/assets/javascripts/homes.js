@@ -4,9 +4,8 @@
 $(document).ready(function() {
 
   ( function () {
-        $('.menu-trigger').mouseenter(function() {
-            $(this).toggleClass('active');
-            // $('#nav-box').toggle();
+        $('.hamburger').mouseenter(function() {
+            $('.menu-trigger').toggleClass('active');
             $('#nav-box').css('visibility', 'visible');
         });
     }.call(this));
@@ -14,7 +13,6 @@ $(document).ready(function() {
     ( function () {
       $('.navigation').mouseleave(function() {
         $('.menu-trigger').toggleClass('active');
-        // $('#nav-box').toggle();
         $('#nav-box').css('visibility', 'hidden');
         // $('#nav-box').css('color', 'green');
       });
