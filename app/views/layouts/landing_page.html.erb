@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dindr</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Figaro.env.google_maps_api_key}", async: true, defer: true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <%= render 'layouts/burger' %>
+<%= yield %>
+</body>
+
+<!-- Footer -->
+
+<footer class="footer-2" role="contentinfo">
+  <div class="footer-logo">
+    <%= link_to image_tag('dindr-little-d.png'), homes_path %>
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About Dindr</a></li>
+      <li><a href="javascript:void(0)">Contact Us</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+        </a></li>
+      </ul>
+    </div>
+</footer>
+
+</html>
