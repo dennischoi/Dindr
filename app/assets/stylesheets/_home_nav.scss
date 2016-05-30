@@ -8,6 +8,12 @@
   position: absolute;
   right: 2.9rem;
   top: 30px;
+  @media (max-width: 667px) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+  }
   // border: 2px dashed blue;
 }
 
@@ -22,6 +28,7 @@
   top: 4.5rem;
   right: 0rem;
   text-align: right;
+  list-style: none;
 
 
   ul {
@@ -60,6 +67,7 @@
   position: absolute;
   top: 3%;
   right: 3%;
+  
   width: 60px;
   height: 40px;
   text-indent: -9999em;
