@@ -34,13 +34,22 @@
     <h2>Waiting on...</h2>
     <% current_user.sent_invitations.each do |inv| %>
       <li class="pending-inv">
-        <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
-          <%= inv.date %> | <%= inv.date_cuisine %> | <%= User.find(inv.accept_user_id).first_name %> |
+        <p class="acpt">
+          <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
+        </p>
+        <p class="acpt">
+          <%= inv.date %>
+        </p>
+        <p class="acpt">
+          <%= User.find(inv.accept_user_id).first_name %> | <%= inv.date_cuisine %>
+        </p>
+        <div class="acpt-button">
           <% if inv.pending == true %>
-            <em>Pending...</em>
+          <em>Pending...</em>
           <% else %>
-            <em class="inv-accepted">Invitation was Accepted!</em>
+          <em class="inv-accepted">Invitation was Accepted!</em>
           <% end %>
+        </div>
       </li>
     <% end %>
   </div>

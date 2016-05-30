@@ -10,9 +10,13 @@
 
 .pending {
   padding-top: 4rem;
+  h2 {
+    text-align: center;
+  }
 }
 
 .user-profile {
+  width: 19.1875rem;
   em {
     font-weight: bold;
   }
@@ -24,6 +28,7 @@
   width: 30%;
   border: solid 2px black;
   list-style-type: none;
+  padding: 1rem;
   img {
     height: 10rem;
     width: 10rem;
@@ -33,9 +38,10 @@
 .pending-inv {
   overflow: hidden;
   float: left;
-  width: 50%;
+  width: 33%;
   border: solid 2px black;
   list-style-type: none;
+  padding: 1rem;
   img {
     height: 10rem;
     width: 10rem;
@@ -43,6 +49,7 @@
 }
 
 .requests {
+  padding-top: 1rem;
   h2 {
     text-align: center;
   }
@@ -53,5 +60,9 @@
 }
 
 .req {
+  text-align: center;
+}
+
+.acpt {
   text-align: center;
 }
