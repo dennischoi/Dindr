@@ -2,13 +2,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-= require "burger"
 
 $(document).ready(function() {
 // ----------------------------------------------------------------------------
 // MODAL
 // ----------------------------------------------------------------------------
-
 
   $(function() {
     $("#button").on("click", function() {
