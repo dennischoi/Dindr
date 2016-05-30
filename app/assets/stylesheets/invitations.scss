@@ -1,9 +1,14 @@
 #invite-container1 {
   overflow-x: hidden;
+  margin: 0;
 }
 
 #invite-container2 {
   overflow-x: hidden;
+  padding-top: 4rem;
+}
+
+.pending {
   padding-top: 4rem;
 }
 
@@ -15,8 +20,8 @@
 
 .request-inv {
   overflow: hidden;
-  float: left;
-  width: 50%;
+  float: right;
+  width: 30%;
   border: solid 2px black;
   list-style-type: none;
   img {
@@ -37,6 +42,16 @@
   }
 }
 
+.requests {
+  h2 {
+    text-align: center;
+  }
+}
+
 .inv-accepted {
   background-color: #5CEC31;
+}
+
+.req {
+  text-align: center;
 }

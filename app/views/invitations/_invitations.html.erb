@@ -1,17 +1,26 @@
 <div id="invite-container1">
 
   <div class="requests">
-    <h2>Invites</h2>
+    <h2>Invites sent to you:</h2>
     <% current_user.accepted_invitations.each do |inv| %>
       <li class="request-inv">
-        <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
-          <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %> |
-        <% if inv.pending == false %>
+        <p class="req">
+          <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
+        </p>
+        <p class="req">
+          <%= inv.date %>
+        </p>
+        <p class="req">
+          <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %>
+        </p>
+        <div class="req-button">
+          <% if inv.pending == false %>
           <em class="inv-accepted">Accepted!</em>
-        <% else %>
+          <% else %>
           <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
-        <% end %>
-        ||| <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
+          <% end %>
+          | <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
+        </div>
       </li>
 
     <% end %>
