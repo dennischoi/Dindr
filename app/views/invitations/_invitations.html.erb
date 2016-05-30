@@ -7,7 +7,7 @@
         <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
           <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %> |
         <% if inv.pending == false %>
-          <em class="inv-accepted">You've Accepted!</em>
+          <em class="inv-accepted">Accepted!</em>
         <% else %>
           <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
         <% end %>
@@ -28,7 +28,11 @@
       <li class="pending-inv">
         <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
           <%= inv.date %> | <%= inv.date_cuisine %> | <%= User.find(inv.accept_user_id).first_name %> |
-          <%= inv.pending == true ? 'Pending...' : 'Invitation was Accepted!'%>
+          <% if inv.pending == true %>
+            <em>Pending...</em>
+          <% else %>
+            <em class="inv-accepted">Invitation was Accepted!</em>
+          <% end %>
       </li>
     <% end %>
   </div>

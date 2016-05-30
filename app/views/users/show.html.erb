@@ -4,20 +4,20 @@
 
 
     <%= image_tag current_user.profile_pic.url %>
-    <p>Username: <%= current_user.user_name %></p>
-    <p>Email: <%= current_user.email %></p>
-    <p>Age: <%= current_user.age %></p>
-    <p>Address: <%= current_user.address %></p>
-    <p>Phone Number: <%= current_user.phone_number %></p>
+    <p><em>Username:</em> <%= current_user.user_name %></p>
+    <p><em>Email:</em> <%= current_user.email %></p>
+    <p><em>Age:</em> <%= current_user.age %></p>
+    <p><em>Address:</em> <%= current_user.address %></p>
+    <p><em>Phone Number:</em> <%= current_user.phone_number %></p>
     <p>
-      Dindr Date:
+      <em>Dindr Date:</em>
       <% if current_user.down_to_meet == true %>
       You're open to a Dindr date!
       <% else %>
       You aren't looking to date.
       <% end %>
     </p>
-    <p>About Me: <%= current_user.bio %></p>
+    <p><em>About Me:</em> <%= current_user.bio %></p>
   </div>
 
   <div class="user-">

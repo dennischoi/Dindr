@@ -6,6 +6,12 @@
   overflow-x: hidden;
 }
 
+.user-profile {
+  em {
+    font-weight: bold;
+  }
+}
+
 .request-inv {
   overflow: hidden;
   float: left;
