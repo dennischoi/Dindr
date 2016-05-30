@@ -1,28 +1,34 @@
-<div class="requests">
-  <h2>Invites</h2>
-  <% current_user.accepted_invitations.each do |inv| %>
-  <li>
-    <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
-    <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %> |
-    <% if inv.pending == false %>
-      You've Accepted!
-    <% else %>
-    <%= button_tag "Accept Date?", class: "accept_button", data: {invitationid: inv.id} %>
+<div id="invite-container1">
+
+  <div class="requests">
+    <h2>Invites</h2>
+    <% current_user.accepted_invitations.each do |inv| %>
+      <li class="request-inv">
+        <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
+          <%= inv.date %> | <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %> |
+        <% if inv.pending == false %>
+          <em class="inv-accepted">You've Accepted!</em>
+        <% else %>
+          <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
+        <% end %>
+        ||| <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
+      </li>
+
     <% end %>
-    ||| <%= button_tag "Delete this BITch", class: 'delete', data: {invitationid: inv.id} %>
-  </li>
+  </div>
 
-  <% end %>
 </div>
 
+<div id="#invite-container2">
 
-<div class="pending">
-  <h2>Waiting on...</h2>
-  <% current_user.sent_invitations.each do |inv| %>
-    <li>
-      <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
-      <%= inv.date %> | <%= inv.date_cuisine %> | <%= User.find(inv.accept_user_id).first_name %> |
-      <%= inv.pending == true ? 'pending' : 'accepted!'%>
-    </li>
-  <% end %>
 </div>
+  <div class="pending">
+    <h2>Waiting on...</h2>
+    <% current_user.sent_invitations.each do |inv| %>
+      <li class="pending-inv">
+        <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
+          <%= inv.date %> | <%= inv.date_cuisine %> | <%= User.find(inv.accept_user_id).first_name %> |
+          <%= inv.pending == true ? 'Pending...' : 'Invitation was Accepted!'%>
+      </li>
+    <% end %>
+  </div>

@@ -1,3 +1,35 @@
-// Place all the styles related to the Invitations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#invite-container1 {
+  overflow-x: hidden;
+}
+
+#invite-container2 {
+  overflow-x: hidden;
+}
+
+.request-inv {
+  overflow: hidden;
+  float: left;
+  width: 50%;
+  border: solid 2px black;
+  list-style-type: none;
+  img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.pending-inv {
+  overflow: hidden;
+  float: left;
+  width: 50%;
+  border: solid 2px black;
+  list-style-type: none;
+  img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.inv-accepted {
+  background-color: #5CEC31;
+}

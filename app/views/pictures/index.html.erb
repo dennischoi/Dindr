@@ -20,12 +20,6 @@
     <span class="meter"></span>
   </div>
 
-  <div id="agg-pics-button" >
-    <!-- <input type="button" id="agg-button" value="Finished!"> -->
-    <%= button_to "See Results", user_cuisines_path, :method => "get" %>
-
-  </div>
-
   <div class="pic-sets" data-user="<%= current_user.id %>">
     <% if @picture1 == true && @picture2 =true && @picture3 == true %>
       <%= render 'pictures' %>
@@ -37,6 +31,11 @@
     <!-- This will have to be changed into an AJAX function -->
   </div>
 
+  <!-- <div id="agg-pics-button" > -->
+    <!-- <input type="button" id="agg-button" value="Finished!"> -->
+    <!-- <%= button_to "See Results", user_cuisines_path, :method => "get" %>
+
+  </div> -->
 
 
 

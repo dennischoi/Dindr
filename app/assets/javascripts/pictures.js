@@ -14,8 +14,11 @@ $(document).on('ready page:load', function() {
       if (turn < 11)
       $('span.meter').css('width', turn/10*100 + "%")
 
+
       if (turn == 10){
         $('#agg-pics-button').addClass('enough-votes')
+        // This has to be changed to heroku url when launched!
+        window.location = "http://localhost:3000/user/cuisines?"
         // .on('click', function(){
         //   updateCuisines(ev)
         //   updateTags(ev)
