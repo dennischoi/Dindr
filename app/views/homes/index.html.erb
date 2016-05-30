@@ -1,5 +1,3 @@
-<%= render 'layouts/burgerbar' %>
-
 <!-- Header Image -->
 
 <div class="image-gradient-dynamic">
@@ -52,17 +50,35 @@
     <iframe src="https://snapwidget.com/embed/177224" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
   </div>
 
+  <!-- <form class="button" action="/game" method="get">
+       <% if current_user %>
+         <input type="submit" value="Click Here to DINDR!">
+       <% else %>
+         <div class="modal modal-trigger">
+           <button id="open-sign-in" class="button">Click Here to DINDR! </button>
+         </div>
+       <% end %>
+     </form> -->
+
   <div id="homepage-button">
+    <% if current_user %>
+  <span id="button">
     <form class="button" action="/game" method="get">
-      <% if current_user %>
-        <input type="submit" value="Click Here to DINDR!">
-      <% else %>
-        <div class="modal modal-trigger">
-          <button id="open-sign-in" class="button">Click Here to DINDR! </button>
-        </div>
-      <% end %>
+      <button type="submit">Click Here to DINDR!</button>
     </form>
-  </div>
+  </span>
+
+      <% else %>
+      <%= render 'layouts/modal' %>
+      <!-- <script>
+      $('.modal-open, .modal').css('visibility' 'hidden')
+      $('body#homepage-button').removeClass('modal' 'modal-open')
+      </script> -->
+      <span id="button">
+          <button id="force-sign-in">Click Here to DINDR!</button>
+    </span>
+      <% end %>
 
 
+</div>
 </div>
