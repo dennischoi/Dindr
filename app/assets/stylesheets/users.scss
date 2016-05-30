@@ -1,9 +1,14 @@
 #profile-page {
   padding-top: 5rem;
   min-height: 47.5rem;
+  overflow: hidden;
   li {
     list-style: none;
   }
+}
+
+.user-profile {
+  float: left;
 }
 
 #new-user-page {
