@@ -2,7 +2,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require "burger"
+= require "burger"
 
 $(document).ready(function() {
 // ----------------------------------------------------------------------------
