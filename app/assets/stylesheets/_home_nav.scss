@@ -1,0 +1,148 @@
+// The Navigation Components
+
+.navigation {
+  // display: inline-block;
+  z-index: 999999999;
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  right: 2.9rem;
+  top: 30px;
+  @media (max-width: 667px) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+  }
+  // border: 2px dashed blue;
+}
+
+#nav-box {
+  width: 8rem;
+  height: auto;
+  visibility: hidden;
+  background-color: rgba(215, 208, 218, 0.4);
+  z-index: 99999999999;
+  position: absolute;
+  // border: 2px dashed white;
+  top: 4.5rem;
+  right: 0rem;
+  text-align: right;
+  list-style: none;
+
+
+  ul {
+    margin-bottom: 20%;
+    li {
+      list-style: none;
+      text-align: right;
+      font-size: 1.3rem;
+      padding: 1% 10% 1% 5%;
+      @media (max-width: 667px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media (max-width: 667px) {
+    width: 6rem;
+  }
+}
+
+.hamburger {
+  height: auto;;
+  width: auto;
+}
+
+// Burger Icon/Animation
+.menu-trigger {
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  
+  width: 60px;
+  height: 40px;
+  text-indent: -9999em;
+  z-index: 99999999999999999999;
+}
+
+.menu-trigger #burger,
+.menu-trigger #burger:before,
+.menu-trigger #burger:after {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: white;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  left: 0;
+}
+
+.menu-trigger #burger:before,
+.menu-trigger #burger:after {
+  content: "";
+}
+
+.menu-trigger #burger {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 16px;
+}
+
+.menu-trigger #burger:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  top: -16px;
+  z-index: 10;
+}
+
+.menu-trigger #burger:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 16px;
+}
+
+.menu-trigger.active {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.menu-trigger.active #burger,
+.menu-trigger.active #burger:before,
+.menu-trigger.active #burger:after {
+  background-color: transparent;
+}
+
+.menu-trigger.active #burger:before {
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+  background-color: white;
+}
+
+.menu-trigger.active #burger:after {
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: white;
+}

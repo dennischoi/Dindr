@@ -24,13 +24,8 @@
     color: black;
   }
 
-  .modal-state {
-    display: none;
-  }
 
-  .modal-trigger {
-    padding: 0 0;
-  }
+  display: none;
 
   .modal-fade-screen { // overlay
     @include position(fixed, 0);
@@ -157,11 +152,11 @@
     visibility: visible;
   }
 }
-
-#modal-1 {
-  position: absolute;
-  top: 50rem;
-}
+//
+// #modal-1 {
+//   position: absolute;
+//   top: 50rem;
+// }
 
 #reset-pass-link {
   color: black;

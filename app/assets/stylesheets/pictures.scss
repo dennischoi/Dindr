@@ -1,31 +1,40 @@
-@import "grid-settings";
+// ----------------------------------------------------------------------------
+// This sheet contains all the styles for game page //-------------------------
+// ----------------------------------------------------------------------------
 
 #game-page {
   margin-top: 5rem;
   min-height: 55rem;
 }
 
-#home-page {
-  padding-bottom: 5rem;
-}
 .page-title {
+  font-size: 2.5rem;
   text-align: center;
-  margin: 3rem;
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1.25rem;
-  }
+  max-width: 35%;
+  margin: auto;
 }
+
+#start-game-button {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
 #reset-pics-button {
   text-align: center;
-  // font-size: 50px;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  // display: none;
 }
 
 #skip-pics-button {
   text-align: center;
   padding: 2rem 0;
+  // display: none;
+}
+
+.game-started {
+  min-height: 200%;
 }
 
 .button_to {
@@ -33,125 +42,7 @@
   padding-top: 2rem;
 }
 
-
-
-.pic-sets {
-  @include outer-container(100%);
-  margin: 10rem 0;
-  #no-pics {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-
-.first-set {
-  @include fill-parent;
-  -webkit-animation: fadein 0.8s;
-}
-
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.randomized-dish {
-  @include span-columns(4);
-}
-
-.image-gradient-dynamic {
-  line-height: 0;
-  position: relative;
-  width: 100%;
-}
-
-// ----------------------------------------------------------------------------
-// Main Pg. Bullet List
-// ----------------------------------------------------------------------------
-#bullets {
-  @include outer-container;
-  margin-left: 30px;
-  // margin-top: 15rem;
-  // border: 1px solid;
-}
-.bullets {
-  $base-line-height: 1.5em !default;
-  $action-color: #95CD44 !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $icon-bullet-size: 6em;
-
-  @include fill-parent;
-  @include row(table);
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5rem 1rem;
-  margin-bottom: $base-line-height;
-  overflow: auto;
-  padding: 0;
-
-  .bullet {
-    @include span-columns(4 of 12);
-    flex-basis: 20em;
-    flex-grow: 1;
-  }
-
-  .bullet-icon {
-    // background: $action-color;
-    border-radius: 50%;
-    float: left;
-    height: $icon-bullet-size;
-    padding: $icon-bullet-size / 6;
-    width: $icon-bullet-size;
-  }
-
-  .bullet-icon-1 {
-    // background: adjust-hue($action-color, -200%);
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .bullet-icon-2 {
-    // background: adjust-hue($action-color, -590%);
-    img {
-      padding-bottom: 4rem;
-    }
-  }
-
-  .bullet-icon-3 {
-    // background: adjust-hue($action-color, -1040%);
-  }
-
-  .bullet-content {
-    margin-bottom: 2em;
-    margin-left: $icon-bullet-size * 1.4;
-    p {
-      font-size: 1.7rem;
-    }
-  }
-
-  h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
-    display: inline-block;
-    font-size: $icon-bullet-size / 3;
-    margin: 0 0 ($icon-bullet-size / 6) 0;
-    padding-top: $icon-bullet-size / 7;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-}
-
-// ----------------------------------------------------------------------------
-// PROGRESS BAR
-// ----------------------------------------------------------------------------
+// Progress Bar
 
 .progress-bar {
   $base-border-color: gainsboro !default;
@@ -251,14 +142,40 @@
   }
 }
 
-//
+// Pictures // --------------------------------------------------------------------
 
-.pic-sets{
-  position: relative;
+.pic-sets {
+  @include outer-container(100%);
+  margin: 10rem 0;
+  border: 1px dotted;
+
+  #no-pics {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.first-set {
+  // @include outer-container(100%);
+  @include fill-parent;
+  // @include row(table);
+  -webkit-animation: fadein 0.8s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.randomized-dish {
+@include span-columns(4);
+// @include shift(-1);
 }
 
 .food-image {
   border-radius: 10%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .on-like {
@@ -275,11 +192,9 @@
 
 i {
   image: 4rem;
-
 }
 
-// Hover Animations
-
+// Hover Animations // --------------------------------------------------------
 // Grow
 
 .hvr-grow {

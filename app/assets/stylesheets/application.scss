@@ -2,8 +2,9 @@
 @import "grid-settings";
 @import "neat";
 @import "base/base";
+@import 'home_nav';
+@import 'footer';
 @import 'pictures';
-@import 'nav';
 @import 'homes';
 @import 'modal';
 @import 'users';
@@ -12,7 +13,6 @@
 @import 'restaurants';
 @import 'maps';
 @import 'invitations';
-
 
  *,
  *:after,
@@ -23,6 +23,7 @@
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 body {
   margin: 0;
   background-image: url('white-light-paper-fibers-1920x1080.png');

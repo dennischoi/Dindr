@@ -2,9 +2,10 @@ $(document).on('ready page:load', function() {
 
   var turn = 0
   var skip = 0
+
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
-    // Potential transition for when a picture is liked/Clicked
+
       turn++;
       $(ev.target).toggleClass('on-like')
       voteImage(ev)
@@ -41,6 +42,10 @@ $(document).on('ready page:load', function() {
 
   $('#reset-button').on('click', function(ev){
     console.log(skip)
+
+    // Giving the pic-sets class "game-started" when the game has started
+
+    $(".pic-sets").addClass("game-started")
     $('#skip-button').off('click')
     ev.stopPropagation();
     turn = 0;
@@ -122,10 +127,6 @@ $(document).on('ready page:load', function() {
   $(function() {
     $(window).scroll(progressRelocate);
     progressRelocate();
-
   });
-
-
-
 
 });

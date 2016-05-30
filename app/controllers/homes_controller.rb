@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  layout "landing_page"
   before_action :load_pictures
 
 
