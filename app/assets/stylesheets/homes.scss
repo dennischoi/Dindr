@@ -19,6 +19,19 @@
   }
 }
 
+// Arrow Styling
+
+#arrow {
+  border-right: 18px solid white;
+  border-bottom: 18px solid white;
+  width: 65px;
+  height: 65px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -220px;
+  margin: 0 auto;
+}
+
 // Bullet List
 
 #bullets {
