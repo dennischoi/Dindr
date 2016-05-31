@@ -1,6 +1,7 @@
 class Invitation < ActiveRecord::Base
+# always name the associations like the schema
   belongs_to :send_user, class_name: 'User'
-  belongs_to :accepted_user, class_name: 'User'
+  belongs_to :accept_user, class_name: 'User'
 
   validate :same_date
 
@@ -14,7 +15,7 @@ class Invitation < ActiveRecord::Base
 
     inv_arr.each do |inv|
       if self.send_user_id == inv.send_user_id && self.accept_user_id == inv.accept_user_id
-        errors.add(:sent_user, "you've already matched!")
+        errors.add(:send_user, "you've already matched!")
       end
     end
   end
