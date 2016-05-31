@@ -130,7 +130,7 @@ function success(ev, position){
   $.ajax({
     url: '/restaurants',
     method: 'get',
-    dataType: 'html',
+    dataType: 'script',
     data: {
         category_filter: cuisine,
         lat: latitude_value,
@@ -138,7 +138,7 @@ function success(ev, position){
       },
     success: function(data){
       console.log(data);
-      $(".result-restaurants").html(data);
+      // $(".result-restaurants").html(data);
       initMap();
 
       map.clearOverlays();
