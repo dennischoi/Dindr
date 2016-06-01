@@ -21,12 +21,12 @@
 
 // Arrow Styling
 
-
 .arrow-box {
   width: 80px;
   height: 50px;
   margin: auto;
 }
+
 #arrow {
   border-right: 15px solid white;
   border-bottom: 15px solid white;
@@ -36,14 +36,14 @@
   margin: 0 auto;
   position: relative;
 
-// For big screens:
-  top: -200px;
+// For 15-inch screens:
+  top: -300px;
 
-// 15-inch screen:
+// 13-inch:
   @media (max-width: 1500px) {
     top: -180px;
   }
-  // 13-inch:
+  // 11-inch:
   @media (max-width: 950px) {
     top: -125px;
   }
@@ -62,94 +62,88 @@
 
 // Bullet List
 
-#bullets {
-  @include fill-parent;
-  // border: 1px solid;
-  min-height: 40rem;
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
+*, *:before, *:after {
+  box-sizing: border-box;
 }
-.bullets {
-  $base-line-height: 1.5em !default;
-  $action-color: #95CD44 !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $icon-bullet-size: 6em;
-  // min-height: 50%;
 
-  display: flex;
-  flex-wrap: wrap;
-  // margin: 5rem 0;
-  // margin-bottom: $base-line-height;
-  overflow: auto;
-  // padding-top: 10%;
-  // border: 0.5px solid;
-  border-radius: 50px;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
 
-  .bullet {
-    @include span-columns(4);
-    flex-basis: 20em;
-    flex-grow: 1;
-    // border: 0.5px solid;
-    border-radius: 50px;
+#card-container {
+  display: block;
+  height: 100%;
+  padding: 100px 0;
+}
 
-  }
-
-  .bullet-icon {
-    // background: $action-color;
+#card-set {
+  @include fill-parent();
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+}
+  .card {
+    height: 450px;
+    width: 33.33333%;
+    background: #fff;
     float: left;
-    height: $icon-bullet-size;
-    padding: $icon-bullet-size / 6;
-    width: $icon-bullet-size;
-    border-bottom: 2px
-  }
+    display: inline;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.3);
+    border-radius: 7px;
+    position: absolute;
+    text-align: center;
+    padding: 50px 30px;
+    &:nth-child(2) {
+      z-index: 10;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -25px;
+      height: 500px;
+      width: 35%;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    &:nth-child(3) {
+      right: 0;
+    }
 
-  .bullet-icon-1 {
-    // background: adjust-hue($action-color, -200%);
+  .icon {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 2em;
+    background: #eee;
+    box-shadow: 0 0 0 4px #ddd;
     img {
-      max-width: 100%;
+      width: 100%;
       height: 100%;
+      padding: 15%;
     }
   }
-
-  .bullet-icon-2 {
-    // background: adjust-hue($action-color, -590%);
-    img {
-      padding-bottom: 4rem;
-      max-width: 130%;
-    }
+  h1 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: .6em;
+    color: #2C3E50;
   }
-
-  .bullet-icon-3 {
-    // background: adjust-hue($action-color, -1040%);
-    img {
-      padding-bottom: 4rem;
-      max-width: 130%;
-    }
-  }
-
-  .bullet-content {
-    margin-bottom: 2em;
-    margin-left: $icon-bullet-size * 1.35;
-    p {
-      font-size: 1.7rem;
-    }
-  }
-
-  h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
-    display: inline-block;
-    font-size: $icon-bullet-size / 3;
-    margin: 0 0 ($icon-bullet-size / 6) 0;
-    padding-top: $icon-bullet-size / 7;
-  }
-
-  li {
-    list-style: none;
-  }
-
   p {
-    color: $base-font-color;
-    line-height: $base-line-height;
+    color: rgba(0,0,0,0.5);
+    font-size: .8em;
+    margin-bottom: 2em;
+    font-size: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: #2C3E50;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
   }
 }
 
@@ -168,11 +162,6 @@
 
 // Carousel
 
-#homepage-widget {
-
-  margin: 6rem auto 0 3.8%;
-}
-
 .snapwidget-widget {
   border:none;
   overflow:hidden;
@@ -183,13 +172,13 @@
 // Button
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-body {
-  background-color: #fff;
+#homepage-widget {
+  margin: 2rem auto 0 3.8%;
 }
 
 #button {
   width: 300px;
-  margin: 25% auto 0;
+  margin: 15% auto 0;
   position: relative;
   z-index: 1;
   text-align: center;

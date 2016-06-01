@@ -11,86 +11,55 @@
 
 <!-- Navigation Arrow -->
 
-
-
 <div class="container" id="home-page">
-<!-- List Bullet -->
 
-  <div id="bullets">
-    <div class="bullets">
-      <div class="bullet">
-        <div class="bullet-icon bullet-icon-1">
-          <%= image_tag('dindr-little-d.png') %>
-        </div>
-        <div class="bullet-content">
-          <h2>Step 1:</h2>
-          <p>Sign up with Dindr!</p>
-          </div>
-      </div>
-      <div class="bullet">
-        <div class="bullet-icon bullet-icon-2">
-          <%= image_tag('udon.png') %>
-        </div>
-        <div class="bullet-content">
-          <h2>Step 2:</h2>
-          <!-- <p>Select the dishes that look the tastiest to you!</p> -->
-          <!-- <p>You will be shown lots of pictures of tasty dishes. Click the dish in each set of 3 that looks most delicious to you.<p> -->
-          <p>You will be shown pictures of tasty dishes. Simply select the ones that look the most delicious to you.<p>
+<!-- List Bullet Cards-->
 
-        </div>
-      </div>
-      <div class="bullet">
-        <div class="bullet-icon bullet-icon-3">
-          <%= image_tag('man-sitting-in-front-of-a-table-eating-and-drinking-while-having-lunch.png') %>        </div>
-        <div class="bullet-content">
-          <h2>Step 3: </h2>
-          <p>Find out exactly what you want to eat and where you can find it nearby!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-<!--
-  <div id="homepage-thumbnails">
-    <% @pictures.each do |picture| %>
-    <%= image_tag picture.content.thumb.url %>
-    <% end %>
-  </div> -->
+<div id="card-container">
+  <ul id="card-set">
+    <li class="card">
+      <div class='icon'><%= image_tag('dindr-little-d.png') %></div>
+      <h1>Step 1: Sign up with Dindr!</h1>
+      <p>Register for an account with us so we can treat you to the full Dindr experience. </p>
+      <a href="#">Click here to sign up!</a>
+    </li>
+    <li class="card">
+      <div class='icon'><%= image_tag('udon.png') %></div>
+      <h1>Step 2:</h1>
+      <p>You will be shown pictures of tasty dishes. Simply select the ones that look the most delicious to you.</p>
+      <!-- <a href="#">View more</a> -->
+    </li>
+    <li class="card">
+      <div class='icon'><%= image_tag('man-sitting-in-front-of-a-table-eating-and-drinking-while-having-lunch.png') %> </div>
+      <h1>Step 2:</h1>
+      <p>Find out exactly what you want to eat and where you can eat it!</p>
+
+      <!-- <a href="#">View more</a> -->
+    </li>
+  </ul>
+</div>
 
 <!-- SNAPWIDGET -->
+
   <div id="homepage-widget">
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <iframe src="https://snapwidget.com/embed/177224" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
   </div>
 
-  <!-- <form class="button" action="/game" method="get">
-       <% if current_user %>
-         <input type="submit" value="Click Here to DINDR!">
-       <% else %>
-         <div class="modal modal-trigger">
-           <button id="open-sign-in" class="button">Click Here to DINDR! </button>
-         </div>
-       <% end %>
-     </form> -->
+<!-- Click here to Dindr button -->
 
   <div id="homepage-button">
     <% if current_user %>
-  <span id="button">
-    <form class="button" action="/game" method="get">
-      <button type="submit">Click Here to DINDR!</button>
-    </form>
-  </span>
-
-      <% else %>
-      <%= render 'layouts/modal' %>
-      <!-- <script>
-      $('.modal-open, .modal').css('visibility' 'hidden')
-      $('body#homepage-button').removeClass('modal' 'modal-open')
-      </script> -->
       <span id="button">
-          <button id="force-sign-in">Click Here to DINDR!</button>
-    </span>
-      <% end %>
-
-
-</div>
+        <form class="button" action="/game" method="get">
+          <button type="submit">Click Here to DINDR!</button>
+        </form>
+      </span>
+    <% else %>
+      <%= render 'layouts/modal' %>
+      <span id="button">
+        <button id="force-sign-in">Click Here to DINDR!</button>
+      </span>
+    <% end %>
+  </div>
 </div>
