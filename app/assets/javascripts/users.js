@@ -87,6 +87,7 @@ $(document).on('ready load:page', function(){
         },
         success: function(data){
           $('.dates-pending').html(data)
+          $('.dindr-date-info').css('display', 'none')
           console.log(data);
         }
       });

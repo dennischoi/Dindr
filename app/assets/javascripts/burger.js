@@ -11,7 +11,7 @@ $(document).ready(function() {
     }.call(this));
 
     ( function () {
-      $('.navigation').mouseleave(function() {
+      $('.navigation').on('click', function() {
         $('.menu-trigger').removeClass('active');
         $('#nav-box').css('visibility', 'hidden');
       });

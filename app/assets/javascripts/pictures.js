@@ -40,7 +40,7 @@ $(document).on('ready page:load', function() {
       };
   }
 
-  $('#reset-button').on('click', function(ev){
+  $('body').on('click', '#reset-button', function(ev){
     console.log(skip)
 
     // Giving the pic-sets class "game-started" when the game has started

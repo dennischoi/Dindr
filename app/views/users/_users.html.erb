@@ -6,12 +6,11 @@
 
     <% else %>
 
-    <div>
-        <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
-    </div>
-
     <div class="dindr-date-info">
-          <%= user.first_name %> <%= user.last_name %>
+      <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
+      <p>
+        <%= user.first_name %> <%= user.last_name %>
+      </p>
     </div>
 
     <% end %>
