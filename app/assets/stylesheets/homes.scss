@@ -21,13 +21,19 @@
 
 // Arrow Styling
 
-.arrow-box {
+.arrow-box-1 {
   width: 80px;
   height: 50px;
   margin: auto;
 }
 
-#arrow {
+.arrow-box-2 {
+  width: 80px;
+  height: 50px;
+  margin: 6rem auto;
+}
+
+#arrow-1 {
   border-right: 15px solid white;
   border-bottom: 15px solid white;
   width: 65px;
@@ -60,6 +66,18 @@
   }
 }
 
+#arrow-2 {
+  border-right: 15px solid black;
+  border-bottom: 15px solid black;
+  width: 65px;
+  height: 65px;
+  transform: rotate(45deg);
+  position: relative;
+  top: 0;
+
+  // margin: 20% auto;
+}
+
 // Bullet List
 
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
@@ -77,7 +95,7 @@ body {
 #card-container {
   display: block;
   height: 100%;
-  padding: 160px 0;
+  padding: 13rem 0 0 0 ;
 }
 
 #card-set {
