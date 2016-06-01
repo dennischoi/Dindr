@@ -8,8 +8,8 @@
           <%= cat[0] %>
         </td>
         <td>
-          <%= button_tag "Find Restaurants Near Me", class:"nearby-restaurants", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>
-          <%= button_tag "Find Dindr Date!", class:"dindr-dates", data: {cuisinename: cat[0]} %>
+          <%= button_tag "Find Restaurants", class:"nearby-restaurants", id:"show-rests-button", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>
+          <%= button_tag "Find A Date!", class:"dindr-dates", id:"show-date-button", data: {cuisinename: cat[0]} %>
         </td>
       </tr>
     </table>
