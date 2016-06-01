@@ -9,7 +9,10 @@
     <div class="dindr-date-info">
       <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
       <p>
-        <%= user.first_name %> <%= user.last_name %>
+        <%= user.first_name %>
+      </p>
+      <p>
+        Age: <%= user.age %> 25
       </p>
     </div>
 
