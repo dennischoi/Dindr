@@ -1,12 +1,6 @@
 <!-- Nav 2 -->
-  <div id="nav-2">
-    <ul class="nav">
-      <li class="nav-item"><a href="about.html">my profile</a></li>
-      <li class="nav-item"><a href="">what else</a></li>
-      <li class="nav-item"><a href="#">should be in</a></li>
-      <li class="nav-item"><a href="#">this navbar?</a></li>
-    </ul>
-  </div>
+
+<%= render 'layouts/homepage_navbar' %>
 
 <!-- Header Image -->
 
@@ -68,7 +62,7 @@
     <% if current_user %>
       <span id="button">
         <form class="button" action="/game" method="get">
-          <button type="submit">Click Here to DINDR!</button>
+          <button id="click-here-to-dindr" type="submit">Click Here to DINDR!</button>
         </form>
       </span>
     <% else %>
