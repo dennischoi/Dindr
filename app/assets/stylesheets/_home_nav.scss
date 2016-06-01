@@ -1,20 +1,19 @@
-// The Navigation Components
+// THE NAVIGATION COMPONENTS FOR THE HOMEPAGE! // ------------------------------------------------
+
+// The hamburger // ------------------------------------------------------------
 
 .navigation {
-  // display: inline-block;
   z-index: 999999999;
   height: 7rem;
   width: 7rem;
-  position: absolute;
+  position: fixed;
   right: 2.9rem;
   top: 30px;
   @media (max-width: 667px) {
     position: absolute;
     top: 1rem;
     right: 1rem;
-
   }
-  // border: 2px dashed blue;
 }
 
 #nav-box {
@@ -29,8 +28,6 @@
   right: 0rem;
   text-align: right;
   list-style: none;
-
-
   ul {
     margin-bottom: 20%;
     li {
@@ -54,6 +51,7 @@
 }
 
 // Burger Icon/Animation
+
 .menu-trigger {
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -67,7 +65,6 @@
   position: absolute;
   top: 3%;
   right: 3%;
-  
   width: 60px;
   height: 40px;
   text-indent: -9999em;
@@ -146,3 +143,5 @@
   transform: translateY(-8px) rotate(-45deg);
   background-color: white;
 }
+
+// The fixed navbar // -----------------------------------------------------------
