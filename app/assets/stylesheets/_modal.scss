@@ -109,6 +109,7 @@
       text-transform: capitalize;
     }
 
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;
@@ -157,8 +158,11 @@
 //   position: absolute;
 //   top: 50rem;
 // }
+.center-me {
+  text-align: center;
+}
 
-#reset-pass-link {
+.reset-pass-link {
   color: black;
   text-decoration: underline;
   hover: $action-color;
