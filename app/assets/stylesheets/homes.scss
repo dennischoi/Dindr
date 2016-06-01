@@ -74,8 +74,6 @@
   transform: rotate(45deg);
   position: relative;
   top: 0;
-
-  // margin: 20% auto;
 }
 
 // Bullet List
@@ -146,7 +144,7 @@ body {
   }
   h1 {
     font-family: "Varela Round", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: .6em;
     color: #2C3E50;
   }
@@ -154,14 +152,14 @@ body {
     color: rgba(0,0,0,0.5);
     font-size: .8em;
     margin-bottom: 2em;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   a {
     text-decoration: none;
-    color: #2C3E50;
+    color: #F3B12F;
     text-transform: uppercase;
     letter-spacing: .2em;
-    font-size: .8em;
+    font-size: 1em;
   }
 }
 
