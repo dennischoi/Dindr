@@ -1,78 +1,81 @@
-
-<!-- BIG HEADER IMAGE -->
-<div class="image-gradient-dynamic">
-  <%= image_tag('dindr-header-v2.png') %>
-</div>
-
-<!-- <div class="container" id="home-page">
-  <div id="homepage-button">
-    <form class="button" action="/game" method="get">
-      <% if current_user %>
-        <input type="submit" value="Click Here to Dindr" >
-      <% else %>
-        <div class="modal modal-trigger">
-          <button id="open-sign-in" class="button">Click Here to Dindr</button>
-        </div>
-      <% end %>
-    </form>
-  </div> -->
-
-<!-- LIST BULLETS -->
-
-  <div id="bullets">
-    <ul class="bullets">
-      <li class="bullet">
-        <div class="bullet-icon bullet-icon-1">
-          <%= image_tag('dindr-little-d.png') %>
-        </div>
-        <div class="bullet-content">
-          <h2>Step 1:</h2>
-          <p>Register an account with Dindr</p>
-          </div>
-      </li>
-      <li class="bullet">
-        <div class="bullet-icon bullet-icon-2">
-          <%= image_tag('udon.png') %>
-        </div>
-        <div class="bullet-content">
-          <h2>Step 2:</h2>
-          <p>You will be shown pictures of amazing dishes. Click the one in each set looks the most delicious to you.<p>
-        </div>
-      </li>
-      <li class="bullet">
-        <div class="bullet-icon bullet-icon-3">
-          <%= image_tag('man-sitting-in-front-of-a-table-eating-and-drinking-while-having-lunch.png') %>        </div>
-        <div class="bullet-content">
-          <h2>Step 3: </h2>
-          <p>Find out what you want to eat! After we've collected enough data on your preferences, we'll show you some restaurants near you that has exactly the food you want!</p>
-        </div>
-      </li>
+<!-- Nav 2 -->
+  <div id="nav-2">
+    <ul class="nav">
+      <li class="nav-item"><a href="about.html">my profile</a></li>
+      <li class="nav-item"><a href="">what else</a></li>
+      <li class="nav-item"><a href="#">should be in</a></li>
+      <li class="nav-item"><a href="#">this navbar?</a></li>
     </ul>
   </div>
-<!--
-  <div id="homepage-thumbnails">
-    <% @pictures.each do |picture| %>
-    <%= image_tag picture.content.thumb.url %>
-    <% end %>
-  </div> -->
 
-  <!-- SNAPWIDGET -->
+<!-- Header Image -->
+
+<div class="image-gradient-dynamic">
+  <%= image_tag('dindr-header-v2.png') %>
+  <!-- Navigation Arrow 1 -->
+  <div class="arrow-box-1">
+    <div class="hvr-bob">
+      <div id="arrow-1"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container" id="home-page">
+
+<!-- List Bullet Cards-->
+
+<div id="card-container">
+  <ul id="card-set">
+    <li class="card">
+      <div class='icon'><%= image_tag('dindr-little-d.png') %></div>
+      <h1>Step 1: Sign up with Dindr</h1>
+      <p>Register for an account with us so we can treat you to the full Dindr experience. </p>
+      <a href="#">Click here to sign up!</a>
+    </li>
+    <li class="card">
+      <div class='icon'><%= image_tag('udon.png') %></div>
+      <h1>Step 2: Click your faves </h1>
+      <p>You will be shown pictures of tasty dishes. Simply select the ones that look the most delicious to you.</p>
+      <!-- <a href="#">View more</a> -->
+    </li>
+    <li class="card">
+      <div class='icon'><%= image_tag('man-sitting-in-front-of-a-table-eating-and-drinking-while-having-lunch.png') %> </div>
+      <h1>Step 3: Find your place and dates! </h1>
+      <p>Find out exactly what you want to eat, where you can eat it, and <em>who </em>to eat it with :) </p>
+      <!-- <a href="#">View more</a> -->
+    </li>
+  </ul>
+</div>
+
+<!-- Navigation Arrow 2 -->
+<div class="arrow-box-2">
+  <div class="hvr-bob">
+    <div id="arrow-2"></div>
+  </div>
+</div>
+
+
+<!-- SNAPWIDGET -->
   <div id="homepage-widget">
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <iframe src="https://snapwidget.com/embed/177224" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
   </div>
 
+<!-- Click here to Dindr button -->
+
   <div id="homepage-button">
-    <form class="button" action="/game" method="get">
-      <% if current_user %>
-        <input type="submit" value="Click Here to DINDR!">
-      <% else %>
-        <div class="modal modal-trigger">
-          <button id="open-sign-in" class="button">Click Here to DINDR! </button>
-        </div>
-      <% end %>
-    </form>
+    <% if current_user %>
+      <span id="button">
+        <form class="button" action="/game" method="get">
+          <button type="submit">Click Here to DINDR!</button>
+        </form>
+      </span>
+    <% else %>
+      <%= render 'layouts/modal' %>
+      <span id="button">
+        <button id="force-sign-in">Click Here to DINDR!</button>
+      </span>
+    <% end %>
   </div>
-
-
 </div>

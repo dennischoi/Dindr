@@ -24,13 +24,8 @@
     color: black;
   }
 
-  .modal-state {
-    display: none;
-  }
 
-  .modal-trigger {
-    padding: 0 0;
-  }
+  display: none;
 
   .modal-fade-screen { // overlay
     @include position(fixed, 0);
@@ -114,6 +109,7 @@
       text-transform: capitalize;
     }
 
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;
@@ -157,13 +153,16 @@
     visibility: visible;
   }
 }
-
-#modal-1 {
-  position: absolute;
-  top: 50rem;
+//
+// #modal-1 {
+//   position: absolute;
+//   top: 50rem;
+// }
+.center-me {
+  text-align: center;
 }
 
-#reset-pass-link {
+.reset-pass-link {
   color: black;
   text-decoration: underline;
   hover: $action-color;

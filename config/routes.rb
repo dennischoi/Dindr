@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :invitations
+  resources :invitations, except: %i(new edit, show)
 
   resources :password_resets
 

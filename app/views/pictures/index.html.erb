@@ -1,32 +1,38 @@
 <div class="container" id="game-page">
 
   <div class="page-title">
-    <h1>The DINDR Game!</h1>
+    <h1>Time to DINDR.</h1>
     <p>You hungry? Let's play!</p>
   </div>
 
-  <div id="reset-pics-button" >
-    <input type="button" id="reset-button" value="Start Over!">
-  </div>
-
-  <div id="skip-pics-button" >
-    <input type="button" id="skip-button" value="Skip!">
-  </div>
-
-  <!-- PROGRESS BAR -->
+  <!-- Progress Bar-->
 
   <div id="progress-anchor"></div>
   <div class="progress-bar">
     <span class="meter"></span>
   </div>
 
+
+  <div id="agg-pics-button" >
+    <!-- <input type="button" id="agg-button" value="Finished!"> -->
+    <%= button_to "See Results", user_cuisines_path, :method => "get" %>
+  </div>
+
+<!-- Pics -->
+
   <div class="pic-sets" data-user="<%= current_user.id %>">
-    <% if @picture1 == true && @picture2 =true && @picture3 == true %>
+
+    <% if @picture1 == true && @picture2 == true && @picture3 == true  %>
       <%= render 'pictures' %>
+
     <% else %>
-      <p id="no-pics">
-        To Start the your Culinary Adventure press the "Start Over" button!
-      </p>
+    <div id="start-game-button" >
+      <input type="button" class="start-button" id="reset-button" value="Start!">
+    </div>
+
+    <p id="no-pics">
+      Click "Start" to begin your culinary adventure!
+    </p>
     <% end %>
     <!-- This will have to be changed into an AJAX function -->
   </div>
@@ -38,5 +44,14 @@
   </div> -->
 
 
+
+  </div>
+  <div id="reset-pics-button" >
+    <input type="button" id="reset-button" value="Start Over!">
+  </div>
+
+  <div id="skip-pics-button" >
+    <input type="button" id="skip-button" value="Skip!">
+  </div>
 
 </div>
