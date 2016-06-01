@@ -15,7 +15,6 @@ class InvitationsController < ApplicationController
 
     if @invitation.save
       render nothing: :true
-
     else
       render :new
     end
@@ -35,7 +34,7 @@ class InvitationsController < ApplicationController
         format.js
         format.html
       end
-      
+
     else
       render :edit
     end

@@ -3,6 +3,7 @@ class Invitation < ActiveRecord::Base
   belongs_to :send_user, class_name: 'User'
   belongs_to :accept_user, class_name: 'User'
 
+  validates :send_user_id, :accept_user_id, :date_cuisine,  :date, presence: true
   validate :same_date
 
   def same_date

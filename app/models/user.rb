@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
-  validate :age_range
+  validates :age, :inclusion => { :in => 1..100, :message => "Age should be between 1-100"}
+  # validate :age_range
 
 # Mounting Uploader for ProfilePic
 
@@ -29,14 +30,6 @@ class User < ActiveRecord::Base
   has_many :sent_invitations, class_name: 'Invitation', foreign_key: :send_user_id
   has_many :accepted_invitations, class_name: 'Invitation', foreign_key: :accept_user_id
 
-
-  def age_range
-
-    if self.age < 1 || self.age > 100
-      errors.add(:age, ": You're age must be within 1-100")
-    end
-
-  end
 
 
   def top_cats
