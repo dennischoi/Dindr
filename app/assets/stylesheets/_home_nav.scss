@@ -9,6 +9,7 @@
   position: fixed;
   right: 2.9rem;
   top: 30px;
+
   @media (max-width: 667px) {
     position: absolute;
     top: 1rem;
@@ -145,3 +146,29 @@
 }
 
 // The fixed navbar // -----------------------------------------------------------
+
+#nav-2 {
+  height: 70px;
+  margin: auto;
+  background-color: rgba(181, 177, 162, 0.9);
+  border-radius: 0px 0px 50px 50px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999999999;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.nav-item {
+  display: inline-block;
+  @include span-columns(3);
+  text-align: center;
+  line-height: 70px;
+  font-size: 1.7rem;
+}
