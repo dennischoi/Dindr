@@ -18,7 +18,7 @@
 }
 
 #nav-box {
-  width: 8rem;
+  width: 12rem;
   height: auto;
   visibility: hidden;
   background-color: rgba(215, 208, 218, 0.4);
@@ -29,8 +29,11 @@
   right: 0rem;
   text-align: right;
   list-style: none;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
   ul {
     margin-bottom: 20%;
+    margin-top: 10%;
     li {
       list-style: none;
       text-align: right;
@@ -157,7 +160,7 @@
   right: 0px;
   left: 0px;
   width: 100%;
-  z-index: 999999999;
+  z-index: 99999999;
   opacity: 0;
 }
 
