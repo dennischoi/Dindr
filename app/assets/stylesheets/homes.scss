@@ -34,6 +34,7 @@
 }
 
 #arrow-1 {
+  cursor: pointer;
   border-right: 15px solid white;
   border-bottom: 15px solid white;
   width: 65px;
@@ -67,6 +68,7 @@
 }
 
 #arrow-2 {
+  cursor: pointer;
   border-right: 15px solid black;
   border-bottom: 15px solid black;
   width: 65px;
@@ -168,6 +170,7 @@ body {
   margin-bottom: 10rem;
   text-align: center;
   z-index: 9999999999;
+  cursor: pointer;
 }
 
 // #open-sign-in {
