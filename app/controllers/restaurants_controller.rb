@@ -22,8 +22,15 @@ class RestaurantsController < ApplicationController
     @restaurant_list = []
     restaurants.each {|restaurant| @restaurant_list << [restaurant.name, restaurant.url, restaurant.location.coordinate.latitude, restaurant.location.coordinate.longitude, restaurant.rating, restaurant.location.display_address]}
 
-    if request.xhr?
-      render partial: 'restaurants'
+
+    respond_to do |format|
+      format.js
+      format.html
     end
+
+
+    # if request.xhr?
+    #   render partial: 'restaurants'
+    # end
   end
 end

@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   validates :first_name, :last_name, :address, presence: true
+  validates :age, :inclusion => { :in => 1..100, :message => "Age should be between 1-100"}
+  # validate :age_range
 
 # Mounting Uploader for ProfilePic
 
@@ -27,6 +29,8 @@ class User < ActiveRecord::Base
   has_many :cuisines, through: :pictures
   has_many :sent_invitations, class_name: 'Invitation', foreign_key: :send_user_id
   has_many :accepted_invitations, class_name: 'Invitation', foreign_key: :accept_user_id
+
+
 
   def top_cats
     category_arr = []
