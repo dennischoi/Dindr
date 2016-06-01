@@ -185,69 +185,7 @@ body {
   text-align: center;
 }
 
-// Button
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-#homepage-widget {
-  margin: 2rem auto 0 3.8%;
-}
-
-#button {
-  width: 300px;
-  margin: 15% auto 0;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  display: block;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ff5252;
-  border: 2px solid #ff5252;
-  padding: 10px;
-  position: relative;
-  display: block;
-  text-align: center;
-  box-sizing: border-box;
-  z-index: 1;
-  width: 300px;
-  background-color: transparent;
-}
-
-button::before {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: all .6s cubic-bezier(1,0.7,0.2,1);
-  -moz-transition: all .8s cubic-bezier(1,0.1,0.2,1);
-  transition: all .8s cubic-bezier(0.25,0.1,0.2,1);
-  content: "";
-  background-color: #F7DC6F;
-  position: absolute;
-  top: -150px;
-  right: auto;
-  left: -10px;
-  z-index: -1;
-  width: 0;
-  height: 300px;
-}
-
-button:hover::before {
-  transform: rotate(70deg);
-  width: 1000px;
-}
-
-// Hover Animation
+// Arrow Hover Animation
 
 .hvr-bob {
   display: inline-block;

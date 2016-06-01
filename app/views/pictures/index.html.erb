@@ -12,13 +12,13 @@
     <span class="meter"></span>
   </div>
 
+<!-- "See Results" button -->
 
   <div id="agg-pics-button" >
-    <!-- <input type="button" id="agg-button" value="Finished!"> -->
     <%= button_to "See Results", user_cuisines_path, :method => "get" %>
   </div>
 
-<!-- Pics -->
+<!-- Picture set -->
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
 
@@ -30,24 +30,19 @@
     <p id="no-pics">
       Click "Start" to begin your culinary adventure!
     </p>
+
     <% end %>
-    <!-- This will have to be changed into an AJAX function -->
   </div>
 
-  <!-- <div id="agg-pics-button" > -->
-    <!-- <input type="button" id="agg-button" value="Finished!"> -->
-    <!-- <%= button_to "See Results", user_cuisines_path, :method => "get" %>
+<!-- Reset pictures button -->
 
-  </div> -->
-
-
-
-  </div>
   <div id="reset-pics-button" >
     <input type="button" class="start-button" id="reset-button" value="Start Over!">
   </div>
 
-  <div id="skip-pics-button" >
+<!-- Skip pictures button -->
+
+  <div id="skip-pics-button">
     <input type="button" id="skip-button" value="Skip!">
   </div>
 

@@ -1,53 +1,63 @@
-//
-// #{$all-buttons} {
-//   appearance: none;
-//   background-color: $action-color;
-//   border: 0;
-//   border-radius: $base-border-radius;
-//   color: #fff;
-//   cursor: pointer;
-//   display: inline-block;
-//   font-family: $base-font-family;
-//   font-size: $base-font-size;
-//   -webkit-font-smoothing: antialiased;
-//   font-weight: 600;
-//   line-height: 1;
-//   padding: $small-spacing $base-spacing;
-//   text-decoration: none;
-//   transition: background-color $base-duration $base-timing;
-//   user-select: none;
-//   vertical-align: middle;
-//   white-space: nowrap;
-//
-//   &:hover,
-//   &:focus {
-//     background-color: shade($action-color, 20%);
-//     color: #fff;
-//   }
-//
-//   &:disabled {
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//
-//     &:hover {
-//       background-color: $action-color;
-//     }
-//   }
-// }
-//
-// .accept_button {
-//   font-size: 0.7rem;
-// }
-//
-// .delete {
-//   font-size: 0.7rem;
-// }
-//
-// .req-button {
-//   text-align: center;
-// }
-//
-// .acpt-button {
-//   text-align: center;
-// }
-//
+// Homepage Button
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+#homepage-widget {
+  margin: 2rem auto 0 3.8%;
+}
+
+#button {
+  width: 300px;
+  margin: 15% auto 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#click-here-to-dindr {
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  padding: 10px;
+  position: relative;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 300px;
+  background-color: transparent;
+
+
+  &::before {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all .6s cubic-bezier(1,0.7,0.2,1);
+    -moz-transition: all .8s cubic-bezier(1,0.1,0.2,1);
+    transition: all .8s cubic-bezier(0.25,0.1,0.2,1);
+    content: "";
+    background-color: #F7DC6F;
+    position: absolute;
+    top: -150px;
+    right: auto;
+    left: -10px;
+    z-index: -1;
+    width: 0;
+    height: 300px;
+  }
+
+  &:hover::before {
+    transform: rotate(70deg);
+    width: 1000px;
+  }
+}
