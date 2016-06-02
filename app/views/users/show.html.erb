@@ -1,29 +1,42 @@
+<!-- Nav 2 -->
+
+<%= render 'layouts/homepage_navbar' %>
+
 <div class="container" id="profile-page">
-  <div class="user-profile">
-    <p><h1><%= current_user.first_name %> <%= current_user.last_name %></h1>  <%= link_to "Edit Profile", edit_user_path %></p>
 
+  <div id="profile-card-container">
+    <ul id="profile-card-set">
+      <li id="profile-card">
 
-    <%= image_tag current_user.profile_pic.url %>
-    <p><em>Username:</em> <%= current_user.user_name %></p>
-    <p><em>Email:</em> <%= current_user.email %></p>
-    <p><em>Age:</em> <%= current_user.age %></p>
-    <p><em>Address:</em> <%= current_user.address %></p>
-    <p><em>Phone Number:</em> <%= current_user.phone_number %></p>
-    <p>
-      <em>Dindr Date:</em>
-      <% if current_user.down_to_meet == true %>
-      You're open to a Dindr date!
-      <% else %>
-      You aren't looking to date.
-      <% end %>
-    </p>
-    <p><em>About Me:</em> <%= current_user.bio %></p>
+        <div id='profile-icon'><%= image_tag current_user.profile_pic.url%></div>
+
+        <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+
+        <p>Dindr'ing since <%= current_user.created_at.to_date %></p>
+
+        <p><em>Age:</em> <%= current_user.age %></p>
+        <p><em>About Me:</em> <%= current_user.bio %> Blah blah blah for now</p>
+
+        <p>
+          <em>Down to Dindr?</em>
+          <% if current_user.down_to_meet == true %>
+          Yes, I'm starving!
+          <% else %>
+          No, thank you!
+          <% end %>
+        </p>
+
+        <%= link_to "Edit Profile", edit_user_path %>
+        <%= link_to "Dindr Dates", invitations_path %>
+        <%= link_to "Dindr Results", user_cuisines_path %>
+
+      </li>
+    </ul>
   </div>
-
-
-  <div class="dates-pending">
-    <%= render '/invitations/invitations' %>
-  </div>
-
 
 </div>
+
+
+<!-- <div class="dates-pending">
+<#%= render '/invitations/invitations' %>
+</div> -->

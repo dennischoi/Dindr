@@ -1,56 +1,53 @@
-<div id="invite-container1">
+<div class="requests">
+  <h2>Who's Invited You:</h2>
+    <div class="invitation-card-container">
+      <ul class="invitation-card-set">
+      <% current_user.accepted_invitations.each do |inv| %>
 
-  <div class="requests">
-    <h2>Invites sent to you:</h2>
-    <% current_user.accepted_invitations.each do |inv| %>
-      <li class="request-inv">
-        <p class="req">
-          <%= image_tag User.find(inv.send_user_id).profile_pic.url %>
-        </p>
-        <p class="req">
-          <%= inv.date %>
-        </p>
-        <p class="req">
-          <%= User.find(inv.send_user_id).first_name %> | <%= inv.date_cuisine %>
-        </p>
-        <div class="req-button">
-          <% if inv.pending == false %>
-          <em class="inv-accepted">Accepted!</em>
-          <% else %>
-          <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
-          <% end %>
-          | <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
-        </div>
-      </li>
+        <li class="invitation-card" id="invitation-request-card">
 
-    <% end %>
-  </div>
+          <div class='invitation-icon'><%= image_tag User.find(inv.send_user_id).profile_pic.url %></div>
+          <p><%= inv.date %></p>
+          <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
 
+          <div class="req-button">
+            <% if inv.pending == false %>
+            <em class="inv-accepted">Accepted!</em>
+            <% else %>
+            <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
+            <% end %>
+            | <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
+          </div>
+        </li>
+      <% end %>
+      </ul>
+    </div>
 </div>
 
 
-<div id="#invite-container2">
-  <div class="pending">
-    <h2>Waiting on...</h2>
-    <% current_user.sent_invitations.each do |inv| %>
-      <li class="pending-inv">
-        <p class="acpt">
-          <%= image_tag User.find(inv.accept_user_id).profile_pic.url %>
-        </p>
-        <p class="acpt">
-          <%= inv.date %>
-        </p>
-        <p class="acpt">
-          <%= User.find(inv.accept_user_id).first_name %> | <%= inv.date_cuisine %>
-        </p>
-        <div class="acpt-button">
-          <% if inv.pending == true %>
-          <em>Pending...</em>
-          <% else %>
-          <em class="inv-accepted">Invitation was Accepted!</em>
-          <% end %>
-        </div>
-      </li>
-    <% end %>
-  </div>
+<div class="pending">
+  <h2>Invitations You're waiting on...</h2>
+    <div class="invitation-card-container">
+
+      <ul class="invitation-card-set">
+      <% current_user.sent_invitations.each do |inv| %>
+
+        <li class="invitation-card" id="invitation-pending-card">
+
+          <div class='invitation-icon'><%= image_tag User.find(inv.accept_user_id).profile_pic.url %></div>
+          <p><%= inv.date %></p>
+          <p>You invited <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
+
+          <div class="acpt-button">
+            <% if inv.pending == true %>
+            <em>Pending...</em>
+            <% else %>
+            <em class="inv-accepted">Invitation was Accepted!</em>
+            <% end %>
+          </div>
+
+        </li>
+      <% end %>
+      </ul>
+    </div>
 </div>
