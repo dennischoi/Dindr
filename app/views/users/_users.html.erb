@@ -1,4 +1,4 @@
-<h1>Send an invite for some <%=@cuis%> food!</h1>
+<h1>Others craving <%=@cuis%>!</h1>
 
 <div>
   <% @users.each do |user| %>
@@ -11,10 +11,7 @@
     <div class="dindr-date-info">
       <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
       <p>
-        <%= user.first_name %>
-      </p>
-      <p>
-        Age: <%= user.age %> 25
+        <%= user.first_name %>, <%= user.age %>
       </p>
     </div>
 

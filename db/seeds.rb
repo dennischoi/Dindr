@@ -21,6 +21,7 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-555-6666',
+  age: '23',
   admin: true,
   remote_profile_pic_url: 'https://66.media.tumblr.com/bbe794936454be70eb8c1f48afe3dced/tumblr_o7pqmigQno1tf5wtuo1_540.jpg'
   })
@@ -36,6 +37,7 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-323-3333',
+  age: '33',
   remote_profile_pic_url: 'https://66.media.tumblr.com/e83d081af4d305d1fe2a51c260038135/tumblr_o76kljMPQq1sfnn0mo1_r1_540.jpg',
 })
 
@@ -48,6 +50,7 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-555-6666',
+  age: '32',
   remote_profile_pic_url: 'https://67.media.tumblr.com/3eb2baa415f5c6284ef4c3a2c871cdf0/tumblr_o7pa7hHnmR1v5kw6jo1_400.jpg'
   })
 
@@ -60,6 +63,7 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-555-6666',
+  age: '26',
   remote_profile_pic_url: 'https://65.media.tumblr.com/fd15d919eb2cd9b53c8f39ceb0e20b11/tumblr_o7pyoimb0p1unmtsfo1_540.jpg'
   })
 
@@ -72,6 +76,7 @@ User.create({
   password_confirmation: 'test',
   address: '150 king street',
   phone_number: '416-555-6666',
+  age: '28',
   remote_profile_pic_url: 'https://67.media.tumblr.com/48f1c32b27df3645b8640e268a7498e4/tumblr_o77sjwTSLh1ufirt1o1_400.jpg'
   })
 

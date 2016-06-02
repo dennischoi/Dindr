@@ -2,7 +2,29 @@
 
   <div class="page-title">
     <h1>Time to DINDR.</h1>
-    <p>You hungry? Let's play!</p>
+    <!-- <p>You hungry? Let's play!</p> -->
+    <p>Select the photo that looks the most delicious to you!</p>
+  </div>
+
+  <!-- Picture set -->
+
+  <div class="pic-sets" data-user="<%= current_user.id %>">
+
+    <% if @picture1 == true && @picture2 == true && @picture3 == true  %>
+    <%= render 'pictures' %>
+
+    <% else %>
+
+    <p id="no-pics">
+
+      <div id="start-game-button" >
+        <input type="button" class="start-button" id="reset-button" value="Start!">
+      </div>
+
+      Click "Start" to begin your culinary adventure!
+    </p>
+
+    <% end %>
   </div>
 
   <!-- Progress Bar-->
@@ -18,33 +40,19 @@
     <%= button_to "See Results", user_cuisines_path, :method => "get" %>
   </div>
 
-<!-- Picture set -->
 
-  <div class="pic-sets" data-user="<%= current_user.id %>">
-
-    <% if @picture1 == true && @picture2 == true && @picture3 == true  %>
-      <%= render 'pictures' %>
-
-    <% else %>
-
-    <p id="no-pics">
-      Click "Start" to begin your culinary adventure!
-    </p>
-
-    <% end %>
-  </div>
-
-<!-- Reset pictures button -->
-
-  <div id="reset-pics-button" >
-    <input type="button" class="start-button" id="reset-button" value="Start Over!">
-  </div>
-
-<!-- Skip pictures button -->
+  <!-- Skip pictures button -->
 
   <div id="skip-pics-button">
     <input type="button" id="skip-button" value="Skip!">
   </div>
+  
+<!-- Reset pictures button -->
+
+  <div id="reset-pics-button" >
+    <input type="button" class="start-button" id="reset-button" value="Play Again!">
+  </div>
+
 
 
 
