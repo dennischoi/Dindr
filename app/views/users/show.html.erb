@@ -1,36 +1,47 @@
 <div class="container" id="profile-page">
   <div class="user-profile">
-    <p><h1><%= current_user.first_name %> <%= current_user.last_name %></h1>  <%= link_to "Edit Profile", edit_user_path %></p>
-
 
     <%= image_tag current_user.profile_pic.url %>
-    <p><em>Username:</em> <%= current_user.user_name %></p>
-    <p><em>Email:</em> <%= current_user.email %></p>
+
+    <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+    <p> also known as </p>
+    <h3><%= current_user.user_name %> </h3>
+
+
+    <p>Dindr'ing since <%= current_user.created_at %></p>
     <p><em>Age:</em> <%= current_user.age %></p>
-    <p><em>Address:</em> <%= current_user.address %></p>
-    <p><em>Phone Number:</em> <%= current_user.phone_number %></p>
+    <p><em>About Me:</em> <%= current_user.bio %> Blah blah blah for now</p>
+
     <p>
-      <em>Dindr Date:</em>
+      <em>Down to Dindr?</em>
       <% if current_user.down_to_meet == true %>
-      You're open to a Dindr date!
+      Yes, I'm starving!
       <% else %>
-      You aren't looking to date.
+      No, thank you!
       <% end %>
     </p>
-    <p><em>About Me:</em> <%= current_user.bio %></p>
+
   </div>
 
 
-  <div class="dates-pending">
-    <%= render '/invitations/invitations' %>
+  <!-- <div class="dates-pending">
+    <#%= render '/invitations/invitations' %>
+  </div> -->
+
+  <div class="profile-page-options">
+
+    <!-- if current_user allow these options, other wise just view profiles -->
+    <ul id="profile-page-options">
+      <li><%= link_to "Edit Profile", edit_user_path %></li>
+      <li><%= link_to "See DindrDates", invitations_path %></li>
+      <li><%= link_to "See DindrResults", user_cuisines_path %></li>
+    </ul>
+
   </div>
 
-  <div id="dindr-dates-button">
-    <%= button_to "See DindrDates", user_path(current_user),  method: :get %>
-  </div>
-
-  <div id="dindr-results-button">
-    <%= button_to "See DindrResults", user_cuisines_path,  method: :get %>
-  </div>
+  <!-- <div id="dindr-results-button">
+    <#%= button_to "See DindrDates", invitations_path,  method: :get %>
+    <#%= button_to "See DindrResults", user_cuisines_path,  method: :get %>
+  </div> -->
 
 </div>

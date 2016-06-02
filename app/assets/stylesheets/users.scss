@@ -8,8 +8,31 @@
 }
 
 .user-profile {
-  float: left;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  em {
+    font-weight: bold;
+  }
 }
+
+#profile-page-options {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-page-options ul{
+  overflow:hidden;
+}
+
+.profile-page-options li{
+  display:inline-block;
+  padding: 20px 10px;
+}
+
+// .user-profile {
+//   float: left;
+// }
 
 #new-user-page {
   padding-top: 5rem;
