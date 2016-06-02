@@ -2,7 +2,7 @@
 // BURGER NAV
 // ----------------------------------------------------------------------------
 $(document).ready(function() {
-
+console.log('document loaded');
   ( function () {
         $('.hamburger').mouseenter(function() {
             $('.menu-trigger').addClass('active');
@@ -11,7 +11,7 @@ $(document).ready(function() {
     }.call(this));
 
     ( function () {
-      $('.navigation').on('click', function() {
+      $('.hamburger').on('click', function() {
         $('.menu-trigger').removeClass('active');
         $('#nav-box').css('visibility', 'hidden');
       });
