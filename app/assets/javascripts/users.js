@@ -51,7 +51,7 @@ $(document).on('ready load:page', function(){
 
 // Create an ajax request to create an invitation
 
-  $("body").on('click', ".dindr-date-pic", function(ev){
+  $("body").on('click', ".dindr-date-info", function(ev){
 
 
 
@@ -87,7 +87,7 @@ $(document).on('ready load:page', function(){
         },
         success: function(data){
           $('.dates-pending').html(data)
-          $('.dindr-date-info').css('display', 'none')
+          $(ev.target).parent().css('display', 'none')
           console.log(data);
         }
       });
