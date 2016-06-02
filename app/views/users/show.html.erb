@@ -25,5 +25,12 @@
     <%= render '/invitations/invitations' %>
   </div>
 
+  <div id="dindr-dates-button">
+    <%= button_to "See DindrDates", user_path(current_user),  method: :get %>
+  </div>
+
+  <div id="dindr-results-button">
+    <%= button_to "See DindrResults", user_cuisines_path,  method: :get %>
+  </div>
 
 </div>
