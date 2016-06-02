@@ -9,7 +9,8 @@
     <% if current_user %>
     <ul>
       <li><%= link_to "my profile", user_path(current_user) %></li>
-      <li><%= link_to "dindr dates" %></li>
+      <li><%= link_to "game", game_path%></li>
+      <li><%= link_to "results", user_cuisines_path %></li>
       <li><%= link_to "log out", :logout, method: :delete %></li>
 
         <% if current_user.admin? %>
