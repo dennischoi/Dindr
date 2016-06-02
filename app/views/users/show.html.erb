@@ -1,3 +1,7 @@
+<!-- Nav 2 -->
+
+<%= render 'layouts/homepage_navbar' %>
+
 <div class="container" id="profile-page">
 
   <div id="profile-card-container">
@@ -8,7 +12,8 @@
 
         <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
 
-        <p>Dindr'ing since <%= current_user.created_at %></p>
+        <p>Dindr'ing since <%= current_user.created_at.to_date %></p>
+
         <p><em>Age:</em> <%= current_user.age %></p>
         <p><em>About Me:</em> <%= current_user.bio %> Blah blah blah for now</p>
 
