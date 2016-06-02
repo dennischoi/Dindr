@@ -35,12 +35,11 @@
         <li class="invitation-card" id="invitation-pending-card">
 
           <div class='invitation-icon'><%= image_tag User.find(inv.accept_user_id).profile_pic.url %></div>
-          <p><%= inv.date %></p>
           <p>You invited <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
 
           <div class="acpt-button">
             <% if inv.pending == true %>
-            <em>Pending...</em>
+            <em>Hurry I'm hungry...</em>
             <% else %>
             <em class="inv-accepted">Invitation was Accepted!</em>
             <% end %>
