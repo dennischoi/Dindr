@@ -1,3 +1,6 @@
+<!-- Modal -->
+<%= render 'layouts/modal' %>
+
 <!-- Nav 2 -->
 
 <%= render 'layouts/homepage_navbar' %>
@@ -58,6 +61,7 @@
 
 <!-- Click here to Dindr button -->
 
+
   <div id="homepage-button">
     <% if current_user %>
       <span id="button">
@@ -66,9 +70,8 @@
         </form>
       </span>
     <% else %>
-      <%= render 'layouts/modal' %>
       <span id="button">
-        <button id="force-sign-in">Click Here to DINDR!</button>
+        <button id="force-sign-in" class="modal-trigger">Click Here to DINDR!</button>
       </span>
     <% end %>
   </div>

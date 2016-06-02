@@ -9,7 +9,7 @@ $(document).ready(function() {
 // ----------------------------------------------------------------------------
 
   $(function() {
-    $("#button").on("click", function() {
+    $(".modal-trigger").on("click", function() {
         $(".modal").css("display", "inherit");
     });
 
