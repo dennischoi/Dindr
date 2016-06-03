@@ -14,7 +14,10 @@ $(document).on('ready load:page', function(){
 
 
   $(".dindr-dates").on('click', function(){
-    console.log("Heyyyyyy")
+    alert("Heyyyyyy")
+
+    // $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500);
+    // });
 
     var userId = $('pic-sets').data('user')
 
@@ -43,6 +46,8 @@ $(document).on('ready load:page', function(){
         },
       success: function(data){
         $(".result-restaurants").html(data);
+        $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500)
+
         console.log(data);
       }
     });
