@@ -53,8 +53,6 @@ $(document).on('ready load:page', function(){
 
   $("body").on('click', ".dindr-date-info", function(ev){
 
-
-
       console.log("i clicked a picture")
 
 
