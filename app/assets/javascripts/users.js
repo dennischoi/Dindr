@@ -12,9 +12,8 @@ $(document).on('ready load:page', function(){
   });
 
 
-
   $(".dindr-dates").on('click', function(){
-    console.log("Heyyyyyy")
+
 
     var userId = $('pic-sets').data('user')
 
@@ -43,6 +42,8 @@ $(document).on('ready load:page', function(){
         },
       success: function(data){
         $(".result-restaurants").html(data);
+        $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500)
+
         console.log(data);
       }
     });
@@ -93,11 +94,6 @@ $(document).on('ready load:page', function(){
   });
 
 
-
-
-
-
-
 });
 
 // Renders the map & top restaurants
@@ -137,7 +133,7 @@ function success(ev, position){
       },
     success: function(data){
       console.log(data);
-      // $(".result-restaurants").html(data);
+      $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500);
       initMap();
 
       map.clearOverlays();
@@ -178,3 +174,6 @@ function success(ev, position){
 function failure(err){
   console.log('ERROR(' + err.code + '): ' + err.message);
 }
+
+
+// More infomation button
