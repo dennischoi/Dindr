@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require burger
+//= require modal
 
 $(document).on('ready page:load', function(){
 
