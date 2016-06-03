@@ -11,10 +11,10 @@
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
 
           <div class="req-button">
-            <% if inv.pending == false %>
-            <em class="inv-accepted">Accepted!</em>
-            <% else %>
+            <% if inv.pending == true %>
             <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
+            <% else %>
+            <em class="inv-accepted">Accepted!</em>
             <% end %>
             | <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
           </div>
