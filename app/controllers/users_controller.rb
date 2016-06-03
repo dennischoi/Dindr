@@ -29,9 +29,6 @@ class UsersController < ApplicationController
       end
     end
 
-    binding.pry
-
-
     @users = []
     potentials.each do |id|
       @users << User.find(id)
@@ -67,7 +64,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
 
       respond_to do |format|
         format.js

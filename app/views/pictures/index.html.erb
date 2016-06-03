@@ -9,22 +9,7 @@
   <!-- Picture set -->
 
   <div class="pic-sets" data-user="<%= current_user.id %>">
-
-    <% if @picture1 == true && @picture2 == true && @picture3 == true  %>
     <%= render 'pictures' %>
-
-    <% else %>
-
-    <p id="no-pics">
-
-      <div id="start-game-button" >
-        <input type="button" class="start-button" id="reset-button" value="Start!">
-      </div>
-
-      Click "Start" to begin your culinary adventure!
-    </p>
-
-    <% end %>
   </div>
 
   <!-- Progress Bar-->
@@ -46,7 +31,7 @@
   <div id="skip-pics-button">
     <input type="button" id="skip-button" value="Skip!">
   </div>
-  
+
 <!-- Reset pictures button -->
 
   <div id="reset-pics-button" >
