@@ -3,6 +3,9 @@ $(document).on('ready page:load', function() {
   var turn = 0
   var skip = 0
 
+  if (turn < 1) {
+    deleteVotes()
+  }
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
 
@@ -17,7 +20,6 @@ $(document).on('ready page:load', function() {
 
 
       if (turn == 10){
-        $('#agg-pics-button').addClass('enough-votes')
         // This has to be changed to heroku url when launched!
         window.location = "http://localhost:3000/user/cuisines?"
         // .on('click', function(){
@@ -40,31 +42,37 @@ $(document).on('ready page:load', function() {
       };
   }
 
-  $('body').on('click', '#reset-button', function(ev){
-    console.log(skip)
-
-    // Giving the pic-sets class "game-started" when the game has started
-
-    $(".pic-sets").addClass("game-started")
-    $('#skip-button').off('click')
-    ev.stopPropagation();
-    turn = 0;
+  function deleteVotes(){
     $.ajax({
       url: '/votes',
       method: 'DELETE',
       dataType: 'script'
     });
-
-    $('#skip-button').css('opacity', '1').on('click', skips);
-    $('#agg-pics-button').removeClass('enough-votes');
-    $('span.meter').css('display', 'block')
-    $('span.meter').css('width', '0%');
-    // updateCuisines(ev);
-    // updateTags(ev);
-    changeImage(ev);
-    skip = 0;
-  });
-
+  }
+  // 
+  // $('body').on('click', '#reset-button', function(ev){
+  //   console.log(skip)
+  //
+  //   // Giving the pic-sets class "game-started" when the game has started
+  //
+  //   $(".pic-sets").addClass("game-started")
+  //   $('#skip-button').off('click')
+  //   ev.stopPropagation();
+  //   turn = 0;
+  //   $.ajax({
+  //     url: '/votes',
+  //     method: 'DELETE',
+  //     dataType: 'script'
+  //   });
+  //
+  //   $('#skip-button').css('opacity', '1').on('click', skips);
+  //   $('#reset-button').removeClass('enough-votes');
+  //   // updateCuisines(ev);
+  //   // updateTags(ev);
+  //   changeImage(ev);
+  //   skip = 0;
+  // });
+  //
 
 
   $('body').on('mouseover mouseleave', '.food-image', function(ev){
