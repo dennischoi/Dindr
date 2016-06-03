@@ -93,8 +93,21 @@ $(document).on('ready load:page', function(){
     };
   });
 
-
+// Down to Meet Button Styling
 });
+
+$(document).on('click', '.toggle-button', function() {
+
+  var useid = $('.toggle-button').data('useid')
+
+    $(this).toggleClass('toggle-button-selected');
+      if (('.toggle-button').toggleClass('toggle-button-selected') && useid.down_to_meet == true) {
+        $('.dtm').html('True')
+      } else {
+        $('.dtm1').html('False')
+      }
+});
+
 
 // Renders the map & top restaurants
 

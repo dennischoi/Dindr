@@ -19,11 +19,24 @@
 
         <p>
           <em>Down to Dindr?</em>
-          <% if current_user.down_to_meet == true %>
+
+          <div class="toggle-button" data: {useid: current_user.id}>
+              <button>
+                <% if current_user.down_to_meet == true %>
+                  <p class='dtm'></p>
+                <% else %>
+                  <p class='dtm1'></p>
+                <% end %>
+              </button>
+          </div>
+
+
+<!--
+          <#% if current_user.down_to_meet == true %>
           Yes, I'm starving!
-          <% else %>
+          <#% else %>
           No, thank you!
-          <% end %>
+          <#% end %> -->
         </p>
 
         <%= link_to "Edit Profile", edit_user_path %>

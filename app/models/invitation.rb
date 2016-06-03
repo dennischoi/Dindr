@@ -13,7 +13,7 @@ class Invitation < ActiveRecord::Base
     b = user.accepted_invitations
 
     inv_arr = a + b
-    # binding.pry
+
     inv_arr.each do |inv|
       if self.send_user_id == inv.send_user_id && self.accept_user_id == inv.accept_user_id && inv.pending == false
         errors.add(:send_user, "you've already matched!")
@@ -29,7 +29,7 @@ class Invitation < ActiveRecord::Base
     b = user.accepted_invitations
 
     inv_arr = a + b
-    # binding.pry
+
 
     inv_arr.each do |inv|
       if self.send_user_id == inv.send_user_id && self.accept_user_id == inv.accept_user_id
