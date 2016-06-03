@@ -94,19 +94,38 @@ $(document).on('ready load:page', function(){
   });
 
 // Down to Meet Button Styling
+  $('body').on('click', '.toggle-button', function() {
+
+    var useid = $('.toggle-button').data('useid')
+    if ($('.toggle-button').hasClass('selected')) {
+      $('.toggle-button').removeClass('selected')
+      $.ajax({
+        url: "/users/" + useid,
+        method: "patch",
+        data: {
+          user: {
+            down_to_meet: false
+          }
+        },
+        dataType: 'script'
+      })
+    }
+    else {
+      $('.toggle-button').addClass('selected')
+      $.ajax({
+        url: "/users/" + useid,
+        method: "patch",
+        data: {
+          user: {
+            down_to_meet: true
+          }
+        },
+        dataType: 'script'
+      })
+    };
+  });
 });
 
-$(document).on('click', '.toggle-button', function() {
-
-  var useid = $('.toggle-button').data('useid')
-
-    $(this).toggleClass('toggle-button-selected');
-      if (('.toggle-button').toggleClass('toggle-button-selected') && useid.down_to_meet == true) {
-        $('.dtm').html('True')
-      } else {
-        $('.dtm1').html('False')
-      }
-});
 
 
 // Renders the map & top restaurants
