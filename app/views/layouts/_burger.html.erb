@@ -19,7 +19,7 @@
 
       <% else %>
       <li class="nav-link"><%= link_to "Sign Up", new_user_path %></li>
-      <li id="button"><a class="modal-trigger" href=""> Sign in </a></li>
+      <li id="button"> <%= link_to "Sign In", 'javascript:;', class: 'modal-trigger' %>
       <% end %>
     </ul>
   </div>

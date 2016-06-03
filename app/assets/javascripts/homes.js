@@ -1,5 +1,9 @@
-$(document).on('ready page:load', function(){
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require burger
 
+$(document).on('ready page:load', function(){
 
   $("#arrow-1").click(function() {
       $('html, body').animate({ scrollTop: $("#home-page").offset().top }, 3500);
