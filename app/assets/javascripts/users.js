@@ -142,7 +142,7 @@ function success(ev, position){
       },
     success: function(data){
       console.log(data);
-      // $(".result-restaurants").html(data);
+      $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500);
       initMap();
 
       map.clearOverlays();
