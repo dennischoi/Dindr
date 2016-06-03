@@ -12,12 +12,8 @@ $(document).on('ready load:page', function(){
   });
 
 
-
   $(".dindr-dates").on('click', function(){
-    alert("Heyyyyyy")
 
-    // $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500);
-    // });
 
     var userId = $('pic-sets').data('user')
 
@@ -96,11 +92,6 @@ $(document).on('ready load:page', function(){
       });
     };
   });
-
-
-
-
-
 
 
 });
@@ -183,3 +174,6 @@ function success(ev, position){
 function failure(err){
   console.log('ERROR(' + err.code + '): ' + err.message);
 }
+
+
+// More infomation button
