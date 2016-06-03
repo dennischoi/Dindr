@@ -6,20 +6,32 @@ class UsersController < ApplicationController
     @cuis = params[:category]
     potentials = []
     array_users = User.where(down_to_meet: true)
+    invites_arr = current_user.inv_arr
 
 
-      array_users.each do |user|
-        cuisine_A = user.top_cats
-        if cuisine_A[0].include?(@cuis)
-          potentials << user.id
-        elsif cuisine_A[1].include?(@cuis)
-          potentials << user.id
-        elsif cuisine_A[2].include?(@cuis)
-          potentials << user.id
-        else
+    array_users.each do |user|
+      cuisine_A = user.top_cats
+      if cuisine_A[0].include?(@cuis)
+        potentials << user.id
+      elsif cuisine_A[1].include?(@cuis)
+        potentials << user.id
+      elsif cuisine_A[2].include?(@cuis)
+        potentials << user.id
+      else
+      end
+    end
 
+    potentials.each do |id|
+      invites_arr.each do |inv|
+        if (inv.send_user_id == current_user.id && inv.accept_user_id == id) || (inv.accept_user_id == current_user.id && inv.send_user_id == id)
+          potentials.delete(id)
         end
       end
+    end
+
+    binding.pry
+
+
     @users = []
     potentials.each do |id|
       @users << User.find(id)
