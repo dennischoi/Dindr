@@ -29,9 +29,6 @@ class UsersController < ApplicationController
       end
     end
 
-
-
-
     @users = []
     potentials.each do |id|
       @users << User.find(id)
@@ -68,7 +65,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-
       respond_to do |format|
         format.js
         format.html
@@ -103,6 +99,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :user_name, :email, :address, :phone_number, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :user_name, :email, :address, :age, :phone_number, :password, :password_confirmation)
   end
 end

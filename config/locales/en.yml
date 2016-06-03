@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    errors:
+      messages:
+        blank: "- Can't leave this field blank"
