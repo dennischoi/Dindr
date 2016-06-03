@@ -25,16 +25,24 @@
 }
 
 #reset-pics-button {
-  text-align: center;
-  font-size: 2.2rem;
+  width: 20%;
+  height: 2.2rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2rem;
+  font-size: 2.2rem;
   // display: none;
+
+  .start-button {
+    text-align: center;
+  }
 }
 
-#skip-pics-button {
-  text-align: center;
-  padding: 2rem 0;
-  // display: none;
+#skip-button {
+  float: right;
+  // text-align: right;
+
+
 }
 
 .game-started {
@@ -150,7 +158,8 @@
 
 .pic-sets {
   @include outer-container(100%);
-  margin: 3rem 0;
+  // margin: 3rem 0;
+  margin-bottom: 1rem;
   border: 1px dotted;
 
   #no-pics {
