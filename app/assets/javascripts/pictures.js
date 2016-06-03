@@ -3,7 +3,8 @@ $(document).on('ready page:load', function() {
   var turn = 0
   var skip = 0
 
-  if (turn < 1) {
+// RESET VOTES WHEN VISITING THE GAME PAGE ONLY
+  if (window.location.pathname == "/game" && turn < 1) {
     deleteVotes()
   }
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
@@ -49,7 +50,7 @@ $(document).on('ready page:load', function() {
       dataType: 'script'
     });
   }
-  // 
+  //
   // $('body').on('click', '#reset-button', function(ev){
   //   console.log(skip)
   //
