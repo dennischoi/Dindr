@@ -74,6 +74,13 @@ class User < ActiveRecord::Base
     tag_hash.sort_by {|k,v| v}.reverse.take(4)
   end
 
+  def inv_arr
+    sent_invites = self.sent_invitations
+    accept_invites = self.accepted_invitations
+
+    all_invites = sent_invites + accept_invites
+  end
+
 
 
 end
