@@ -8,25 +8,24 @@
   <div class="each-rest" data-latitude=<%= latitude %> data-longitude=<%= longitude %> data-name="<%= name %>" >
     <ul>
 
-      <li id="rest-name">
+      <li class="rest-name">
         <%= link_to "#{name}", url %>
       </li>
 
-      <li>
-        Rating: <%= rating %>
+      <li class="rest-rating">
+        <%= rating %> / 5
       </li>
 
-      <li>
+      <li class="rest-distance">
         Only <%= current_user.distance_to([latitude, longitude], :km).round(2) %> kms away!
       </li>
 
-      <li>
-        Located at
+      <li class="rest-location">
+        Located at:
         <% address.each do |field| %>
-          <li>
             <%= field %>
-          </li>
         <% end %>
+
       </li>
 
    </ul>
