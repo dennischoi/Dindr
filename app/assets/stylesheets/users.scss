@@ -124,7 +124,20 @@
   }
 }
 
-#dindr-date-button {
-  margin-left: auto;
-  margin-right: auto;
+.dindr-date-results {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+// .dindr-date-info {
+//   width: 33.33333%;
+//   float: left;
+// }
+
+
+#dindr-date-profiles {
+  position: relative;
+  clear: both;
 }
