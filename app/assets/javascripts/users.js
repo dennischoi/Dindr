@@ -41,8 +41,8 @@ $(document).on('ready load:page', function(){
           category: cuisine,
         },
       success: function(data){
-        $(".result-restaurants").html(data);
-        $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500)
+        $(".result-restaurants-dates").html(data);
+        $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500)
 
         console.log(data);
       }
@@ -165,7 +165,7 @@ function success(ev, position){
       },
     success: function(data){
       console.log(data);
-      $('html, body').animate({ scrollTop: $(".result-restaurants").offset().top }, 3500);
+      $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500);
       initMap();
 
       map.clearOverlays();
