@@ -28,7 +28,7 @@
             <% end %>
           </div>
 
-          <% if current_user == @user.id%>
+          <% if current_user.id == @user.id %>
           <div class="toggle-button" data: {useid: current_user.id}>
               <button>
 
@@ -44,7 +44,7 @@
           No, thank you!
           <#% end %> -->
         </p>
-        <% if current_user == @user.id%>
+        <% if current_user.id == @user.id%>
         <%= link_to "Edit Profile", edit_user_path %>
         <%= link_to "Dindr Dates", invitations_path %>
         <%= link_to "Dindr Results", user_cuisines_path %>

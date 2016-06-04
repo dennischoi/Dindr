@@ -8,13 +8,13 @@
 
     <% else %>
 
-    <div class="dindr-date-info">
-      <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
+    <div>
+      <em class="dindr-date-info"><%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %></em>
       <p data-acceptuserName='<%= user.first_name %>'>
-        <%= user.first_name %>, <%= user.age %>
-        <%= link_to User.find(user.id).first_name + "'s Profile", user_path(user.id) %>
+        <%= link_to User.find(user.id).first_name, user_path(user.id), :target => "_blank" %>, <%= user.age %>
       </p>
     </div>
+
 
     <% end %>
   </div>
