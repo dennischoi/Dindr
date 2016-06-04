@@ -134,11 +134,13 @@
 
 .dindr-date-layout {
   overflow: hidden;
+}
+
+.dindr-date-box {
+  float: left;
   width: 33%;
-  display: inline-flex;
 }
 
 .dindr-date-info {
-  float: left;
-
+  text-align: center;
 }

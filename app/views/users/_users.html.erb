@@ -1,16 +1,16 @@
 <h1>Others craving <%=@cuis%>!</h1>
 
-<div>
+<div class="dindr-date-layout">
   <% @users.each do |user| %>
 
-  <div class="dindr-date-layout">
+  <div class="dindr-date-box" data-acceptuserName='<%= user.first_name %>'>
     <% if user.id == current_user.id %>
 
     <% else %>
 
     <div class="dindr-date-info">
       <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
-      <p>
+      <p data-acceptuserName='<%= user.first_name %>'>
         <%= user.first_name %>, <%= user.age %>
       </p>
     </div>
