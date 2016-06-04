@@ -21,14 +21,16 @@
           <em>Down to Dindr?</em>
 
           <div id="down_to_meet">
-            <% if @user.down_to_meet == true %>
+            <% if @user.profile_pic? == false %>
+              You must have a profile picture to change this setting!
+            <% elsif @user.down_to_meet == true  %>
               Yes! Let's Eat!
             <% else %>
               Nah, I'm good.
             <% end %>
           </div>
 
-          <% if current_user.id == @user.id %>
+          <% if current_user.id == @user.id && @user.profile_pic? %>
           <div class="toggle-button" data: {useid: current_user.id}>
               <button>
 
@@ -36,13 +38,6 @@
           </div>
           <% end %>
 
-
-<!--
-          <#% if current_user.down_to_meet == true %>
-          Yes, I'm starving!
-          <#% else %>
-          No, thank you!
-          <#% end %> -->
         </p>
         <% if current_user.id == @user.id%>
         <%= link_to "Edit Profile", edit_user_path %>

@@ -11,9 +11,7 @@ class UsersController < ApplicationController
 
     array_users.each do |user|
         cuisine_A = user.top_cats
-        if cuisine_A.empty?
-          next
-        elsif cuisine_A[0].include?(@cuis)
+        if cuisine_A[0].include?(@cuis)
           potentials << user.id
         elsif cuisine_A[1].include?(@cuis)
           potentials << user.id

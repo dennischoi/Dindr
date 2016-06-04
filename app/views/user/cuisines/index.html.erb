@@ -18,8 +18,13 @@
           <%= button_tag "Find Restaurants", class:"nearby-restaurants", id:"show-rests-button", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>
 
           <!-- <#%= button_to "Find Restaurants", restaurants_path, method: :get, class:"nearby-restaurants", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %> -->
-
-          <%= button_tag "Find Dindr Date!", class:"dindr-dates", id:"show-date-button", data: {cuisinename: cat[0]} %>
+          <% if current_user.profile_pic? == false %>
+            <div class="">
+              <%= link_to "change profile pic to dindr", edit_user_path(current_user.id), id:"no-prof"%>
+            </div>
+          <% else %>
+            <%= button_tag "Find A Date!", class:"dindr-dates", id:"show-date-button", data: {cuisinename: cat[0]} %>
+          <% end %>
         </li>
         <% end %>
       </ul>
