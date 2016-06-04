@@ -83,6 +83,8 @@ class User < ActiveRecord::Base
     all_invites = sent_invites + accept_invites
   end
 
+  
+
 
 
 end

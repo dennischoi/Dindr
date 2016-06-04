@@ -107,7 +107,10 @@ $(document).on('ready load:page', function(){
             down_to_meet: false
           }
         },
-        dataType: 'script'
+        dataType: 'script',
+        success: function(data){
+          $('#down_to_meet').html("Nah, I'm good.")
+        }
       })
     }
     else {
@@ -120,7 +123,10 @@ $(document).on('ready load:page', function(){
             down_to_meet: true
           }
         },
-        dataType: 'script'
+        dataType: 'script',
+        success: function(data){
+          $('#down_to_meet').html("Yes! Let's eat!")
+        }
       })
     };
   });
