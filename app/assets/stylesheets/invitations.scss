@@ -109,7 +109,7 @@
     border-radius: 50%;
     margin: 0 auto 2em;
     background: #eee;
-    box-shadow: 0 0 0 4px #ddd;  
+    box-shadow: 0 0 0 4px #ddd;
   }
   h1 {
     font-family: "Varela Round", sans-serif;
@@ -130,4 +130,15 @@
     letter-spacing: .2em;
     font-size: 1em;
   }
+}
+
+.dindr-date-layout {
+  overflow: hidden;
+  width: 33%;
+  display: inline-flex;
+}
+
+.dindr-date-info {
+  float: left;
+
 }
