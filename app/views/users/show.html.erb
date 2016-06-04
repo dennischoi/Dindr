@@ -8,31 +8,33 @@
     <ul id="profile-card-set">
       <li id="profile-card">
 
-        <div id='profile-icon'><%= image_tag current_user.profile_pic.url%></div>
+        <div id='profile-icon'><%= image_tag @user.profile_pic.url%></div>
 
-        <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 
-        <p>Dindr'ing since <%= current_user.created_at.to_date.strftime("%B %d, %Y") %></p>
+        <p>Dindr'ing since <%= @user.created_at.to_date.strftime("%B %d, %Y") %></p>
 
-        <p><em>Age:</em> <%= current_user.age %></p>
-        <p><em>About Me:</em> <%= current_user.bio %> Blah blah blah for now</p>
+        <p><em>Age:</em> <%= @user.age %></p>
+        <p><em>About Me:</em> <%= @user.bio %> Blah blah blah for now</p>
 
         <p>
           <em>Down to Dindr?</em>
 
           <div id="down_to_meet">
-            <% if current_user.down_to_meet == true %>
+            <% if @user.down_to_meet == true %>
               Yes! Let's Eat!
             <% else %>
               Nah, I'm good.
             <% end %>
           </div>
 
+          <% if current_user == @user.id%>
           <div class="toggle-button" data: {useid: current_user.id}>
               <button>
 
               </button>
           </div>
+          <% end %>
 
 
 <!--
@@ -42,11 +44,11 @@
           No, thank you!
           <#% end %> -->
         </p>
-
+        <% if current_user == @user.id%>
         <%= link_to "Edit Profile", edit_user_path %>
         <%= link_to "Dindr Dates", invitations_path %>
         <%= link_to "Dindr Results", user_cuisines_path %>
-
+        <% end %>
       </li>
     </ul>
   </div>
