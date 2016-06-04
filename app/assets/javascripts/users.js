@@ -106,7 +106,7 @@ $(document).on('ready load:page', function(){
           user: {
             down_to_meet: false
           }
-        },
+        }
         dataType: 'script'
       })
     }
