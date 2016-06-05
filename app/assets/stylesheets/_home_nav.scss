@@ -3,12 +3,12 @@
 // The hamburger // ------------------------------------------------------------
 
 .navigation {
-  z-index: 999999999;
+  z-index: 999999999999999999;
   height: 7rem;
   width: 7rem;
   position: fixed;
-  right: 2.9rem;
-  top: 30px;
+  right: 1rem;
+  top: 1rem;
 
   @media (max-width: 667px) {
     position: absolute;
@@ -160,7 +160,7 @@
   right: 0px;
   left: 0px;
   width: 100%;
-  z-index: 99999999;
+  z-index: 9999;
   opacity: 0;
 }
 
@@ -168,9 +168,9 @@
   opacity: 1;
 }
 
-.nav-item {
+.homepage-nav-item {
   display: inline-block;
-  @include span-columns(3);
+  @include span-columns(2);
   text-align: center;
   line-height: 70px;
   font-size: 1.7rem;

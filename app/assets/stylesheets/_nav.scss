@@ -3,7 +3,7 @@
   margin: auto;
   background-color: rgba(181, 177, 162, 0.9);
   border-radius: 0px 0px 50px 50px;
-  position: fixed;
+  position: absolute;
   top: 0px;
   right: 0px;
   left: 0px;
@@ -12,10 +12,15 @@
   opacity: 1;
 }
 
-.homepage-nav-item {
+.nav-item {
   display: inline-block;
-  @include span-columns(3);
+  @include span-columns(2);
   text-align: center;
   line-height: 70px;
   font-size: 1.7rem;
+  border: 1px solid;
+  height: 100%;
+  img {
+    max-height: 100%;
+  }
 }
