@@ -21,11 +21,11 @@ $(document).on('ready page:load', function(){
 
 $(window).on('scroll', function() {
     console.log($(this).scrollTop());
-    if ($(this).scrollTop() > 850 && $('#nav-2').css('opacity') == 0 ) {
+    if ($(this).scrollTop() > 930 && $('#nav-2').css('opacity') == 0 ) {
         $('#nav-2').animate({opacity : 1}, 'slow');
     }
 
-    else if ($(this).scrollTop() < 850 && $('#nav-2').css('opacity') == 1 ) {
+    else if ($(this).scrollTop() < 930 && $('#nav-2').css('opacity') == 1 ) {
         $('#nav-2').animate({opacity : 0}, 'fast');
     }
 });
