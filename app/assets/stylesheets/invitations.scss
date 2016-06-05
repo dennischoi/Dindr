@@ -7,59 +7,59 @@
 }
 
 // Date Requests
-.requests {
-  h2 {
-    text-align: center;
-  }
-}
+// .requests {
+//   h2 {
+//     text-align: center;
+//   }
+// }
+//
+// .request-inv {
+//   overflow: hidden;
+//   float: right;
+//   width: 30%;
+//   border: solid 2px black;
+//   list-style-type: none;
+//   padding: 1rem;
+//   img {
+//     height: 10rem;
+//     width: 10rem;
+//   }
+// }
+//
+// // Dates Pending
+//
+// .pending {
+//   h2 {
+//     text-align: center;
+//   }
+// }
+//
+//
+// .pending-inv {
+//   overflow: hidden;
+//   float: left;
+//   width: 33%;
+//   border: solid 2px black;
+//   list-style-type: none;
+//   padding: 1rem;
+//   img {
+//     height: 10rem;
+//     width: 10rem;
+//   }
+// }
 
-.request-inv {
-  overflow: hidden;
-  float: right;
-  width: 30%;
-  border: solid 2px black;
-  list-style-type: none;
-  padding: 1rem;
-  img {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-// Dates Pending
-
-.pending {
-  h2 {
-    text-align: center;
-  }
-}
-
-
-.pending-inv {
-  overflow: hidden;
-  float: left;
-  width: 33%;
-  border: solid 2px black;
-  list-style-type: none;
-  padding: 1rem;
-  img {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-
-.inv-accepted {
-  background-color: #5CEC31;
-}
-
-.req {
-  text-align: center;
-}
-
-.acpt {
-  text-align: center;
-}
+//
+// .inv-accepted {
+//   background-color: #5CEC31;
+// }
+//
+// .req {
+//   text-align: center;
+// }
+//
+// .acpt {
+//   text-align: center;
+// }
 
 
 // Trying to Create Cards like HomePage
@@ -121,7 +121,7 @@
   p {
     color: rgba(0,0,0,0.5);
     font-size: .8em;
-    padding: 1rem 0;
+    padding: 0 0 1rem;
     font-size: 1.1rem;
   }
   a {
@@ -129,6 +129,8 @@
     color: #F3B12F;
     text-transform: uppercase;
     letter-spacing: .2rem;
+    // trying to add some padding to the bottom but it's not working
+    // padding: 0 0 1rem;
     font-size: 1rem;
   }
 }
@@ -230,9 +232,9 @@ $pink: #E91E63;
   text-align: center;
   width: 130px;
   border-radius:40px;
-  background: #fff;
   border: 2px solid $green;
-  color:$green;
+  color:white;
+  background: $green;
   letter-spacing:1px;
   text-shadow:0;
   font:{
@@ -241,10 +243,7 @@ $pink: #E91E63;
   }
   cursor: pointer;
   transition: all 0.25s ease;
-  &:hover {
-    color:white;
-    background: $green;
-  }
+
   &:active {
     //letter-spacing: 2px;
     letter-spacing: 2px ;
@@ -271,8 +270,8 @@ $pink: #E91E63;
 }
 .validate {
   font-size:13px;
-  color: white;
-  background: $green;
+  color: $green;
+  background: #fff;
 
 }
 

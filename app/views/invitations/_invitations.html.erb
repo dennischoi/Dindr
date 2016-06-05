@@ -50,7 +50,8 @@
           <div class="acpt-button">
             <% if inv.pending == true %>
             <% else %>
-            <em class="inv-accepted">Invitation was Accepted!</em>
+            <!-- <em class="inv-accepted">Invitation was Accepted!</em> -->
+            <%= button_tag "Invitation was Accepted!", class: "invitation-accepted-button"%>
             <% end %>
           </div>
         </li>
