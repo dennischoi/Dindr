@@ -18,7 +18,7 @@
 }
 
 #nav-box {
-  width: 12rem;
+  min-width: 200px;
   height: auto;
   visibility: hidden;
   background-color: rgba(215, 208, 218, 0.4);
@@ -29,16 +29,16 @@
   right: 0rem;
   text-align: right;
   list-style: none;
-  border-top-left-radius: 35px;
-  border-bottom-left-radius: 35px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   @media (max-width: 667px) {
     width: 6rem;
   }
 }
 
 #nav-box-list {
-  margin-bottom: 20%;
-  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-top: 3%;
 }
 .nav-box-list-items {
   list-style: none;

@@ -95,7 +95,7 @@ body {
 #card-container {
   display: block;
   height: 100%;
-  padding: 6rem 0 0 0 ;
+  padding: 9rem 0 0 0 ;
 }
 
 #card-set {
@@ -171,6 +171,7 @@ body {
   text-align: center;
   z-index: 9999999999;
   cursor: pointer;
+  height: auto;
 }
 
 // #open-sign-in {
@@ -263,4 +264,9 @@ body {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
+}
+
+#homepage-widget {
+
+  margin: 10rem auto 0 3.8%;
 }
