@@ -300,3 +300,53 @@ $pink: #E91E63;
     width: 1000px;
   }
 }
+
+
+// Pending Invitation Button
+
+
+#see-pending-invitations-button {
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  padding: 10px;
+  position: relative;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 300px;
+  background-color: transparent;
+  margin: 0 auto;
+
+
+  &::before {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all .6s cubic-bezier(1,0.7,0.2,1);
+    -moz-transition: all .8s cubic-bezier(1,0.1,0.2,1);
+    transition: all .8s cubic-bezier(0.25,0.1,0.2,1);
+    content: "";
+    background-color: #F7DC6F;
+    position: absolute;
+    top: -150px;
+    right: auto;
+    left: -10px;
+    z-index: -1;
+    width: 0;
+    height: 300px;
+  }
+
+  &:hover::before {
+    transform: rotate(70deg);
+    width: 1000px;
+  }
+}

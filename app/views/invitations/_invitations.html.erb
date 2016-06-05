@@ -1,5 +1,5 @@
 <div class="requests">
-  <h2>Who's Invited You:</h2>
+
     <div class="invitation-card-container">
       <ul class="invitation-card-set">
       <% current_user.accepted_invitations.each do |inv| %>
@@ -7,7 +7,8 @@
         <li class="invitation-card" id="invitation-request-card">
 
           <div class='invitation-icon'><%= image_tag User.find(inv.send_user_id).profile_pic.url %></div>
-          <!-- <p><#%= inv.date %></p> -->
+          <p><%= inv.date.strftime("%B %d, %Y")  %></p>
+
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
           <!-- <#%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %> -->
 
@@ -26,9 +27,14 @@
     </div>
 </div>
 
+<!--  new button. doesnt have to be a button, just wanted it to look nice -->
+
+<div class="see-pending-invitations">
+    <%= button_to "Pending Invitations", invitations_path,  method: :get, id:"see-pending-invitations-button"%>
+</div>
+
 
 <div class="pending">
-  <h2>Invitations You're waiting on...</h2>
     <div class="invitation-card-container">
 
       <ul class="invitation-card-set">
