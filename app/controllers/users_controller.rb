@@ -34,8 +34,6 @@ class UsersController < ApplicationController
     inv_id.each do |id|
       potentials.delete(id)
     end
-    binding.pry
-
     @users = []
 
     potentials.each do |id|
