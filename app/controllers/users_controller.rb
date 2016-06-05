@@ -10,15 +10,15 @@ class UsersController < ApplicationController
 
 
     array_users.each do |user|
-      cuisine_A = user.top_cats
-      if cuisine_A[0].include?(@cuis)
-        potentials << user.id
-      elsif cuisine_A[1].include?(@cuis)
-        potentials << user.id
-      elsif cuisine_A[2].include?(@cuis)
-        potentials << user.id
-      else
-      end
+        cuisine_A = user.top_cats
+        if cuisine_A[0].include?(@cuis)
+          potentials << user.id
+        elsif cuisine_A[1].include?(@cuis)
+          potentials << user.id
+        elsif cuisine_A[2].include?(@cuis)
+          potentials << user.id
+        else
+        end
     end
 
     potentials.each do |id|
@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     end
 
     @users = []
+
     potentials.each do |id|
       @users << User.find(id)
     end
@@ -65,15 +66,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-      respond_to do |format|
-        format.js
-        format.html
-      end
+      # respond_to do |format|
+      #   format.js
+      #   format.html
+      # end
 
-
-    # if request.xhr?
-    #   render partial: 'invitations/invitations'
-    # end
   end
 
   def edit

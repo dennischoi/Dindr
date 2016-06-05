@@ -1,7 +1,7 @@
 $(document).on('ready page:load', function(){
 
 
-  $('body').on('click','.accept_button', function(ev){
+  $('body').on('click','.accept-request-button', function(ev){
     console.log("You're a badass - ariane")
 
     var invId = $(ev.target).data('invitationid')
@@ -22,7 +22,7 @@ $(document).on('ready page:load', function(){
     };
   });
 
-  $('body').on('click', '.delete', function(ev) {
+  $('body').on('click', '.delete-request-button', function(ev) {
     console.log("I deleted you")
     var invId = $(ev.target).data('invitationid')
     console.log(invId)
@@ -44,4 +44,5 @@ $(document).on('ready page:load', function(){
       });
     };
   });
+
 });

@@ -4,7 +4,7 @@
 
 #game-page {
   margin-top: 5rem;
-  min-height: 55rem;
+  height: 100%;
 }
 
 .page-title {
@@ -24,17 +24,13 @@
   margin-bottom: 2rem;
 }
 
-#reset-pics-button {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  // display: none;
-}
 
-#skip-pics-button {
-  text-align: center;
-  padding: 2rem 0;
-  // display: none;
+
+#skip-button {
+  float: right;
+  // text-align: right;
+
+
 }
 
 .game-started {
@@ -44,6 +40,7 @@
 .button_to {
   text-align: center;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 // Progress Bar
@@ -150,8 +147,8 @@
 
 .pic-sets {
   @include outer-container(100%);
-  margin: 3rem 0;
-  border: 1px dotted;
+  // margin: 3rem 0;
+  margin-bottom: 1rem;
 
   #no-pics {
     font-size: 2rem;
@@ -186,7 +183,7 @@
   left: 110%
 }
 
-#agg-pics-button {
+#reset-button {
   display: none;
 
   &.enough-votes{

@@ -12,9 +12,8 @@ $(document).on('ready load:page', function(){
   });
 
 
-
   $(".dindr-dates").on('click', function(){
-    console.log("Heyyyyyy")
+
 
     var userId = $('pic-sets').data('user')
 
@@ -42,7 +41,9 @@ $(document).on('ready load:page', function(){
           category: cuisine,
         },
       success: function(data){
-        $(".result-restaurants").html(data);
+        $(".result-restaurants-dates").html(data);
+        $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500)
+
         console.log(data);
       }
     });
@@ -92,13 +93,46 @@ $(document).on('ready load:page', function(){
     };
   });
 
+// Down to Meet Button Styling
+  $('body').on('click', '.toggle-button', function() {
 
-
-
-
-
-
+    var useid = $('.toggle-button').data('useid')
+    if ($('.toggle-button').hasClass('selected')) {
+      $('.toggle-button').removeClass('selected')
+      $.ajax({
+        url: "/users/" + useid,
+        method: "patch",
+        data: {
+          user: {
+            down_to_meet: false
+          }
+        },
+        dataType: 'script',
+        success: function(data){
+          $('#down_to_meet').html("Nah, I'm good.")
+        }
+      })
+    }
+    else {
+      $('.toggle-button').addClass('selected')
+      $.ajax({
+        url: "/users/" + useid,
+        method: "patch",
+        data: {
+          user: {
+            down_to_meet: true
+          }
+        },
+        dataType: 'script',
+        success: function(data){
+          $('#down_to_meet').html("Yes! Let's eat!")
+        }
+      })
+    };
+  });
 });
+
+
 
 // Renders the map & top restaurants
 
@@ -137,7 +171,7 @@ function success(ev, position){
       },
     success: function(data){
       console.log(data);
-      // $(".result-restaurants").html(data);
+      $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500);
       initMap();
 
       map.clearOverlays();
@@ -178,3 +212,6 @@ function success(ev, position){
 function failure(err){
   console.log('ERROR(' + err.code + '): ' + err.message);
 }
+
+
+// More infomation button
