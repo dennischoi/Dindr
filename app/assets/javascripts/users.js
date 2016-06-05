@@ -13,10 +13,7 @@ $(document).on('ready load:page', function(){
 
 
   $(".dindr-dates").on('click', function(){
-
-
     var userId = $('pic-sets').data('user')
-
     $.ajax({
 
       url: '/users/' + userId,
