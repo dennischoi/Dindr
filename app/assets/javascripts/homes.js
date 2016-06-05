@@ -24,11 +24,9 @@ $(window).on('scroll', function() {
     console.log($(this).scrollTop());
     if ($(this).scrollTop() > 850 && $('#nav-2').css('opacity') == 0 ) {
         $('#nav-2').animate({opacity : 1}, 'slow');
-        $('.navigation').animate({opacity: 0}, 'fast');
     }
 
     else if ($(this).scrollTop() < 850 && $('#nav-2').css('opacity') == 1 ) {
         $('#nav-2').animate({opacity : 0}, 'fast');
-        $('.navigation').animate({opacity: 1}, 'fast');
     }
 });
