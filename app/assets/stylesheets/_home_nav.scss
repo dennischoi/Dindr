@@ -8,7 +8,7 @@
   width: 7rem;
   position: fixed;
   right: 1rem;
-  top: 1rem;
+  top: 0.6rem;
 
   @media (max-width: 667px) {
     position: absolute;
@@ -31,24 +31,24 @@
   list-style: none;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
-  ul {
-    margin-bottom: 20%;
-    margin-top: 10%;
-    li {
-      list-style: none;
-      text-align: right;
-      font-size: 1.3rem;
-      padding: 1% 10% 1% 5%;
-      @media (max-width: 667px) {
-        font-size: 0.9rem;
-      }
-    }
-  }
   @media (max-width: 667px) {
     width: 6rem;
   }
 }
 
+#nav-box-list {
+  margin-bottom: 20%;
+  margin-top: 10%;
+}
+.nav-box-list-items {
+  list-style: none;
+  text-align: right;
+  font-size: 1.3rem;
+  padding: 1% 10% 1% 5%;
+  @media (max-width: 667px) {
+    font-size: 0.9rem;
+  }
+}
 .hamburger {
   height: auto;;
   width: auto;
@@ -151,10 +151,9 @@
 // The fixed navbar // -----------------------------------------------------------
 
 #nav-2 {
-  height: 70px;
+  height: 66px;
   margin: auto;
   background-color: rgba(181, 177, 162, 0.9);
-  border-radius: 0px 0px 50px 50px;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -174,4 +173,6 @@
   text-align: center;
   line-height: 70px;
   font-size: 1.7rem;
+  height: 100%;
+  border: 1px solid;
 }
