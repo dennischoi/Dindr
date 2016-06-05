@@ -1,7 +1,7 @@
 #nav-3 {
   height: 66px;
   margin: auto;
-  background-color: rgba(181, 177, 162, 0.9);
+  background-color: rgba(191, 201, 202, 0.7);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -15,11 +15,95 @@
   display: inline-block;
   @include span-columns(2);
   text-align: center;
-  line-height: 70px;
   font-size: 1.7rem;
-  border: 1px solid;
+  // border: 1px solid;
   height: 100%;
   img {
     max-height: 100%;
+    position: relative;
+    left: 0px;
+    margin-bottom: 0.3rem;
   }
+}
+
+#home-link {
+  text-align: left;
+  padding: 0.7rem 0 0 1rem;
+  a {
+    position: relative;
+    bottom: 0.4rem;
+  }
+}
+
+.menu-trigger #burger,
+.menu-trigger #burger:before,
+.menu-trigger #burger:after {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: black;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  left: 0;
+}
+
+.menu-trigger #burger:before,
+.menu-trigger #burger:after {
+  content: "";
+}
+
+.menu-trigger #burger {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 16px;
+}
+
+.menu-trigger #burger:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  top: -16px;
+  z-index: 10;
+}
+
+.menu-trigger #burger:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 16px;
+}
+
+.menu-trigger.active {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.menu-trigger.active #burger,
+.menu-trigger.active #burger:before,
+.menu-trigger.active #burger:after {
+  background-color: transparent;
+}
+
+.menu-trigger.active #burger:before {
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+  background-color: black;
+}
+
+.menu-trigger.active #burger:after {
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: black;
 }

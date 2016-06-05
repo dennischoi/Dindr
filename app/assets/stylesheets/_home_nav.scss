@@ -75,9 +75,9 @@
   z-index: 99999999999999999999;
 }
 
-.menu-trigger #burger,
-.menu-trigger #burger:before,
-.menu-trigger #burger:after {
+.menu-trigger #home-burger,
+.menu-trigger #home-burger:before,
+.menu-trigger #home-burger:after {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -90,19 +90,19 @@
   left: 0;
 }
 
-.menu-trigger #burger:before,
-.menu-trigger #burger:after {
+.menu-trigger #home-burger:before,
+.menu-trigger #home-burger:after {
   content: "";
 }
 
-.menu-trigger #burger {
+.menu-trigger #home-burger {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   top: 16px;
 }
 
-.menu-trigger #burger:before {
+.menu-trigger #home-burger:before {
   -moz-transform-origin: 33% 100%;
   -ms-transform-origin: 33% 100%;
   -webkit-transform-origin: 33% 100%;
@@ -111,7 +111,7 @@
   z-index: 10;
 }
 
-.menu-trigger #burger:after {
+.menu-trigger #home-burger:after {
   -moz-transform-origin: 33% 0;
   -ms-transform-origin: 33% 0;
   -webkit-transform-origin: 33% 0;
@@ -126,13 +126,13 @@
   transform: rotateY(180deg);
 }
 
-.menu-trigger.active #burger,
-.menu-trigger.active #burger:before,
-.menu-trigger.active #burger:after {
+.menu-trigger.active #home-burger,
+.menu-trigger.active #home-burger:before,
+.menu-trigger.active #home-burger:after {
   background-color: transparent;
 }
 
-.menu-trigger.active #burger:before {
+.menu-trigger.active #home-burger:before {
   -moz-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
   -webkit-transform: translateY(8px) rotate(45deg);
@@ -140,7 +140,7 @@
   background-color: white;
 }
 
-.menu-trigger.active #burger:after {
+.menu-trigger.active #home-burger:after {
   -moz-transform: translateY(-8px) rotate(-45deg);
   -ms-transform: translateY(-8px) rotate(-45deg);
   -webkit-transform: translateY(-8px) rotate(-45deg);
@@ -171,7 +171,7 @@
   display: inline-block;
   @include span-columns(2);
   text-align: center;
-  line-height: 70px;
+  // line-height: 70px;
   font-size: 1.7rem;
   height: 100%;
   border: 1px solid;

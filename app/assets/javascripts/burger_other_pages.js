@@ -10,10 +10,10 @@ $(document).on('ready page:load', function() {
     ev.stopPropagation();
     $('.menu-trigger').toggleClass('active');
     if(count % 2 === 0){
-      $('.nav-links').css('visibility', 'visible');
+      $('#nav-box').css('visibility', 'visible');
     }
     else {
-      $('.nav-links').css('visibility', 'hidden');
+      $('#nav-box').css('visibility', 'hidden');
     }
     count++;
   });
@@ -30,8 +30,7 @@ $(document).on('ready page:load', function() {
 if(document.getElementById('game-page')!=null){
 
   $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
-  $('span').css('background-color' , 'black');
-  $('span').after().css('background-color' , 'black');
+  $('#burger').css('top' , '1.2rem');
 
 }
 
