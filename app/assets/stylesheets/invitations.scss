@@ -1,20 +1,17 @@
-#invite-container1 {
-  overflow-x: hidden;
-  margin: 0;
+#dindr-date-invitations {
+  margin-top: 4rem;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
 }
 
-#invite-container2 {
-  overflow-x: hidden;
-  padding-top: 4rem;
-}
-
-.pending {
-  padding-top: 4rem;
+// Date Requests
+.requests {
   h2 {
     text-align: center;
   }
 }
-
 
 .request-inv {
   overflow: hidden;
@@ -29,6 +26,15 @@
   }
 }
 
+// Dates Pending
+
+.pending {
+  h2 {
+    text-align: center;
+  }
+}
+
+
 .pending-inv {
   overflow: hidden;
   float: left;
@@ -42,12 +48,6 @@
   }
 }
 
-.requests {
-  padding-top: 1rem;
-  h2 {
-    text-align: center;
-  }
-}
 
 .inv-accepted {
   background-color: #5CEC31;
@@ -67,7 +67,7 @@
 .invitation-card-container {
   display: block;
   height: 100%;
-  padding: 4rem 0 0 0 ;
+  padding: 1rem 0 0 0 ;
 }
 
 .invitation-card-set {
@@ -120,15 +120,15 @@
   p {
     color: rgba(0,0,0,0.5);
     font-size: .8em;
-    margin-bottom: 2em;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
   }
   a {
     text-decoration: none;
     color: #F3B12F;
     text-transform: uppercase;
-    letter-spacing: .2em;
-    font-size: 1em;
+    letter-spacing: .2rem;
+    font-size: 1rem;
   }
 }
 

@@ -11,13 +11,14 @@
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
           <%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %>
 
-          <div class="req-button">
+          <div class="request-buttons">
             <% if inv.pending == true %>
-            <%= button_tag "Accept", class: "accept_button", data: {invitationid: inv.id} %>
+            <%= button_tag "Accept", class: "accept-request-button", data: {invitationid: inv.id} %>
             <% else %>
-            <em class="inv-accepted">Accepted!</em>
+            <%= button_tag "Accepted", class: "inv-accepted"%>
+            <!-- <em class="inv-accepted">Accepted!</em> -->
             <% end %>
-            | <%= button_tag "Delete", class: 'delete', data: {invitationid: inv.id} %>
+            <%= button_tag "Delete", class: 'delete-request-button', data: {invitationid: inv.id} %>
           </div>
         </li>
       <% end %>
@@ -42,7 +43,6 @@
 
           <div class="acpt-button">
             <% if inv.pending == true %>
-            <em>Hurry I'm hungry...</em>
             <% else %>
             <em class="inv-accepted">Invitation was Accepted!</em>
             <% end %>
