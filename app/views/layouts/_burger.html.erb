@@ -9,20 +9,19 @@
 
   <div id="nav-box">
     <% if current_user %>
-    <ul>
-      <li><%= link_to "my profile", user_path(current_user) %></li>
-      <li><%= link_to "game", game_path%></li>
-      <li><%= link_to "results", user_cuisines_path %></li>
-      <li><%= link_to "log out", :logout, method: :delete %></li>
+      <ul id="nav-box-list">
+        <li class="nav-box-list-items"><%= link_to "my profile", user_path(current_user) %></li>
+        <li class="nav-box-list-items"><%= link_to "game", game_path%></li>
+        <li class="nav-box-list-items"><%= link_to "results", user_cuisines_path %></li>
+        <li class="nav-box-list-items"><%= link_to "log out", :logout, method: :delete %></li>
 
-        <% if current_user.admin? %>
-          <li><%= link_to "view all pictures", admin_pictures_path %></li>
-        <% end %>
-
-      <% else %>
-      <li class="nav-link"><%= link_to "Sign Up", new_user_path %></li>
-      <li id="button"> <%= link_to "Sign In", 'javascript:;', class: 'modal-trigger' %>
-      <% end %>
+          <% if current_user.admin? %>
+            <li class="nav-box-list-items"><%= link_to "view all pictures", admin_pictures_path %></li>
+          <% end %>
+    <% else %>
+      <li class="nav-box-list-items"><%= link_to "Sign Up", new_user_path %></li>
+      <li class="nav-box-list-items"> <%= link_to "Sign In", 'javascript:;', class: 'modal-trigger' %>
+    <% end %>
     </ul>
   </div>
 </div>
