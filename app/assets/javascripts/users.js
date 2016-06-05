@@ -67,8 +67,6 @@ $(document).on('ready load:page', function(){
     console.log(date_cuisine)
     console.log(accept_userId)
     console.log(date)
-
-
     console.log(userId)
 
     if (picAnswer) {
@@ -85,8 +83,8 @@ $(document).on('ready load:page', function(){
           }
         },
         success: function(data){
-          $('.dates-pending').html(data)
-          $(ev.target).parent().css('display', 'none')
+          $('.dates-pending').html(data);
+          $(ev.target).parent().css('display', 'none');
           console.log(data);
         }
       });
