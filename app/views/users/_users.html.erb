@@ -3,14 +3,25 @@
 
 
 <!-- <div class="dindr-date-layout"> -->
-<div class="">
-  <ul class="">
+<div class="potential-list">
+  <ul>
     <% @users.each do |user| %>
       <% if user.id == current_user.id %>
       <% else %>
     <!-- <div class="dindr-date-box" data-acceptuserName='<#%= user.first_name %>'></div> -->
       <li class="potential-dates" data-acceptuserName='<%= user.first_name %>'>
+        <div class="pro-pic">
           <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
+        </div>
+        <div class="summary" data-acceptuserName='<%= user.first_name %>'>
+
+          <%= link_to User.find(user.id).first_name, user_path(user.id), :target => "_blank" %>, <%= user.age %>
+        </div>
+        <div class="choice">
+            <button type="button" name="button" class="send_invite" id="show-rests-button" data-datecuisine=<%= @cuis %> data-acceptuserId=<%= user.id %> data-acceptuserName=<%= user.first_name %> data-currentuserid=<%= current_user.id %> >Send Invite!</button>
+            <button type="button" name="button" class="delete_selection" id="show-date-button">Nope!</button>
+
+        </div>
 
       </li>
       <% end %>

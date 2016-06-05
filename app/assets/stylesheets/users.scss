@@ -143,15 +143,62 @@
 }
 
 //trying to get better styling for the potential results-page
+.potential-list {
+  margin-top: 1em;
+  overflow-y: scroll;
+  height: 500px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3)
+}
 .potential-dates {
-  height: 25%;
   width: 100%;
+  height: 150px;
+  padding: 1em;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 2em;
+  // display:inline-block;
+  // vertical-align: middle;
 
-  .dindr-date-pic {
+  .pro-pic {
     height: 100%;
-    width: 18%;
+    width: 33.3333%;
+    float: left;
+    // display: inline-block;
+
+    .dindr-date-pic {
+      height: 7em;
+      width: 7em;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
   }
 
+  .summary {
+    width: 33.33333%;
+    float: left;
+    margin-top: 2.5em;
+    // display: inline-block;
+
+  }
+
+  .choice {
+    width: 33.33333%;
+    float: left;
+    margin-top: 1em;
+    // display: inline-block;
+
+
+      #show-rests-button {
+        display: block;
+        margin-top: 0;
+        margin-right:auto;
+        margin-left: auto;
+      }
+      #show-date-button {
+        margin-right:auto;
+        margin-left: auto;
+        display: block;
+      }
+  }
 
 }
 
