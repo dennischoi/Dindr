@@ -5,12 +5,12 @@
 .footer-2 {
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: rgba(244, 182, 102, 0.9);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background: rgba(162, 132, 176, 0.6);
+  background: $footer-background;
   display: inline-block;
   padding: 1rem;
   width: 100%;
@@ -54,7 +54,7 @@
   }
 
   ul li a {
-    color: $footer-link-color;
+    color: #6A9793;
     text-decoration: none;
 
     &:focus,
@@ -66,10 +66,11 @@
   .footer-secondary-links {
     @include media($large-screen) {
       float: right;
+      margin-top: 15px;
     }
 
     li {
-      font-size: 0.8em;
+      font-size: 1.1em;
     }
 
     ul.footer-social {
