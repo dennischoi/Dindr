@@ -2,6 +2,46 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+#skip-button,
+input[type=submit] {
+appearance: none;
+background-color: $action-color;
+border: 0;
+border-radius: $base-border-radius;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: $base-font-family;
+font-size: $base-font-size;
+-webkit-font-smoothing: antialiased;
+font-weight: 600;
+line-height: 1;
+padding: $small-spacing $base-spacing;
+text-decoration: none;
+transition: background-color $base-duration $base-timing;
+user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+
+&:hover,
+&:focus {
+  background-color: shade($action-color, 20%);
+  color: #fff;
+}
+
+&:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  &:hover {
+    background-color: $action-color;
+  }
+}
+}
+
+
+
+
 #button {
   width: 500px;
   height: 100%;
@@ -97,28 +137,6 @@ $pink: #E91E63;
   &:after {
     // content:"Show Restaurants";
   }
-}
-.onclic {
-  width: 40px;
-  border-color:$gray;
-  border-width:3px;
-  font-size:0;
-  border-left-color:$green;
-  animation: rotating 2s 0.25s linear infinite;
-
-  &:after {
-    content:"";
-  }
-  &:hover {
-    color:$green;
-    background: white;
-  }
-}
-.validate {
-  font-size:13px;
-  color: white;
-  background: $green;
-
 }
 
 @keyframes rotating {
