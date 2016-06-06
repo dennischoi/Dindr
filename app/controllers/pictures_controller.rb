@@ -11,6 +11,7 @@ class PicturesController < ApplicationController
     # array = array1.concat(array2)
     # array.uniq!
     votes_array = current_user.votes.pluck(:picture_id)
+    
     @pictures = Picture.order_by_rand.where.not(id: votes_array)
 
     @picture1 = @pictures[0]
