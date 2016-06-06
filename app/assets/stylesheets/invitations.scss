@@ -348,8 +348,9 @@ $pink: #E91E63;
 
 // //trying to get better styling for the invitations page pending section
 
+
 .invitation-pending-list {
-  margin-top: 1em;
+  margin: 2em 0;
   overflow-x: scroll;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
   height: 450px;
@@ -384,4 +385,36 @@ $pink: #E91E63;
     margin-top: 2em;
   }
 
+}
+
+
+// Pending & Dindr Date Button
+
+
+.invitation-button {
+  display: inline-block;
+  margin: 2em auto;
+  padding: 0 2em;
+}
+
+// Toggling Hidden Sections
+
+.invitation-pending-container {
+  display: none;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.dindr-date-container {
+  display: none;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.button-clicked {
+  display: block;
 }

@@ -45,4 +45,22 @@ $(document).on('ready page:load', function(){
     };
   });
 
+
+  $('body').on('click', '#see-pending-invitations-button', function() {
+      alert("HAYYYYY");
+      $('.invitation-pending-container').toggleClass( "button-clicked");
+      $('.dindr-date-container').removeClass( "button-clicked");
+  });
+
+  $('body').on('click', '#see-dindr-dates-button', function() {
+      alert("HAYYYYYHIIIIIEEE");
+      $('.dindr-date-container').toggleClass( "button-clicked");
+      $('.invitation-pending-container').removeClass( "button-clicked");
+  });
+
+  // $("#arrow-2").click(function() {
+  //     $('html, body').animate({ scrollTop: $("#homepage-button").offset().top }, 3500);
+  // });
+
+
 });

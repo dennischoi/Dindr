@@ -31,42 +31,52 @@
     </div>
 </div>
 
+
 <!--  new button. doesnt have to be a button, just wanted it to look nice -->
 
-<div class="see-pending-invitations">
-    <%= button_to "Pending Invitations", invitations_path,  method: :get, id:"see-pending-invitations-button"%>
+<div class="invitation-button">
+  <%= button_tag "Pending Invitations", id:"see-pending-invitations-button"%>
+</div>
+
+<div class="invitation-button">
+  <%= button_tag "See Dindr Dates", id:"see-dindr-dates-button"%>
 </div>
 
 
+<div class="invitation-pending-container">
 
-<div class="invitation-pending-list">
-      <ul>
-      <% current_user.sent_invitations.each do |inv| %>
+  <h1> Who You're Waiting to Hear from: </h1>
 
-        <li class="invitation-pending">
+  <div class="invitation-pending-list">
+        <ul>
+        <% current_user.sent_invitations.each do |inv| %>
 
-          <div class='invitation-pending-pic'>
-            <%= image_tag User.find(inv.accept_user_id).profile_pic.url, class: "invitation-pending-profile-pic" %></div>
+          <li class="invitation-pending">
 
-          <div class="invitation-info">
-          <p>You invited <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
+            <div class='invitation-pending-pic'>
+              <%= image_tag User.find(inv.accept_user_id).profile_pic.url, class: "invitation-pending-profile-pic" %></div>
 
-          <%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %>
+            <div class="invitation-info">
+            <p>You invited <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
 
-          <div class="acpt-button">
-            <% if inv.pending == true %>
-            <% else %>
-            <!-- <em class="inv-accepted">Invitation was Accepted!</em> -->
-            <%= button_tag "Invitation was Accepted!", class: "invitation-accepted-button"%>
-            <% end %>
-          </div>
-        </li>
-      <% end %>
-      </ul>
-    </div>
+            <%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %>
+
+            <div class="acpt-button">
+              <% if inv.pending == true %>
+              <% else %>
+              <!-- <em class="inv-accepted">Invitation was Accepted!</em> -->
+              <%= button_tag "Invitation was Accepted!", class: "invitation-accepted-button"%>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+  </div>
+
 </div>
 
 
-<div class="see-dindr-dates">
-  <%= button_to "See Dindr Dates", invitations_path,  method: :get, id:"see-dindr-dates-button"%>
+<div class="dindr-date-container">
+  <h1> This Section Will Arrive Shortly :)</h1>
 </div>
