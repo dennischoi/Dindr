@@ -8,9 +8,12 @@
 
           <div class='invitation-pic'>
             <%= image_tag User.find(inv.send_user_id).profile_pic.url, class: "invitation-profile-pic"%></div>
+
+          <div class="invitation-info">
           <p><%= inv.date.strftime("%B %d, %Y")  %></p>
 
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
+        </div>
           <!-- <#%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %> -->
 
           <div class="request-buttons">

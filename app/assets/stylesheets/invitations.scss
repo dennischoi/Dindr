@@ -388,32 +388,32 @@ $pink: #E91E63;
     }
   }
 
-  // .summary {
-  //   width: 33.33333%;
-  //   float: left;
-  //   margin-top: 2.5em;
-  //   // display: inline-block;
-  //
-  // }
-  //
-  // .choice {
-  //   width: 33.33333%;
-  //   float: left;
-  //   margin-top: 1em;
-  //   // display: inline-block;
-  //
-  //
-  //     #show-rests-button {
-  //       display: block;
-  //       margin-top: 0;
-  //       margin-right:auto;
-  //       margin-left: auto;
-  //     }
-  //     #show-date-button {
-  //       margin-right:auto;
-  //       margin-left: auto;
-  //       display: block;
-  //     }
-  // }
+  .invitation-info {
+    width: 33.33333%;
+    float: left;
+    margin-top: 2.5em;
+    // display: inline-block;
+
+  }
+
+  .request-buttons {
+    width: 33.33333%;
+    float: left;
+    margin-top: 1em;
+    // display: inline-block;
+
+
+      .accept-request-button {
+        display: block;
+        margin-top: 0;
+        margin-right:auto;
+        margin-left: auto;
+      }
+      .delete-request-button {
+        margin-right:auto;
+        margin-left: auto;
+        display: block;
+      }
+  }
 
 }

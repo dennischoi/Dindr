@@ -17,6 +17,7 @@
         <div class="summary" data-acceptuserName='<%= user.first_name %>'>
           <%= link_to User.find(user.id).first_name, user_path(user.id), :target => "_blank" %>, <%= user.age %>
         </div>
+
         <div class="choice">
             <button type="button" name="button" class="send_invite" id="show-rests-button" data-datecuisine=<%= @cuis %> data-acceptuserId=<%= user.id %> data-acceptuserName=<%= user.first_name %> data-currentuserid=<%= current_user.id %> >Send Invite!</button>
             <button type="button" name="button" class="delete_selection" id="show-date-button">Nope!</button>
