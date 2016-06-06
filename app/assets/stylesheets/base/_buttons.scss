@@ -343,3 +343,27 @@ $pink: #E91E63;
   margin: 0 auto;
 
 }
+
+// See Dindr-Date Button
+
+#see-dindr-dates-button {
+
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  padding: 10px;
+  position: relative;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 300px;
+  background-color: transparent;
+  margin: 0 auto;
+
+}
