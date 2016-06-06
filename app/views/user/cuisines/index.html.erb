@@ -12,7 +12,7 @@
       <ul id="results-card-set">
       <% current_user.top_cats.each do |cat| %>
         <li class="card">
-          <div class='icon'><%= image_tag('udon.png') %></div>
+          <div class='icon'><%= image_tag('food-love.png') %></div>
           <h1><%= cat[0] %></h1>
           <p>Mmm Delish!</p>
           <%= button_tag "Find Restaurants", class:"nearby-restaurants", id:"show-rests-button", data: {cuisinelabel:  "#{@cuisines.find_by(name: cat[0]).label}"}  %>

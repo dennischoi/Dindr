@@ -31,11 +31,19 @@
           </div>
 
           <% if current_user.id == @user.id && @user.profile_pic? %>
-          <div class="toggle-button" data: {useid: current_user.id}>
-              <button>
+            <% if @user.down_to_meet == true %>
+              <div class="toggle-button selected" data: {useid: current_user.id}>
+                  <button>
 
-              </button>
-          </div>
+                  </button>
+              </div>
+            <% else %>
+              <div class="toggle-button" data: {useid: current_user.id}>
+                  <button>
+
+                  </button>
+              </div>
+            <% end %>
           <% end %>
 
         </p>

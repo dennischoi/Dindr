@@ -143,9 +143,10 @@
 }
 
 //trying to get better styling for the potential results-page
+
 .potential-list {
   margin-top: 1em;
-  overflow-y: scroll;
+  overflow-x: scroll;
   height: 500px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3)
 }
@@ -192,12 +193,6 @@
     // display: inline-block;
 
 
-      #show-rests-button {
-        display: block;
-        margin-top: 0;
-        margin-right:auto;
-        margin-left: auto;
-      }
       #show-date-button {
         margin-right:auto;
         margin-left: auto;

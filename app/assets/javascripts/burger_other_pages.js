@@ -28,10 +28,23 @@ $(document).on('ready page:load', function() {
   });
 
 if(document.getElementById('game-page')!=null){
-
   $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
   $('#burger').css('top' , '1.2rem');
+}
 
+if(document.getElementById('profile-page')!=null){
+  $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
+  $('#burger').css('top' , '1.2rem');
+}
+
+if(document.getElementById('dindr-date-invitations')!=null){
+  $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
+  $('#burger').css('top' , '1.2rem');
+}
+
+if(document.getElementById('results-page')!=null){
+  $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
+  $('#burger').css('top' , '1.2rem');
 }
 
 });

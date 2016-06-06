@@ -1,34 +1,33 @@
 <div class="modal">
-<div class="modal-open">
-      <div class="modal-fade-screen">
-        <div class="modal-inner">
-          <div class="modal-close" for="modal-1"></div>
-            <h1>Sign in</h1>
+  <div class="modal-open">
+        <div class="modal-fade-screen">
+          <div class="modal-inner">
+            <div class="modal-close" for="modal-1"></div>
+              <h1>Sign in</h1>
 
-            <p class="modal-content">
+              <p class="modal-content">
 
-        <%= form_tag create_path do %>
+          <%= form_tag create_path do %>
 
-              <div class="field">
-                <%= label_tag :email %>
-                <%= text_field_tag :email, params[:email] %>
+                <div class="field">
+                  <%= label_tag :email %>
+                  <%= text_field_tag :email, params[:email] %>
+                </div>
+                <div class="field">
+                  <%= label_tag :password %>
+                  <%= password_field_tag :password %>
+                </div>
+                <div class="action" id="login-submit">
+                  <%= submit_tag :Submit %>
+                </div>
+
+              <% end %>
+
+              <div class="center-me">
+                <%= link_to 'Sign up', new_user_path, class: "reset-pass-link" %> | <%= link_to 'Reset your password', password_resets_path, class: "reset-pass-link"%>
               </div>
-              <div class="field">
-                <%= label_tag :password %>
-                <%= password_field_tag :password %>
-              </div>
-              <div class="action">
-                <%= submit_tag :Submit %>
-              </div>
-        <% end %>
-            </br>
-            </br>
-            </br>
-            <div class="center-me">
-              <%= link_to 'Sign up', new_user_path, class: "reset-pass-link" %> | <%= link_to 'Reset your password', password_resets_path, class: "reset-pass-link"%>
-            </div>
-        </p>
+          </p>
+        </div>
       </div>
-    </div>
-</div>
+  </div>
 </div>

@@ -79,12 +79,12 @@
     border-radius: $base-border-radius;
     margin: auto;
     margin-top: 0;
-    min-height: 95%;
+    height: 60%;
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
     transition: opacity 0.25s ease;
-    min-width: 95%;
+    width: 50%;
     a {
       color: black;
     }
@@ -166,4 +166,9 @@
   color: black;
   text-decoration: underline;
   hover: $action-color;
+}
+
+#login-submit {
+  width: 7.5rem;
+  margin: 3.5rem auto;
 }
