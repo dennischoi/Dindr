@@ -13,10 +13,7 @@ $(document).on('ready load:page', function(){
 
 
   $(".dindr-dates").on('click', function(){
-
-
     var userId = $('pic-sets').data('user')
-
     $.ajax({
 
       url: '/users/' + userId,
@@ -52,7 +49,7 @@ $(document).on('ready load:page', function(){
 
 // Create an ajax request to create an invitation
 
-  $("body").on('click', ".dindr-date-info", function(ev){
+  $("body").on('click', ".send_invite", function(ev){
 
       console.log("i clicked a picture")
 
@@ -67,8 +64,6 @@ $(document).on('ready load:page', function(){
     console.log(date_cuisine)
     console.log(accept_userId)
     console.log(date)
-
-
     console.log(userId)
 
     if (picAnswer) {
@@ -86,12 +81,17 @@ $(document).on('ready load:page', function(){
         },
         success: function(data){
           $('.dates-pending').html(data)
-          $(ev.target).parent().css('display', 'none')
+          $(ev.target).parent().parent().css('display', 'none')
           console.log(data);
         }
       });
     };
   });
+
+  $("body").on('click', ".delete_selection", function(ev){
+
+    $(ev.target).parent().parent().css('display', 'none');
+  })
 
 // Down to Meet Button Styling
   $('body').on('click', '.toggle-button', function() {

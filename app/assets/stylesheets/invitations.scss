@@ -1,65 +1,65 @@
-#invite-container1 {
-  overflow-x: hidden;
-  margin: 0;
-}
-
-#invite-container2 {
-  overflow-x: hidden;
-  padding-top: 4rem;
-}
-
-.pending {
-  padding-top: 4rem;
-  h2 {
-    text-align: center;
-  }
-}
-
-
-.request-inv {
-  overflow: hidden;
-  float: right;
-  width: 30%;
-  border: solid 2px black;
-  list-style-type: none;
-  padding: 1rem;
-  img {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-.pending-inv {
-  overflow: hidden;
-  float: left;
-  width: 33%;
-  border: solid 2px black;
-  list-style-type: none;
-  padding: 1rem;
-  img {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-.requests {
-  padding-top: 1rem;
-  h2 {
-    text-align: center;
-  }
-}
-
-.inv-accepted {
-  background-color: #5CEC31;
-}
-
-.req {
+#dindr-date-invitations {
+  margin-top: 4rem;
   text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
 }
 
-.acpt {
-  text-align: center;
-}
+// Date Requests
+// .requests {
+//   h2 {
+//     text-align: center;
+//   }
+// }
+//
+// .request-inv {
+//   overflow: hidden;
+//   float: right;
+//   width: 30%;
+//   border: solid 2px black;
+//   list-style-type: none;
+//   padding: 1rem;
+//   img {
+//     height: 10rem;
+//     width: 10rem;
+//   }
+// }
+//
+// // Dates Pending
+//
+// .pending {
+//   h2 {
+//     text-align: center;
+//   }
+// }
+//
+//
+// .pending-inv {
+//   overflow: hidden;
+//   float: left;
+//   width: 33%;
+//   border: solid 2px black;
+//   list-style-type: none;
+//   padding: 1rem;
+//   img {
+//     height: 10rem;
+//     width: 10rem;
+//   }
+// }
+
+//
+// .inv-accepted {
+//   background-color: #5CEC31;
+// }
+//
+// .req {
+//   text-align: center;
+// }
+//
+// .acpt {
+//   text-align: center;
+// }
 
 
 // Trying to Create Cards like HomePage
@@ -67,7 +67,7 @@
 .invitation-card-container {
   display: block;
   height: 100%;
-  padding: 4rem 0 0 0 ;
+  padding: 1rem 0 0 0 ;
 }
 
 .invitation-card-set {
@@ -75,14 +75,15 @@
   display: block;
   margin: 0 auto;
   position: relative;
+  text-align: center;
   height: 500px;
 }
   .invitation-card {
     height: 450px;
     width: 33.33333%;
     background: #fff;
-    float: left;
-    display: inline;
+    // float: left;
+    // display: inline;
     box-shadow: 0 5px 30px 0 rgba(0,0,0,0.3);
     border-radius: 7px;
     position: absolute;
@@ -120,27 +121,231 @@
   p {
     color: rgba(0,0,0,0.5);
     font-size: .8em;
-    margin-bottom: 2em;
+    padding: 0 0 1rem;
     font-size: 1.1rem;
   }
   a {
     text-decoration: none;
     color: #F3B12F;
     text-transform: uppercase;
-    letter-spacing: .2em;
-    font-size: 1em;
+    letter-spacing: .2rem;
+    // trying to add some padding to the bottom but it's not working
+    // padding: 0 0 1rem;
+    font-size: 1rem;
   }
 }
 
-.dindr-date-layout {
-  overflow: hidden;
-}
 
-.dindr-date-box {
-  float: left;
-  width: 33%;
-}
 
-.dindr-date-info {
+// Results Page - Move to User.scss
+
+// .dindr-date-layout {
+//   overflow: hidden;
+// }
+//
+// .dindr-date-box {
+//   float: left;
+//   width: 33%;
+// }
+//
+// .dindr-date-info {
+//   text-align: center;
+// }
+
+
+// Dindr Date Request Buttons
+
+// Accept Request button
+
+$green: #1ECD97;
+$gray: #bbbbbb;
+$pink: #E91E63;
+
+.accept-request-button  {
+  font-family: 'Roboto', sans-serif;
+  outline:none;
+  height: 40px;
   text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $green;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    // content:"Show Restaurants";
+  }
+}
+.onclic {
+  width: 40px;
+  border-color:$gray;
+  border-width:3px;
+  font-size:0;
+  border-left-color:$green;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content:"";
+  }
+  &:hover {
+    color:$green;
+    background: white;
+  }
+}
+.validate {
+  font-size:13px;
+  color: white;
+  background: $green;
+
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Invitation Accepted Button
+
+.invitation-accepted-button {
+  font-family: 'Roboto', sans-serif;
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  border: 2px solid $green;
+  color:white;
+  background: $green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    // content:"Show Restaurants";
+  }
+}
+.onclic {
+  width: 40px;
+  border-color:$gray;
+  border-width:3px;
+  font-size:0;
+  border-left-color:$green;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content:"";
+  }
+  &:hover {
+    color:$green;
+    background: white;
+  }
+}
+.validate {
+  font-size:13px;
+  color: $green;
+  background: #fff;
+
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+// Delete button
+.delete-request-button {
+  font-family: 'Roboto', sans-serif;
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid $action-color;
+  color: $action-color;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $action-color;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    // content:"Show Restaurants";
+  }
+}
+.onclic {
+  width: 40px;
+  border-color:$gray;
+  border-width:3px;
+  font-size:0;
+  border-left-color:$pink;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content:"";
+  }
+  &:hover {
+    color:$pink;
+    background: white;
+  }
+}
+.validate {
+  font-size:13px;
+  color: white;
+  background: $pink;
+
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

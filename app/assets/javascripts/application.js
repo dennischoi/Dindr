@@ -4,4 +4,4 @@
 //= require maps
 //= require pictures
 //= require users
-//= require burger
+//= require burger_other_pages

@@ -3,12 +3,12 @@
 // The hamburger // ------------------------------------------------------------
 
 .navigation {
-  z-index: 999999999;
+  z-index: 999999999999999999;
   height: 7rem;
   width: 7rem;
   position: fixed;
-  right: 2.9rem;
-  top: 30px;
+  right: 1rem;
+  top: 0.6rem;
 
   @media (max-width: 667px) {
     position: absolute;
@@ -18,7 +18,7 @@
 }
 
 #nav-box {
-  width: 12rem;
+  min-width: 200px;
   height: auto;
   visibility: hidden;
   background-color: rgba(215, 208, 218, 0.4);
@@ -29,26 +29,26 @@
   right: 0rem;
   text-align: right;
   list-style: none;
-  border-top-left-radius: 35px;
-  border-bottom-left-radius: 35px;
-  ul {
-    margin-bottom: 20%;
-    margin-top: 10%;
-    li {
-      list-style: none;
-      text-align: right;
-      font-size: 1.3rem;
-      padding: 1% 10% 1% 5%;
-      @media (max-width: 667px) {
-        font-size: 0.9rem;
-      }
-    }
-  }
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   @media (max-width: 667px) {
     width: 6rem;
   }
 }
 
+#nav-box-list {
+  margin-bottom: 10%;
+  margin-top: 3%;
+}
+.nav-box-list-items {
+  list-style: none;
+  text-align: right;
+  font-size: 1.3rem;
+  padding: 1% 10% 1% 5%;
+  @media (max-width: 667px) {
+    font-size: 0.9rem;
+  }
+}
 .hamburger {
   height: auto;;
   width: auto;
@@ -75,9 +75,9 @@
   z-index: 99999999999999999999;
 }
 
-.menu-trigger #burger,
-.menu-trigger #burger:before,
-.menu-trigger #burger:after {
+.menu-trigger #home-burger,
+.menu-trigger #home-burger:before,
+.menu-trigger #home-burger:after {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -90,19 +90,19 @@
   left: 0;
 }
 
-.menu-trigger #burger:before,
-.menu-trigger #burger:after {
+.menu-trigger #home-burger:before,
+.menu-trigger #home-burger:after {
   content: "";
 }
 
-.menu-trigger #burger {
+.menu-trigger #home-burger {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   top: 16px;
 }
 
-.menu-trigger #burger:before {
+.menu-trigger #home-burger:before {
   -moz-transform-origin: 33% 100%;
   -ms-transform-origin: 33% 100%;
   -webkit-transform-origin: 33% 100%;
@@ -111,7 +111,7 @@
   z-index: 10;
 }
 
-.menu-trigger #burger:after {
+.menu-trigger #home-burger:after {
   -moz-transform-origin: 33% 0;
   -ms-transform-origin: 33% 0;
   -webkit-transform-origin: 33% 0;
@@ -126,13 +126,13 @@
   transform: rotateY(180deg);
 }
 
-.menu-trigger.active #burger,
-.menu-trigger.active #burger:before,
-.menu-trigger.active #burger:after {
+.menu-trigger.active #home-burger,
+.menu-trigger.active #home-burger:before,
+.menu-trigger.active #home-burger:after {
   background-color: transparent;
 }
 
-.menu-trigger.active #burger:before {
+.menu-trigger.active #home-burger:before {
   -moz-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
   -webkit-transform: translateY(8px) rotate(45deg);
@@ -140,7 +140,7 @@
   background-color: white;
 }
 
-.menu-trigger.active #burger:after {
+.menu-trigger.active #home-burger:after {
   -moz-transform: translateY(-8px) rotate(-45deg);
   -ms-transform: translateY(-8px) rotate(-45deg);
   -webkit-transform: translateY(-8px) rotate(-45deg);
@@ -151,16 +151,15 @@
 // The fixed navbar // -----------------------------------------------------------
 
 #nav-2 {
-  height: 70px;
+  height: 66px;
   margin: auto;
-  background-color: rgba(181, 177, 162, 0.9);
-  border-radius: 0px 0px 50px 50px;
+  background-color: rgba(191, 201, 202, 0.7);
   position: fixed;
   top: 0px;
   right: 0px;
   left: 0px;
   width: 100%;
-  z-index: 99999999;
+  z-index: 9999;
   opacity: 0;
 }
 
@@ -168,10 +167,12 @@
   opacity: 1;
 }
 
-.nav-item {
+.homepage-nav-item {
   display: inline-block;
-  @include span-columns(3);
+  @include span-columns(2);
   text-align: center;
-  line-height: 70px;
+  // line-height: 70px;
   font-size: 1.7rem;
+  height: 100%;
+  border: 1px solid;
 }

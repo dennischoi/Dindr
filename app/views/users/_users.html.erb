@@ -2,25 +2,34 @@
   <h1>Others craving <%=@cuis%>!</h1>
 
 
-<div class="dindr-date-layout">
-  <% @users.each do |user| %>
+<!-- <div class="dindr-date-layout"> -->
+<div class="potential-list">
+  <ul>
+    <% @users.each do |user| %>
+      <% if user.id == current_user.id %>
+      <% else %>
+    <!-- <div class="dindr-date-box" data-acceptuserName='<#%= user.first_name %>'></div> -->
 
-  <div class="dindr-date-box" data-acceptuserName='<%= user.first_name %>'>
-    <% if user.id == current_user.id %>
+      <li class="potential-dates" data-acceptuserName='<%= user.first_name %>'>
+        <div class="pro-pic">
+          <%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %>
+        </div>
+        <div class="summary" data-acceptuserName='<%= user.first_name %>'>
+          <%= link_to User.find(user.id).first_name, user_path(user.id), :target => "_blank" %>, <%= user.age %>
+        </div>
+        <div class="choice">
+            <button type="button" name="button" class="send_invite" id="show-rests-button" data-datecuisine=<%= @cuis %> data-acceptuserId=<%= user.id %> data-acceptuserName=<%= user.first_name %> data-currentuserid=<%= current_user.id %> >Send Invite!</button>
+            <button type="button" name="button" class="delete_selection" id="show-date-button">Nope!</button>
 
-    <% else %>
+        </div>
 
-    <div>
-      <em class="dindr-date-info"><%= image_tag user.profile_pic.url, class: "dindr-date-pic", data: {datecuisine: "#{@cuis}", acceptuserId: user.id, acceptuserName: user.first_name, currentuserid: current_user.id } %></em>
-      <p data-acceptuserName='<%= user.first_name %>'>
-        <%= link_to User.find(user.id).first_name, user_path(user.id), :target => "_blank" %>, <%= user.age %>
-      </p>
-    </div>
-
-
+      </li>
+      <% end %>
     <% end %>
-  <% end %>
-  </div>
+  </ul>
+</div>
+
+<!-- </div> -->
 
   <div id="dindr-date-profiles">
     <%= button_to "See Invitations", invitations_path,  method: :get, id:"see-invitations-button"%>

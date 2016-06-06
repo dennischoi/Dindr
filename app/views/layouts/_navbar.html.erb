@@ -1,14 +1,17 @@
 <!-- This is the navbar for all the pages aside from the homepage. -->
 
 <div id="nav-3">
-  <ul class="nav">
-    <!-- <li class="nav-item"><%= link_to "home", root_path %></li> -->
-    <% if current_user %>
-    <li class="nav-item"><%= link_to "profile", user_path(current_user) %></li>
 
-    <li class="nav-item"><%= link_to "DindrResults", user_cuisines_path %></li>
-    <li class="nav-item"><%= link_to "DindrDates", invitations_path %></li>
-    <li class="nav-item"><%= link_to "log out", :logout, method: :delete %></li>
+    <% if current_user %>
+    <li class="nav-item" id="home-link">
+        <%= link_to image_tag('dindr-littlered-d.png'), homes_path %>
+      </li>
+
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    <li class="nav-item"><%= render 'layouts/burger_other_pages' %></li>
+
     <% end %>
-  </ul>
 </div>

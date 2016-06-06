@@ -4,7 +4,7 @@
 
 #game-page {
   margin-top: 5rem;
-  height: 100%;
+  min-height: 58rem;
 }
 
 .page-title {
@@ -39,7 +39,7 @@
 
 .button_to {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 }
 
@@ -148,8 +148,7 @@
 .pic-sets {
   @include outer-container(100%);
   // margin: 3rem 0;
-  margin-bottom: 1rem;
-  border: 1px dotted;
+  margin: 5rem auto;
 
   #no-pics {
     font-size: 2rem;

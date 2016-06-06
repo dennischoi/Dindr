@@ -21,14 +21,19 @@ class UsersController < ApplicationController
         end
     end
 
+    inv_id = []
     potentials.each do |id|
       invites_arr.each do |inv|
         if (inv.send_user_id == current_user.id && inv.accept_user_id == id) || (inv.accept_user_id == current_user.id && inv.send_user_id == id)
-          potentials.delete(id)
+          invites_arr.delete(inv)
+          inv_id << id
         end
       end
     end
 
+    inv_id.each do |id|
+      potentials.delete(id)
+    end
     @users = []
 
     potentials.each do |id|

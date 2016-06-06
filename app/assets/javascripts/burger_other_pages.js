@@ -22,8 +22,16 @@ $(document).on('ready page:load', function() {
     console.log('click')
     if($('.menu-trigger').hasClass('active')){
       $('.menu-trigger').removeClass('active');
-      $('#nav-box').css('visibility', 'hidden');
+      $('.nav-links').css('visibility', 'hidden');
       count++
     }
   });
+
+if(document.getElementById('game-page')!=null){
+
+  $('#nav-3').css('background-color', 'rgba(181, 177, 162, 0)');
+  $('#burger').css('top' , '1.2rem');
+
+}
+
 });
