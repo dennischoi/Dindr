@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #results-page {
-  min-height: 65.5rem;
-  margin-top: 6rem;
+  min-height: 55rem;
+  margin-top: 10rem;
+  @media (max-width: 1400px) {
+    margin-top: 5rem;
+  }
 }
 
 #date-page {
-  margin-top: 5rem;
-  min-height: 55rem;
+  margin-top: 10rem;
+  min-height: 30rem;
 }
 
 // .top-box {
@@ -120,6 +123,9 @@
     position: absolute;
     text-align: center;
     padding: 50px 30px;
+    @media (max-width: 1126px) {
+    height: 105%;
+    }
     &:nth-child(2) {
       z-index: 10;
       left: 50%;
@@ -129,6 +135,9 @@
       width: 35%;
       padding-top: 75px;
       padding-bottom: 75px;
+      @media (max-width: 1126px) {
+      height: 105%;
+      }
     }
     &:nth-child(3) {
       right: 0;
@@ -157,8 +166,10 @@
   p {
     color: rgba(0,0,0,0.5);
     font-size: .8em;
-    margin-bottom: 2em;
     font-size: 1.1rem;
+    @media (max-width: 753px) {
+      margin-bottom: 0.3rem;
+    }
   }
   a {
     text-decoration: none;
@@ -166,5 +177,6 @@
     text-transform: uppercase;
     letter-spacing: .2em;
     font-size: 1em;
+
   }
 }

@@ -16,7 +16,7 @@
   @include span-columns(2);
   text-align: center;
   font-size: 1.7rem;
-  // border: 1px solid;
+  // border-right: 1px solid;
   height: 100%;
   img {
     max-height: 100%;
@@ -28,10 +28,10 @@
 
 #home-link {
   text-align: left;
-  padding: 0.7rem 0 0 1rem;
+  padding: 0.4rem 0 0 1rem;
   a {
     position: relative;
-    bottom: 0.4rem;
+    bottom: 0rem;
   }
 }
 
