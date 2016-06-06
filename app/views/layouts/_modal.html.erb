@@ -15,13 +15,11 @@
                 <%= label_tag :password %>
                 <%= password_field_tag :password %>
               </div>
-              <div class="action">
+              <div class="action" id="login-submit">
                 <%= submit_tag :Submit %>
               </div>
             <% end %>
-            </br>
-            </br>
-            </br>
+        
             <div class="center-me">
               <%= link_to 'Sign up', new_user_path, class: "reset-pass-link" %> | <%= link_to 'Reset your password', password_resets_path, class: "reset-pass-link"%>
             </div>
