@@ -37,9 +37,6 @@
     <%= button_to "Pending Invitations", invitations_path,  method: :get, id:"see-pending-invitations-button"%>
 </div>
 
-<div class="see-pending-invitations">
-    <%= button_to "See Dindr Dates",  id:"see-pending-invitations-button"%>
-</div>
 
 
 <div class="pending">
@@ -66,4 +63,9 @@
       <% end %>
       </ul>
     </div>
+</div>
+
+
+<div class="see-dindr-dates">
+  <%= button_to "See Dindr Dates", invitations_path,  method: :get, id:"see-dindr-dates-button"%>
 </div>
