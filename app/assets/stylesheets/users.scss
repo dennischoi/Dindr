@@ -142,6 +142,84 @@
   clear: both;
 }
 
+//trying to get better styling for the potential results-page
+.potential-list {
+  margin-top: 1em;
+  overflow-y: scroll;
+  height: 500px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3)
+}
+
+.potential-dates {
+  width: 100%;
+  height: 150px;
+  padding: 1em;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 1em;
+  // display:inline-block;
+  // vertical-align: middle;
+
+  .pro-pic {
+    height: 100%;
+    width: 33.3333%;
+    float: left;
+    // display: inline-block;
+
+    .dindr-date-pic {
+      height: 7em;
+      width: 7em;
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto 2em;
+      background: #eee;
+      box-shadow: 0 0 0 4px #ddd;
+      vertical-align: middle;
+    }
+  }
+
+  .summary {
+    width: 33.33333%;
+    float: left;
+    margin-top: 2.5em;
+    // display: inline-block;
+
+  }
+
+  .choice {
+    width: 33.33333%;
+    float: left;
+    margin-top: 1em;
+    // display: inline-block;
+
+
+      #show-rests-button {
+        display: block;
+        margin-top: 0;
+        margin-right:auto;
+        margin-left: auto;
+      }
+      #show-date-button {
+        margin-right:auto;
+        margin-left: auto;
+        display: block;
+      }
+  }
+
+}
+
+
+
+  // .icon
+  // img {
+  //   display: block;
+  //   width: 150px;
+  //   height: 150px;
+  //   border-radius: 50%;
+  //   margin: 0 auto 2em;
+  //   background: #eee;
+  //   box-shadow: 0 0 0 4px #ddd;
+  // }
+
 
 // Trying to Create Cards to Appear on Dindr Dates Results Page
 
@@ -150,73 +228,73 @@
 
 
 
-.dindr-date-card-container {
-  display: block;
-  height: 100%;
-}
 
-.dindr-date-card-set {
-  @include fill-parent();
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  height: 350px;
-}
-  .dindr-date-info {
-    height: 350px;
-    width: 33.33333%;
-    background: #fff;
-    margin: 0 auto;
-    // float: left;
-    // display: inline;
-    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.3);
-    border-radius: 7px;
-    // position: absolute;
-    text-align: center;
-    padding: 50px 30px;
-    &:nth-child(2) {
-      z-index: 10;
-      left: 50%;
-      transform: translateX(-50%);
-      top: -25px;
-      height: 500px;
-      width: 35%;
-      padding-top: 75px;
-      padding-bottom: 75px;
-    }
-    &:nth-child(3) {
-      right: 0;
-    }
-
-
-  // .icon 
-  img {
-    display: block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 2em;
-    background: #eee;
-    box-shadow: 0 0 0 4px #ddd;
-
-  }
-  h1 {
-    font-family: "Varela Round", sans-serif;
-    font-size: 1.3em;
-    margin-bottom: .6em;
-    color: #2C3E50;
-  }
-  p {
-    color: rgba(0,0,0,0.5);
-    font-size: .8em;
-    margin-bottom: 2em;
-    font-size: 1.1rem;
-  }
-  a {
-    text-decoration: none;
-    color: #F3B12F;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    font-size: 1em;
-  }
-}
+// .dindr-date-card-container {
+//   display: block;
+//   height: 100%;
+// }
+//
+// .dindr-date-card-set {
+//   @include fill-parent();
+//   display: block;
+//   margin: 0 auto;
+//   position: relative;
+//   height: 350px;
+// }
+//   .dindr-date-info {
+//     height: 350px;
+//     width: 33.33333%;
+//     background: #fff;
+//     margin: 0 auto;
+//     // float: left;
+//     // display: inline;
+//     box-shadow: 0 5px 30px 0 rgba(0,0,0,0.3);
+//     border-radius: 7px;
+//     // position: absolute;
+//     text-align: center;
+//     padding: 50px 30px;
+//     &:nth-child(2) {
+//       z-index: 10;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       top: -25px;
+//       height: 500px;
+//       width: 35%;
+//       padding-top: 75px;
+//       padding-bottom: 75px;
+//     }
+//     &:nth-child(3) {
+//       right: 0;
+//     }
+//
+//
+//   .icon img {
+//     display: block;
+//     width: 150px;
+//     height: 150px;
+//     border-radius: 50%;
+//     margin: 0 auto 2em;
+//     background: #eee;
+//     box-shadow: 0 0 0 4px #ddd;
+//
+//   }
+//   h1 {
+//     font-family: "Varela Round", sans-serif;
+//     font-size: 1.3em;
+//     margin-bottom: .6em;
+//     color: #2C3E50;
+//   }
+//   p {
+//     color: rgba(0,0,0,0.5);
+//     font-size: .8em;
+//     margin-bottom: 2em;
+//     font-size: 1.1rem;
+//   }
+//   a {
+//     text-decoration: none;
+//     color: #F3B12F;
+//     text-transform: uppercase;
+//     letter-spacing: .2em;
+//     font-size: 1em;
+//   }
+// }
