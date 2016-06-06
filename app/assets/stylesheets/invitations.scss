@@ -3,64 +3,9 @@
   text-align: center;
   h1 {
     font-size: 2rem;
+    margin: 0 0 1.5em;
   }
 }
-
-// Date Requests
-// .requests {
-//   h2 {
-//     text-align: center;
-//   }
-// }
-//
-// .request-inv {
-//   overflow: hidden;
-//   float: right;
-//   width: 30%;
-//   border: solid 2px black;
-//   list-style-type: none;
-//   padding: 1rem;
-//   img {
-//     height: 10rem;
-//     width: 10rem;
-//   }
-// }
-//
-// // Dates Pending
-//
-// .pending {
-//   h2 {
-//     text-align: center;
-//   }
-// }
-//
-//
-// .pending-inv {
-//   overflow: hidden;
-//   float: left;
-//   width: 33%;
-//   border: solid 2px black;
-//   list-style-type: none;
-//   padding: 1rem;
-//   img {
-//     height: 10rem;
-//     width: 10rem;
-//   }
-// }
-
-//
-// .inv-accepted {
-//   background-color: #5CEC31;
-// }
-//
-// .req {
-//   text-align: center;
-// }
-//
-// .acpt {
-//   text-align: center;
-// }
-
 
 // Trying to Create Cards like HomePage
 
@@ -134,23 +79,6 @@
     font-size: 1rem;
   }
 }
-
-
-
-// Results Page - Move to User.scss
-
-// .dindr-date-layout {
-//   overflow: hidden;
-// }
-//
-// .dindr-date-box {
-//   float: left;
-//   width: 33%;
-// }
-//
-// .dindr-date-info {
-//   text-align: center;
-// }
 
 
 // Dindr Date Request Buttons
@@ -416,4 +344,80 @@ $pink: #E91E63;
       }
   }
 
+}
+
+// //trying to get better styling for the invitations page pending section
+
+
+.invitation-pending-list {
+  margin: 2em 0;
+  overflow-x: scroll;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  height: 450px;
+}
+
+.invitation-pending {
+  width: 300px;
+  height: 450px;
+  margin: 0 auto;
+  padding: 1em;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+
+  .invitation-pending-pic {
+    margin: 3em 0;
+
+    .invitation-pending-profile-pic {
+      height: 7em;
+      width: 7em;
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto;
+      background: #eee;
+      box-shadow: 0 0 0 4px #ddd;
+    }
+  }
+
+  .invitation-info {
+    margin: 1em 0;
+  }
+
+  .acpt-button {
+    margin-top: 2em;
+  }
+
+}
+
+
+// Pending & Dindr Date Button
+
+
+.invitation-button {
+  display: inline-block;
+  margin: 2em auto;
+  padding: 0 2em;
+}
+
+// Toggling Hidden Sections
+
+.invitation-pending-container {
+  display: none;
+  margin-top: 2em;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.dindr-date-container {
+  display: none;
+  height: 400px;
+  margin-top: 6em;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.button-clicked {
+  display: block;
 }

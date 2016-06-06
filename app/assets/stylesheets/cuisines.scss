@@ -56,14 +56,27 @@
   }
 }
 
-.each-rest {
-  float: left;
-  display: inline-block;
-  padding: 2rem;
-  width: 33.3%;
-  border: 2px solid black;
-  border-radius: 5px;
-  min-height: 28rem;
+.yelp-results {
+  height: calc(20rem + 2px);
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: none;
+  .innerwrap {
+    width: 1514px;
+    height: 100%;
+  }
+  .each-rest {
+    float: left;
+    padding: 2rem;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    width: 250px;
+    border-radius: 5px;
+    height: calc(100% - 2px);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+
+  }
 }
 
 .cats {
