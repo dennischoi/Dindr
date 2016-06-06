@@ -12,7 +12,7 @@ class VotesController < ApplicationController
     if @vote.save
       render nothing: :true
     else
-      flash.now[:alert] =  "no vote sent"
+      flash.now[:alert] =  "No Vote Sent"
     end
   end
 
