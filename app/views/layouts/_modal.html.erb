@@ -4,9 +4,11 @@
         <div class="modal-inner">
           <div class="modal-close" for="modal-1"></div>
             <h1>Sign in</h1>
+
             <p class="modal-content">
 
-            <%= form_tag create_path do %>
+        <%= form_tag create_path do %>
+
               <div class="field">
                 <%= label_tag :email %>
                 <%= text_field_tag :email, params[:email] %>
@@ -18,7 +20,7 @@
               <div class="action">
                 <%= submit_tag :Submit %>
               </div>
-            <% end %>
+        <% end %>
             </br>
             </br>
             </br>
