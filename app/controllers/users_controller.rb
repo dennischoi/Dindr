@@ -38,6 +38,7 @@ class UsersController < ApplicationController
     inv_id.each do |id|
       potentials.delete(id)
     end
+    potentials.delete(current_user.id)
     @users = []
 
     potentials.each do |id|
