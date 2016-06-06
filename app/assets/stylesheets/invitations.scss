@@ -349,3 +349,71 @@ $pink: #E91E63;
     transform: rotate(360deg);
   }
 }
+
+
+
+// //trying to get better styling for the invitations page
+
+.invitation-request-list {
+  margin-top: 1em;
+  overflow-y: scroll;
+  height: 500px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3)
+}
+
+.invitation-requests {
+  width: 100%;
+  height: 150px;
+  padding: 1em;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 1em;
+  // display:inline-block;
+  // vertical-align: middle;
+
+  .invitation-pic {
+    height: 100%;
+    width: 33.3333%;
+    float: left;
+    // display: inline-block;
+
+    .invitation-profile-pic {
+      height: 7em;
+      width: 7em;
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto 2em;
+      background: #eee;
+      box-shadow: 0 0 0 4px #ddd;
+      vertical-align: middle;
+    }
+  }
+
+  // .summary {
+  //   width: 33.33333%;
+  //   float: left;
+  //   margin-top: 2.5em;
+  //   // display: inline-block;
+  //
+  // }
+  //
+  // .choice {
+  //   width: 33.33333%;
+  //   float: left;
+  //   margin-top: 1em;
+  //   // display: inline-block;
+  //
+  //
+  //     #show-rests-button {
+  //       display: block;
+  //       margin-top: 0;
+  //       margin-right:auto;
+  //       margin-left: auto;
+  //     }
+  //     #show-date-button {
+  //       margin-right:auto;
+  //       margin-left: auto;
+  //       display: block;
+  //     }
+  // }
+
+}

@@ -1,12 +1,13 @@
-<div class="requests">
+<div class="invitation-request-list">
 
-    <div class="invitation-card-container">
-      <ul class="invitation-card-set">
-      <% current_user.accepted_invitations.each do |inv| %>
 
-        <li class="invitation-card" id="invitation-request-card">
+      <ul>
+        <% current_user.accepted_invitations.each do |inv| %>
 
-          <div class='invitation-icon'><%= image_tag User.find(inv.send_user_id).profile_pic.url %></div>
+        <li class="invitation-requests">
+
+          <div class='invitation-pic'>
+            <%= image_tag User.find(inv.send_user_id).profile_pic.url, class: "invitation-profile-pic"%></div>
           <p><%= inv.date.strftime("%B %d, %Y")  %></p>
 
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
