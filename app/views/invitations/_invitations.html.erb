@@ -1,15 +1,19 @@
-<div class="requests">
+<div class="invitation-request-list">
 
-    <div class="invitation-card-container">
-      <ul class="invitation-card-set">
-      <% current_user.accepted_invitations.each do |inv| %>
 
-        <li class="invitation-card" id="invitation-request-card">
+      <ul>
+        <% current_user.accepted_invitations.each do |inv| %>
 
-          <div class='invitation-icon'><%= image_tag User.find(inv.send_user_id).profile_pic.url %></div>
+        <li class="invitation-requests">
+
+          <div class='invitation-pic'>
+            <%= image_tag User.find(inv.send_user_id).profile_pic.url, class: "invitation-profile-pic"%></div>
+
+          <div class="invitation-info">
           <p><%= inv.date.strftime("%B %d, %Y")  %></p>
 
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
+        </div>
           <!-- <#%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %> -->
 
           <div class="request-buttons">
@@ -31,6 +35,10 @@
 
 <div class="see-pending-invitations">
     <%= button_to "Pending Invitations", invitations_path,  method: :get, id:"see-pending-invitations-button"%>
+</div>
+
+<div class="see-pending-invitations">
+    <%= button_to "See Dindr Dates",  id:"see-pending-invitations-button"%>
 </div>
 
 
