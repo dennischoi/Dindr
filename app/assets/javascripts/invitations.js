@@ -47,15 +47,20 @@ $(document).on('ready page:load', function(){
 
 
   $('body').on('click', '#see-pending-invitations-button', function() {
-      alert("HAYYYYY");
       $('.invitation-pending-container').toggleClass( "button-clicked");
       $('.dindr-date-container').removeClass( "button-clicked");
+      $('html,body').animate({
+    scrollTop: $(".invitation-pending-container").offset().top},
+    '500');
   });
 
   $('body').on('click', '#see-dindr-dates-button', function() {
-      alert("HAYYYYYHIIIIIEEE");
       $('.dindr-date-container').toggleClass( "button-clicked");
       $('.invitation-pending-container').removeClass( "button-clicked");
+      $('html,body').animate({
+        scrollTop:
+      $(".dindr-date-container").offset().top},
+      'slow');
   });
 
   // $("#arrow-2").click(function() {
