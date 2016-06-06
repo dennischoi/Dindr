@@ -302,9 +302,9 @@ $pink: #E91E63;
 
 
 // Pending Invitation Button
-
-
+//
 #see-pending-invitations-button {
+
   cursor: pointer;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
@@ -323,29 +323,4 @@ $pink: #E91E63;
   background-color: transparent;
   margin: 0 auto;
 
-
-  &::before {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: all .6s cubic-bezier(1,0.7,0.2,1);
-    -moz-transition: all .8s cubic-bezier(1,0.1,0.2,1);
-    transition: all .8s cubic-bezier(0.25,0.1,0.2,1);
-    content: "";
-    background-color: #F7DC6F;
-    position: absolute;
-    top: -150px;
-    right: auto;
-    left: -10px;
-    z-index: -1;
-    width: 0;
-    height: 300px;
-  }
-
-  &:hover::before {
-    transform: rotate(70deg);
-    width: 1000px;
-  }
 }
