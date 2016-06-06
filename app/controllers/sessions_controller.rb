@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       flash.now[:alert] = "Login Failed"
       redirect_to(:homes, notice: 'Try Again')
     end
+
   end
 
   def destroy

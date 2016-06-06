@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   validates :age, :inclusion => { :in => 1..100, :message => "Age should be between 1-100"}
 
+
   # validate :age_range
 
 # Mounting Uploader for ProfilePic

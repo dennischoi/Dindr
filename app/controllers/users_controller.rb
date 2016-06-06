@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 
 
     array_users.each do |user|
+      if user.top_cats.empty?
+        next
+      else
         cuisine_A = user.top_cats
         if cuisine_A[0].include?(@cuis)
           potentials << user.id
@@ -19,6 +22,7 @@ class UsersController < ApplicationController
           potentials << user.id
         else
         end
+      end
     end
 
     inv_id = []
@@ -34,6 +38,7 @@ class UsersController < ApplicationController
     inv_id.each do |id|
       potentials.delete(id)
     end
+    potentials.delete(current_user.id)
     @users = []
 
     potentials.each do |id|
