@@ -3,7 +3,6 @@
 // ----------------------------------------------------------------------------
 
 .footer-2 {
-  $base-spacing: 1.5em !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
@@ -13,7 +12,7 @@
 
   background: rgba(162, 132, 176, 0.6);
   display: inline-block;
-  padding: $base-spacing;
+  padding: 1rem;
   width: 100%;
 
   .footer-logo {
@@ -27,7 +26,8 @@
   }
 
   .footer-logo img {
-    height: 1.6em;
+    height: 3em;
+    margin-top: 5px;
   }
 
   ul {
@@ -93,9 +93,9 @@
       }
 
       img {
-        height: 1.6em;
+        height: 3em;
         opacity: 0.7;
-        padding: 1px;
+        padding: 0.5px;
 
         &:focus,
         &:hover {
