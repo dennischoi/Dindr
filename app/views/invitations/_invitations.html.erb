@@ -1,6 +1,4 @@
 <div class="invitation-request-list">
-
-
       <ul>
         <% current_user.accepted_invitations.each do |inv| %>
 
@@ -33,74 +31,3 @@
 
 
 <!--  new button. doesnt have to be a button, just wanted it to look nice -->
-
-<div class="invitation-button">
-  <%= button_tag "Pending Invitations", id:"see-pending-invitations-button"%>
-</div>
-
-<div class="invitation-button">
-  <%= button_tag "See Dindr Dates", id:"see-dindr-dates-button"%>
-</div>
-
-
-<div class="invitation-pending-container">
-
-  <h1> Who You're Waiting to Hear from: </h1>
-
-  <div class="invitation-pending-list">
-        <ul>
-        <% current_user.sent_invitations.each do |inv| %>
-
-          <li class="invitation-pending">
-
-            <div class='invitation-pending-pic'>
-              <%= image_tag User.find(inv.accept_user_id).profile_pic.url, class: "invitation-pending-profile-pic" %></div>
-
-            <div class="invitation-info">
-            <p>You invited <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
-
-            <%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %>
-
-            <div class="acpt-button">
-              <% if inv.pending == true %>
-              <% else %>
-              <!-- <em class="inv-accepted">Invitation was Accepted!</em> -->
-              <%= button_tag "Invitation was Accepted!", class: "invitation-accepted-button"%>
-              <% end %>
-            </div>
-          </li>
-        <% end %>
-        </ul>
-      </div>
-  </div>
-
-</div>
-
-
-<div class="dindr-date-container">
-  <h1> This Section Will Arrive Shortly :)</h1>
-
-  <div class="outer-wrap-dates">
-    <div class="inner-wrap-dates">
-        <% @matched_invites.each do |inv| %>
-        <div class="the-dates">
-          <ul>
-            <li>
-              <div class='invitation-pending-pic'>
-                <%= image_tag User.find(inv.accept_user_id).profile_pic.url, class: "invitation-pending-profile-pic" %></div>
-
-                <div class="invitation-info">
-                  <p>You've matched with <%= User.find(inv.accept_user_id).first_name %> for <%= inv.date_cuisine %>!</p>
-
-                  <%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %>
-                </div>
-
-              </li>
-            </ul>
-        </div>
-        <% end %>
-
-    </div>
-
-  </div>
-</div>

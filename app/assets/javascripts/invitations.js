@@ -31,6 +31,7 @@ $(document).on('ready page:load', function(){
     // JS Alert function
     var deleteAnswer = confirm ("Are you sure you want to delete?");
 
+
     if (deleteAnswer){
       $.ajax({
         url: "/invitations/" + invId,
@@ -62,7 +63,7 @@ $(document).on('ready page:load', function(){
   $(function(){
     var n = $('.the-dates').length
 
-    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' ) 
+    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' )
   });
 
   // $("#arrow-2").click(function() {
