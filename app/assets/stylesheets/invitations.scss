@@ -348,47 +348,47 @@ $pink: #E91E63;
 
 // //trying to get better styling for the invitations page pending section
 
+.waiting-for{
+    max-height: 450px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
 
-.invitation-pending-list {
-  margin: 2em 0;
-  overflow-x: scroll;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-  height: 450px;
-}
+  .invitation-pending-list {
+    max-height: 400px;
 
-.invitation-pending {
-  width: 300px;
-  height: 450px;
-  margin: 0 auto;
-  padding: 1em;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    .invitation-pending {
+      width: 300px;
+      height: 400px;
+      float: left;
+      padding: 1em;
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
 
-  .invitation-pending-pic {
-    margin: 3em 0;
+      .invitation-pending-pic {
+        margin: 3em 0;
 
-    .invitation-pending-profile-pic {
-      height: 7em;
-      width: 7em;
-      border-radius: 100%;
-      display: block;
-      margin: 0 auto;
-      background: #eee;
-      box-shadow: 0 0 0 4px #ddd;
+        .invitation-pending-profile-pic {
+          height: 7em;
+          width: 7em;
+          border-radius: 100%;
+          display: block;
+          margin: 0 auto;
+          background: #eee;
+          box-shadow: 0 0 0 4px #ddd;
+        }
+      }
     }
   }
-
-  .invitation-info {
-    margin: 1em 0;
-  }
-
-  .acpt-button {
-    margin-top: 2em;
-  }
-
+}
+// Pending & Dindr Date Button
+.invitation-info {
+  margin: 1em 0;
 }
 
-
-// Pending & Dindr Date Button
+.acpt-button {
+  margin-top: 2em;
+}
 
 
 .invitation-button {
