@@ -10,23 +10,22 @@ $(document).on('ready page:load', function() {
   // called the event handler on the body because .food-image is always new when we render new pictures. So we need to call on its parents class which allows its children to be clicked on even when it changes.
   $('body').on('click','.food-image', function(ev){
 
-      turn++;
-      $(ev.target).toggleClass('on-like')
-      voteImage(ev)
-      changeImage(ev)
-      console.log(turn)
+    turn++;
+    $(ev.target).toggleClass('on-like')
+    voteImage(ev)
+    changeImage(ev)
+    console.log(turn)
 
       if (turn < 11)
       $('span.meter').css('width', turn/10*100 + "%")
 
 
       if (turn == 10){
-        // This has to be changed to heroku url when launched!
+
         // window.location = "http://dindrdates.herokuapp.com/user/cuisines?"
         window.location = "http://localhost:3000/user/cuisines?"
-        // .on('click', function(){
-        //   updateCuisines(ev)
-        //   updateTags(ev)
+
+
       }
   });
 
