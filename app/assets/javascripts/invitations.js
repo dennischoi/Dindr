@@ -20,6 +20,13 @@ $(document).on('ready page:load', function(){
           }
         }
       });
+      // Ajax request to show Matched Dates
+      $.ajax({
+        url: "/invitations",
+        method: 'get',
+        dataType: 'script',
+      });
+
     };
   });
 
