@@ -1,6 +1,25 @@
 class InvitationsController < ApplicationController
   def index
-    @invitations = current_user.accepted_invitations
+    sent_invites = current_user.sent_invitations
+    accept_invites = current_user.accepted_invitations
+
+    all_invites = sent_invites + accept_invites
+
+    @matched_invites = []
+    @sent_matches = []
+
+    accept_invites.each do |inv|
+      if inv.pending == false
+        @matched_invites << inv
+      end
+    end
+
+    sent_invites.each do |inv|
+      if inv.pending == false
+        @sent_matches << inv
+      end
+    end
+
   end
 
   def show

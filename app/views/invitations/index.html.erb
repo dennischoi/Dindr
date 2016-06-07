@@ -3,7 +3,26 @@
 <h1>Who's Invited You on a Dindr Date ... </h1>
 
   <div class="dates-pending">
-    <%= render '/invitations/invitations' %>
+    <%= render 'invitations' %>
   </div>
+
+
+    <div class="invitation-button">
+      <%= button_tag "Pending Invitations", id:"see-pending-invitations-button"%>
+    </div>
+
+    <div class="invitation-button">
+      <%= button_tag "See Dindr Dates", id:"see-dindr-dates-button"%>
+    </div>
+
+  <div class="invitebuttons">
+    <%= render 'invitebuttons' %>
+  </div>
+
+  <div class="matchedinvites">
+    <%= render 'matchedinvites' %>
+  </div>
+
+
 
 </div>

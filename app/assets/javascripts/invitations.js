@@ -5,18 +5,22 @@ $(document).on('ready page:load', function(){
     console.log("You're a badass - ariane")
 
     var invId = $(ev.target).data('invitationid')
+    var acceptAnswer = confirm ("Do you want to Dindr with this person?")
 
+// Only for Safari
     console.log(invId)
-    $.ajax({
-      url: "/invitations/" + invId,
-      method: 'patch',
-      dataType: 'script',
-      data: {
-        invitation: {
-          pending: false
+    if (acceptAnswer) {
+      $.ajax({
+        url: "/invitations/" + invId,
+        method: 'patch',
+        dataType: 'script',
+        data: {
+          invitation: {
+            pending: false
+          }
         }
-      }
-    });
+      });
+    };
   });
 
   $('body').on('click', '.delete-request-button', function(ev) {
@@ -25,16 +29,17 @@ $(document).on('ready page:load', function(){
     console.log(invId)
 
     // JS Alert function
-    // var deleteAnswer = confirm ("Are you sure you want to delete?");
+    var deleteAnswer = confirm ("Are you sure you want to delete?");
 
-    // if (deleteAnswer){
-    $.ajax({
-      url: "/invitations/" + invId,
-      method: "DELETE",
-      dataType: 'script',
 
-    });
-    // };
+    if (deleteAnswer){
+      $.ajax({
+        url: "/invitations/" + invId,
+        method: "DELETE",
+        dataType: 'script',
+
+      });
+    };
   });
 
 
@@ -53,6 +58,12 @@ $(document).on('ready page:load', function(){
         scrollTop:
       $(".dindr-date-container").offset().top},
       'slow');
+  });
+
+  $(function(){
+    var n = $('.the-dates').length
+
+    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' )
   });
 
   // $("#arrow-2").click(function() {

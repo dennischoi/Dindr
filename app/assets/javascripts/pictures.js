@@ -24,6 +24,7 @@ $(document).on('ready page:load', function() {
         // This has to be changed to heroku url when launched!
         //  "http://dindrdates.herokuapp.com/user/cuisines?"
         window.location = "localhost:3000/user/cuisines?"
+        // window.location = "localhost:3000/user/cuisines?"
         // .on('click', function(){
         //   updateCuisines(ev)
         //   updateTags(ev)
