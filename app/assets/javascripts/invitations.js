@@ -55,6 +55,12 @@ $(document).on('ready page:load', function(){
       'slow');
   });
 
+  $(function(){
+    var n = $('.the-dates').length
+
+    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' ) 
+  });
+
   // $("#arrow-2").click(function() {
   //     $('html, body').animate({ scrollTop: $("#homepage-button").offset().top }, 3500);
   // });
