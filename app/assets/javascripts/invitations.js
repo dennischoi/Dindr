@@ -65,6 +65,12 @@ $(document).on('ready page:load', function(){
 
     $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' )
   });
+  $(function(){
+    var n = $('.invitation-pending').length
+
+    $('.invitation-pending-list').css('width', n * 300 + 'px' )
+  });
+
 
   // $("#arrow-2").click(function() {
   //     $('html, body').animate({ scrollTop: $("#homepage-button").offset().top }, 3500);
