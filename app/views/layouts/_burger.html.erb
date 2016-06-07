@@ -11,10 +11,9 @@
     <% if current_user %>
       <ul id="nav-box-list">
         <li class="nav-box-list-items"><%= link_to "profile", user_path(current_user) %></li>
-        <li class="nav-box-list-items"><%= link_to "the game", game_path%></li>
+        <li class="nav-box-list-items"><%= link_to "game", game_path%></li>
         <li class="nav-box-list-items"><%= link_to "dindr dates", invitations_path%></li>
         <li class="nav-box-list-items"><%= link_to "results", user_cuisines_path%></li>
-        <!-- <li class="nav-box-list-items"><%= link_to "results", user_cuisines_path %></li> -->
         <li class="nav-box-list-items"><%= link_to "logout", :logout, method: :delete %></li>
 
           <% if current_user.admin? %>

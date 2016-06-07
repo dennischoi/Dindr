@@ -2,12 +2,17 @@
 
 .rest-name {
   font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .rest-rating {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: tomato;
 }
 
 .rest-info-location {
   font-size: 1rem;
 }
+ .rest-distance {
+   margin-bottom: 2%;
+ }

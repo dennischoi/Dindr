@@ -12,14 +12,14 @@
 
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 
-        <p>Dindr'ing since <%= @user.created_at.to_date.strftime("%B %d, %Y") %></p>
+        <p>Dindr'ing since: <%= @user.created_at.to_date.strftime("%B %d, %Y") %></p>
 
-        <p><em>Age:</em> <%= @user.age %></p>
-        <p><em>About Me:</em> <%= @user.bio %> Blah blah blah for now</p>
+        <p>Age: <%= @user.age %></p>
+        <p>About Me: <%= @user.bio %> Blah blah blah for now</p></br>
 
         <p>
-          <em>Down to Dindr?</em>
 
+          <em><strong>Down to Dindr?</strong></em>
           <div id="down_to_meet">
             <% if @user.profile_pic? == false %>
               You must have a profile picture to change this setting!
