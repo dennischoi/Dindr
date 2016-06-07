@@ -107,6 +107,10 @@ $green: #1ECD97;
 $gray: #bbbbbb;
 $pink: #E91E63;
 
+#reset-pics-button {
+  margin-top: 5rem;
+}
+
 #show-rests-button {
   font-family: 'Roboto', sans-serif;
   outline:none;
@@ -240,7 +244,7 @@ $pink: #E91E63;
   z-index: 1;
   width: 300px;
   background-color: transparent;
-  margin: 0 auto;
+  margin: 0px auto 5px;
 
 
   &::before {
