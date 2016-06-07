@@ -211,11 +211,11 @@
   overflow-y: none;
   .inner-wrap-dates {
     // width: ;
-    height: 100%;
+    height:100%;
+    // margin-bottom: -2px;
   }
   .the-dates {
     float: left;
-    margin-bottom: 2px;
     margin-left: 5px;
     width: 250px;
     border-radius: 5px;
@@ -223,6 +223,10 @@
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     background-color: white;
 
+    .invitation-info1 {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 

@@ -65,6 +65,7 @@ $(document).on('ready page:load', function(){
 
     $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' )
   });
+
   $(function(){
     var n = $('.invitation-pending').length
 
