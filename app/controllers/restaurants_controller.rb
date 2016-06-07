@@ -4,10 +4,6 @@ class RestaurantsController < ApplicationController
   def index
 
 
-    #
-    # if request.xhr?
-    #   params[:category_filter]
-
     search_options = {
            limit: 6,
            radius_filter: '2000',
@@ -28,9 +24,5 @@ class RestaurantsController < ApplicationController
       format.html
     end
 
-
-    # if request.xhr?
-    #   render partial: 'restaurants'
-    # end
   end
 end

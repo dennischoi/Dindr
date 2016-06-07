@@ -12,7 +12,6 @@
 
           <p><%= User.find(inv.send_user_id).first_name %> has invited you for <%= inv.date_cuisine %></p>
         </div>
-          <!-- <#%= link_to User.find(inv.accept_user_id).first_name + "'s Profile", user_path(inv.accept_user_id) %> -->
 
           <div class="request-buttons">
             <% if inv.pending == true %>
@@ -20,7 +19,6 @@
             <%= button_tag "Decline", class: 'delete-request-button', data: {invitationid: inv.id} %>
             <% else %>
             <%= button_tag "It's a Date!", class: "invitation-accepted-button"%>
-            <!-- <em class="inv-accepted">Accepted!</em> -->
             <% end %>
           </div>
         </li>
@@ -28,6 +26,3 @@
       </ul>
     </div>
 </div>
-
-
-<!--  new button. doesnt have to be a button, just wanted it to look nice -->

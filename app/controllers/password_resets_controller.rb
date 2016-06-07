@@ -3,19 +3,13 @@ class PasswordResetsController < ApplicationController
 
   def index
   end
-  # request password reset.
-  # you get here when the user entered his email in the reset password form and
-  # submitted it.
+
   def create
     @user = User.find_by_email(params[:email])
 
-    # this line sends an email to the user with instructions on how to reset
-    # their password (a url with a random token).
     @user.deliver_reset_password_instructions! if @user
 
-    # tell the user instructions have been sent whether or not email was found.
-    # this is to not leak information to stranger dangers about which emails
-    # already exist in the system.
+
     redirect_to(root_path, :notice => 'Instructions have been sent to your email.')
   end
 
