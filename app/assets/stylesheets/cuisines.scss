@@ -20,7 +20,7 @@
 // }
 
 .top-cuis {
-  margin-top: 4rem;
+  margin-top: 8rem;
   text-align: center;
   font-size: 2rem;
 }
@@ -49,7 +49,7 @@
 .result-restaurants-dates {
   position: relative;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 6rem;
   // overflow: hidden;
   h1 {
     font-size: 1.6rem;
@@ -59,15 +59,16 @@
 .yelp-results {
   height: calc(20rem + 2px);
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: none;
+  margin-bottom: 8rem;
   .innerwrap {
     width: 1514px;
     height: 100%;
   }
   .each-rest {
     float: left;
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 2px;
     margin-left: 2px;
     width: 250px;
