@@ -4,31 +4,33 @@
 </div>
 
 <div class="yelp-results">
-  <% @restaurant_list.each do |name, url, latitude, longitude, rating, address| %>
-  <div class="each-rest" data-latitude=<%= latitude %> data-longitude=<%= longitude %> data-name="<%= name %>" >
-    <ul>
+  <div class="innerwrap">
+    <% @restaurant_list.each do |name, url, latitude, longitude, rating, address| %>
+      <div class="each-rest" data-latitude=<%= latitude %> data-longitude=<%= longitude %> data-name="<%= name %>" >
+        <ul>
 
-      <li class="rest-name">
-        <%= link_to "#{name}", url %>
-      </li>
+          <li class="rest-name">
+            <%= link_to "#{name}", url %>
+          </li>
 
-      <li class="rest-rating">
-        <%= rating %> / 5
-      </li>
+          <li class="rest-rating">
+            <%= rating %> / 5
+          </li>
 
-      <li class="rest-distance">
-        Only <%= current_user.distance_to([latitude, longitude], :km).round(2) %> kms away!
-      </li>
+          <li class="rest-distance">
+            Only <%= current_user.distance_to([latitude, longitude], :km).round(2) %> kms away!
+          </li>
 
-      <li class="rest-location">
-        Located at:
-        <% address.each do |field| %>
-            <%= field %>
-        <% end %>
+          <li class="rest-location">
+            Located at:
+            <% address.each do |field| %>
+                <%= field %>
+            <% end %>
 
-      </li>
+          </li>
 
-   </ul>
- </div>
-  <% end %>
+       </ul>
+      </div>
+     <% end %>
+  </div>
 </div>
