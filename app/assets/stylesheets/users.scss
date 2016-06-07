@@ -201,6 +201,31 @@
       }
   }
 }
+
+.outer-wrap-dates {
+  height: calc(20rem + 2px);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  overflow-y: none;
+  .inner-wrap-dates {
+    // width: ;
+    height: 100%;
+  }
+  .the-dates {
+    float: left;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    width: 250px;
+    border-radius: 5px;
+    height: calc(100% - 2px);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+
+  }
+}
+
   // .icon
   // img {
   //   display: block;

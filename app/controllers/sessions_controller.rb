@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_back_or_to(:homes, notice: 'Login successful')
     else
       flash.now[:alert] = "Login Failed"
-      redirect_to(:homes, notice: 'Try Again')
+      redirect_to :homes
     end
 
   end
