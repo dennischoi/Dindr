@@ -80,6 +80,71 @@ User.create({
   remote_profile_pic_url: 'https://67.media.tumblr.com/48f1c32b27df3645b8640e268a7498e4/tumblr_o77sjwTSLh1ufirt1o1_400.jpg'
   })
 
+  User.create({
+    first_name: 'Justin',
+    last_name: 'Bieber',
+    user_name: 'JB4EVER',
+    email: 'bieber@gmail.com',
+    password: 'test',
+    password_confirmation: 'test',
+    address: '150 king street',
+    phone_number: '416-555-6666',
+    age: 32,
+    remote_profile_pic_url: 'https://67.media.tumblr.com/d8bf62602c5cd8bed515c9384e0349a9/tumblr_o8cst5uW1x1ujtldso9_400.png'
+    })
+
+  User.create({
+    first_name: 'Beyonce',
+    last_name: 'Knowles',
+    user_name: 'Queen B',
+    email: 'beyonce@gmail.com',
+    password: 'test',
+    password_confirmation: 'test',
+    address: '150 king street',
+    phone_number: '416-555-6666',
+    age: 32,
+    remote_profile_pic_url: 'https://67.media.tumblr.com/79058c788de944db11086b8f5281bf52/tumblr_o8dzmvW1qm1tqakyso1_1280.png'
+    })
+
+  User.create({
+    first_name: 'Drake',
+    last_name: 'Drake',
+    user_name: 'The 6ix',
+    email: 'drake@gmail.com',
+    password: 'test',
+    password_confirmation: 'test',
+    address: '150 king street',
+    phone_number: '416-555-6666',
+    age: 32,
+    remote_profile_pic_url: 'https://66.media.tumblr.com/93d235eaf162674333da27f9ad345830/tumblr_o8dpycjV1w1tr6q14o1_540.jpg'
+    })
+
+  User.create({
+    first_name: 'Taylor',
+    last_name: 'Swift',
+    user_name: 'TS',
+    email: 'taylor@gmail.com',
+    password: 'test',
+    password_confirmation: 'test',
+    address: '150 king street',
+    phone_number: '416-555-6666',
+    age: 32,
+    remote_profile_pic_url: 'https://67.media.tumblr.com/8d4276088a9c0394189db13603c3c4ff/tumblr_o8epgpHnt81s0xkm8o1_500.png'
+    })
+
+  User.create({
+    first_name: 'Selena',
+    last_name: 'Gomez',
+    user_name: 'Hottie3',
+    email: 'selena@gmail.com',
+    password: 'test',
+    password_confirmation: 'test',
+    address: '150 king street',
+    phone_number: '416-555-6666',
+    age: 32,
+    remote_profile_pic_url: 'https://66.media.tumblr.com/bd94ffc546c9f04f34145529690f436d/tumblr_o8dfy7ruF11tk8m1mo1_500.jpg'
+    })
+
 # Invitation.create({
 #   date: '12-1-2016',
 #   send_user_id: User.find_by(first_name: 'Mark').id,
