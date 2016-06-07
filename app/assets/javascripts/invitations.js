@@ -31,8 +31,7 @@ $(document).on('ready page:load', function(){
     $.ajax({
       url: "/invitations/" + invId,
       method: "DELETE",
-      dataType: 'script',
-
+      dataType: 'script'
     });
     // };
   });
@@ -58,7 +57,7 @@ $(document).on('ready page:load', function(){
   $(function(){
     var n = $('.the-dates').length
 
-    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' ) 
+    $('.inner-wrap-dates').css('width', (n * 250) + (n * 7) + 'px' )
   });
 
   // $("#arrow-2").click(function() {

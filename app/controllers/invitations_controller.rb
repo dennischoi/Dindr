@@ -6,10 +6,17 @@ class InvitationsController < ApplicationController
     all_invites = sent_invites + accept_invites
 
     @matched_invites = []
+    @sent_matches = []
 
-    all_invites.each do |inv|
+    accept_invites.each do |inv|
       if inv.pending == false
         @matched_invites << inv
+      end
+    end
+
+    sent_invites.each do |inv|
+      if inv.pending == false
+        @sent_matches << inv
       end
     end
 
