@@ -22,7 +22,7 @@ $(document).on('ready page:load', function() {
     console.log('click')
     if($('.menu-trigger').hasClass('active')){
       $('.menu-trigger').removeClass('active');
-      $('.nav-links').css('visibility', 'hidden');
+      $('#nav-box').css('visibility', 'hidden');
       count++
     }
   });
