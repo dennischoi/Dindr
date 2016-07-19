@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
 
     search_options = {
            limit: 6,
-           radius_filter: '2000',
+           radius_filter: '10000',
            category_filter: params[:category_filter].downcase
          }
 

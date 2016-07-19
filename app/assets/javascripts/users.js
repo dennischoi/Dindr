@@ -181,7 +181,7 @@ function success(ev, position){
         title: 'You!'
       });
       markerArray.push(marker);
-      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+      marker.setIcon('https://maps.google.com/mapfiles/ms/icons/blue-dot.png');
       map.panTo(marker.getPosition());
 
 
