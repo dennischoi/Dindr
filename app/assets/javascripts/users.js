@@ -183,7 +183,6 @@ function success(ev, position){
       });
       markerArray.push(marker);
       marker.setIcon('https://maps.google.com/mapfiles/ms/icons/blue-dot.png');
-      map.panTo(marker.getPosition());
 
 
       var rests = $('.each-rest');
