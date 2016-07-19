@@ -21,7 +21,7 @@ $(document).on('ready page:load', function() {
 
 
       if (turn == 10){
-        window.location = "http://dindrdates.herokuapp.com/user/cuisines?"
+        window.location = "https://dindrdates.herokuapp.com/user/cuisines?"
         // window.location = "http://localhost:3000/user/cuisines?"
       }
   });

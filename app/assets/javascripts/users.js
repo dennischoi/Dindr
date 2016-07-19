@@ -173,7 +173,6 @@ function success(ev, position){
       console.log(data);
       $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500);
       initMap();
-
       map.clearOverlays();
 
       var marker = new google.maps.Marker({
