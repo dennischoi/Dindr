@@ -172,6 +172,7 @@ function success(ev, position){
     success: function(data){
       console.log(data);
       $('html, body').animate({ scrollTop: $(".result-restaurants-dates").offset().top }, 3500);
+
       initMap();
       map.clearOverlays();
 
@@ -187,21 +188,30 @@ function success(ev, position){
 
       var rests = $('.each-rest');
       console.log(rests)
-
+      var counter = 0
       jQuery.each(rests, function(ind, val){
 
         var restLat = $(val).data('latitude')
         var restLng = $(val).data('longitude')
         var name = $(val).data('name')
         var restMap = {lat: restLat, lng: restLng}
+        counter += 1
         //
         var restaurant = new google.maps.Marker({
           position: restMap,
+          label: counter.toString(),
           title: name + "!"
         });
         markerArray.push(restaurant);
         restaurant.setMap(map);
-    });
+      });
+
+      var bounds = new google.maps.LatLngBounds();
+      for (var i = 0; i < markerArray.length; i++) {
+        bounds.extend(markerArray[i].getPosition());
+      }
+
+      map.fitBounds(bounds);
     }
   });
 

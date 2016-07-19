@@ -5,6 +5,7 @@
 
 <div class="yelp-results">
   <div class="innerwrap">
+    <% counter = 0 %>
     <% @restaurant_list.each do |name, url, latitude, longitude, rating, address| %>
       <div class="each-rest" data-latitude=<%= latitude %> data-longitude=<%= longitude %> data-name="<%= name %>" >
         <ul>
@@ -26,8 +27,8 @@
             <% address.each do |field| %>
                 <%= field %>
             <% end %>
-
           </li>
+          <li>Map Label: <strong><%= counter += 1 %></strong></li>
 
        </ul>
       </div>
